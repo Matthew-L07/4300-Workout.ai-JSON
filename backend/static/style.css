@@ -12,80 +12,112 @@
     flex-direction: column;
 }
 
-#google-c{
-    color:#4285F4;
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b4a618b; /* Soft background for contrast */
 }
 
-#google-s{
-    color:#DB4437;
+.top-text h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgb(0, 238, 255), 0 0 20px rgba(59, 92, 95, 0.8), 0 0 30px rgba(31, 34, 34, 0.6);
+
 }
 
-#google-4{
-    color:	#F4B400;
-}
-
-#google-3{
-    color:	#4285F4;
-}
-
-#google-0-1{
-    color:	#0F9D58;
-}
-
-#google-0-2{
-    color:#DB4437;
-}
-
-.google-colors{
-    display: flex;
-    align-items: center;
-    font-size: 48px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.google-colors h1{
-    margin-bottom: 0;
-    margin-right: 3px;
-}
-
-.input-box{
+.input-box {
     border-radius: 50px;
-    border:1px solid black;
+    border: 1px solid #ffffff;
     display: flex;
     align-items: center;
     margin-top: 10px;
-    padding:12px;
+    padding: 12px;
     width: 600px;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
-.input-box img{
-    height: 20px;
-    width:20px;
-}
-
-.top-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.input-box input{
+.input-box input {
     width: 100%;
     margin-left: 10px;
     font-size: 16px;
     border: none;
     outline: 0;
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
 }
 
-#answer-box{
+#answer-box {
     width: 700px;
-    margin-top:50px; 
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.episode-title{
-    font-family: 'Kanit', sans-serif;
+.exercise-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.episode-desc{
-    font-family: 'Montserrat', sans-serif;
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.exercise-title {
+    color:rgba(0, 0, 0, 0.593);
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.exercise-desc {
+    color:rgba(0, 0, 0, 0.593);
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.exercise-rating {
+    color:rgba(0, 0, 0, 0.593);
+    font-size: 14px;
+    font-style: italic;
+    color: #888;
+}
+
+.input-box input:focus {
+    border: 2px solid #4ca3af;
+    background-color: #e8f7e6;
+}
+
+.left-icon {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    cursor: pointer;
+    left: 0;
+    padding-left: 20px;
+}
+
+.left-icon img {
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .input-box {
+        width: 90%;
+    }
+    #answer-box {
+        width: 90%;
+    }
 }
