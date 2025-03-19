@@ -5,10 +5,48 @@
     <div class="full-body-container">
         <div class="top-text">
             <h1>Find Your Exercise</h1>
+
+            <!-- Search box -->
             <div class="input-box" onclick="sendFocus()">
                 <input placeholder="Search for a fitness exercise" id="filter-text-val" onkeyup="filterText()">
             </div>
+
+            <!-- Equipment Dropdown -->
+            <div class="dropdown-container">
+                <label for="equipment-select">Equipment:</label>
+                <select id="equipment-select" onchange="filterText()">
+                    <option value="">All</option>
+                    {% for eq in equipment_list %}
+                        <option value="{{ eq }}">{{ eq }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- BodyPart Dropdown -->
+            <div class="dropdown-container">
+                <label for="bodypart-select">Body Part:</label>
+                <select id="bodypart-select" onchange="filterText()">
+                    <option value="">All</option>
+                    {% for bp in bodypart_list %}
+                        <option value="{{ bp }}">{{ bp }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Level Dropdown -->
+            <div class="dropdown-container">
+                <label for="level-select">Level:</label>
+                <select id="level-select" onchange="filterText()">
+                    <option value="">All</option>
+                    {% for lv in level_list %}
+                        <option value="{{ lv }}">{{ lv }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
         </div>
+
+        <!-- Results box -->
         <div id="answer-box"></div>
     </div>
 
@@ -31,8 +69,18 @@
 
         function filterText(){
             document.getElementById("answer-box").innerHTML = "";
+
             let query = document.getElementById("filter-text-val").value;
-            fetch("/exercises?" + new URLSearchParams({ title: query }).toString())
+            let equipment = document.getElementById("equipment-select").value;
+            let bodypart = document.getElementById("bodypart-select").value;
+            let level = document.getElementById("level-select").value;
+
+            let params = { title: query };
+            if (equipment) params.equipment = equipment;
+            if (bodypart) params.bodypart = bodypart;
+            if (level) params.level = level;
+
+            fetch("/exercises?" + new URLSearchParams(params).toString())
             .then((response) => response.json())
             .then((data) => data.forEach(row => {
                 let tempDiv = document.createElement("div");
