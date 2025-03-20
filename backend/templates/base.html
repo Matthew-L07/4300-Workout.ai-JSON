@@ -1,6 +1,11 @@
 <!doctype html>
-<title>{% block title %}{% endblock %} - Fitness Finder</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<html lang="en">
+
+<head>
+    <title>{% block title %}{% endblock %} - Fitness Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
 <body>
     <div class="full-body-container">
         <div class="top-text">
@@ -8,16 +13,16 @@
 
             <!-- Search box -->
             <div class="input-box" onclick="sendFocus()">
-                <input placeholder="Search for a fitness exercise" id="filter-text-val" onkeyup="filterText()">
+                <input placeholder="Search for a fitness exercise" id="filter-text-val">
             </div>
 
             <!-- Equipment Dropdown -->
             <div class="dropdown-container">
                 <label for="equipment-select">Equipment:</label>
-                <select id="equipment-select" onchange="filterText()">
+                <select id="equipment-select">
                     <option value="">All</option>
                     {% for eq in equipment_list %}
-                        <option value="{{ eq }}">{{ eq }}</option>
+                    <option value="{{ eq }}">{{ eq }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -25,10 +30,10 @@
             <!-- BodyPart Dropdown -->
             <div class="dropdown-container">
                 <label for="bodypart-select">Body Part:</label>
-                <select id="bodypart-select" onchange="filterText()">
+                <select id="bodypart-select">
                     <option value="">All</option>
                     {% for bp in bodypart_list %}
-                        <option value="{{ bp }}">{{ bp }}</option>
+                    <option value="{{ bp }}">{{ bp }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -36,10 +41,10 @@
             <!-- Level Dropdown -->
             <div class="dropdown-container">
                 <label for="level-select">Level:</label>
-                <select id="level-select" onchange="filterText()">
+                <select id="level-select">
                     <option value="">All</option>
                     {% for lv in level_list %}
-                        <option value="{{ lv }}">{{ lv }}</option>
+                    <option value="{{ lv }}">{{ lv }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -55,7 +60,7 @@
     </div>
 
     <script>
-        function answerBoxTemplate(title, desc, rating){
+        function answerBoxTemplate(title, desc, rating) {
             return `<div class='exercise-card'>
                 <h3 class='exercise-title'>${title}</h3>
                 <p class='exercise-desc'>${desc}</p>
@@ -63,11 +68,11 @@
             </div>`;
         }
 
-        function sendFocus(){
+        function sendFocus() {
             document.getElementById('filter-text-val').focus();
         }
 
-        function filterText(){
+        function filterText() {
             document.getElementById("answer-box").innerHTML = "";
 
             let query = document.getElementById("filter-text-val").value;
@@ -81,12 +86,23 @@
             if (level) params.level = level;
 
             fetch("/exercises?" + new URLSearchParams(params).toString())
-            .then((response) => response.json())
-            .then((data) => data.forEach(row => {
-                let tempDiv = document.createElement("div");
-                tempDiv.innerHTML = answerBoxTemplate(row.Title, row.Desc, row.Rating);
-                document.getElementById("answer-box").appendChild(tempDiv);
-            }));
+                .then((response) => response.json())
+                .then((data) => {
+                    document.getElementById("answer-box").innerHTML = "";
+                    data.forEach(row => {
+                        let tempDiv = document.createElement("div");
+                        tempDiv.innerHTML = answerBoxTemplate(row.Title, row.Desc, row.Rating);
+                        document.getElementById("answer-box").appendChild(tempDiv);
+                    });
+                });
         }
+
+        document.getElementById("filter-text-val").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                filterText();
+            }
+        });
     </script>
 </body>
+
+</html>
