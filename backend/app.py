@@ -3,8 +3,8 @@ import os
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+# from sklearn.feature_extraction.text import TfidfVectorizer
+# from sklearn.metrics.pairwise import cosine_similarity
 from collections import defaultdict, Counter
 import re
 import math
@@ -49,7 +49,7 @@ df = defaultdict(int)
 
 processed_docs = []
 
-iterations = 0
+index = 0
 for i, d in enumerate(documents):
     desc = d[1].lower()
     words_in_desc = re.findall(r'\b[a-zA-Z0-9]+\b', desc)
@@ -57,7 +57,8 @@ for i, d in enumerate(documents):
 
     for w in words_in_desc:
         if w not in word_to_index:
-            word_to_index[w] = i
+            word_to_index[w] = index
+            index += 1
         df[w] += 1
     processed_docs.append(words_in_desc)
     index_to_doc[i] = d
@@ -67,7 +68,6 @@ total_docs = len(processed_docs)
 idf_vector = {}
 for word, count in df.items():
     idf_vector[word] = max(math.log(total_docs / count, 2), 0)
-
 
 tf_idf_matrix = []
 
@@ -126,17 +126,16 @@ def exercises_search():
 
     simularity = []
     for i, document_vector in enumerate(tf_idf_matrix):
+        print(i, document_vector[414])
         s = cosine_similarity(query_vector, document_vector)
         simularity.append((i, s))
 
     sim_sorted = sorted(simularity, key=lambda x: x[1], reverse=True)
 
     filtered_df = exercises
-    top_matches = []
-
     sim_sorted = sorted(simularity, key=lambda x: x[1], reverse=True)
-
     top_matches = []
+    print(sim_sorted[:10])
 
     for idx, _ in sim_sorted[:10]:
         doc = index_to_doc[idx]
