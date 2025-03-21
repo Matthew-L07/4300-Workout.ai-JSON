@@ -27,28 +27,6 @@
                 </select>
             </div>
 
-            <!-- BodyPart Dropdown -->
-            <div class="dropdown-container">
-                <label for="bodypart-select">Body Part:</label>
-                <select id="bodypart-select">
-                    <option value="">All</option>
-                    {% for bp in bodypart_list %}
-                    <option value="{{ bp }}">{{ bp }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-
-            <!-- Level Dropdown -->
-            <div class="dropdown-container">
-                <label for="level-select">Level:</label>
-                <select id="level-select">
-                    <option value="">All</option>
-                    {% for lv in level_list %}
-                    <option value="{{ lv }}">{{ lv }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-
         </div>
 
         <!-- Results box -->
@@ -77,13 +55,9 @@
 
             let query = document.getElementById("filter-text-val").value;
             let equipment = document.getElementById("equipment-select").value;
-            let bodypart = document.getElementById("bodypart-select").value;
-            let level = document.getElementById("level-select").value;
 
             let params = { title: query };
             if (equipment) params.equipment = equipment;
-            if (bodypart) params.bodypart = bodypart;
-            if (level) params.level = level;
 
             fetch("/exercises?" + new URLSearchParams(params).toString())
                 .then((response) => response.json())

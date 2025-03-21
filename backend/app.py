@@ -35,8 +35,6 @@ with open(json_file_path, 'r') as file:
     ]
 
 equipment_list = sorted(exercises['Equipment'].dropna().unique().tolist())
-bodypart_list = sorted(exercises['BodyPart'].dropna().unique().tolist())
-level_list = sorted(exercises['Level'].dropna().unique().tolist())
 
 # vectorizer = TfidfVectorizer(stop_words='english')
 # term_document_matrix = vectorizer.fit_transform(x[1] for x in documents)
@@ -101,17 +99,13 @@ CORS(app)
 @app.route("/")
 def home():
     return render_template('base.html', title="Fitness Search",
-                           equipment_list=equipment_list,
-                           bodypart_list=bodypart_list,
-                           level_list=level_list)
+                           equipment_list=equipment_list)
 
 
 @app.route("/exercises")
 def exercises_search():
     text = request.args.get("title", "")
     equipment = request.args.get("equipment", "")
-    bodypart = request.args.get("bodypart", "")
-    level = request.args.get("level", "")
 
     text = text.strip().lower()
     query_words = re.findall(r'\b[\w-]+\b', text)
@@ -136,15 +130,23 @@ def exercises_search():
     sim_sorted = sorted(simularity, key=lambda x: x[1], reverse=True)
     top_matches = []
     print(sim_sorted[:10])
-
-    for idx, _ in sim_sorted[:10]:
+    for idx, _ in sim_sorted:
         doc = index_to_doc[idx]
+
+        title, desc, body_part, equip, lvl, rating, ratingdesc = doc
+
+        if equipment and equip != equipment:
+            continue 
+
         match = {
-            'Title': doc[0],
-            'Desc': doc[1],
-            'Rating': doc[5]
+            'Title': title,
+            'Desc': desc,
+            'Rating': rating
         }
         top_matches.append(match)
+
+        if len(top_matches) >= 10:
+            break
 
     return top_matches
 
@@ -173,23 +175,6 @@ def exercises_search():
     #     'Title', 'Desc', 'BodyPart', 'Equipment', 'Level', 'Rating']].to_dict(orient='records')
 
     # return jsonify(results)
-
-    if text:
-        filtered_df = filtered_df[filtered_df['Title'].str.lower(
-        ).str.contains(text.lower())]
-
-    if equipment:
-        filtered_df = filtered_df[filtered_df['Equipment'] == equipment]
-
-    if bodypart:
-        filtered_df = filtered_df[filtered_df['BodyPart'] == bodypart]
-
-    if level:
-        filtered_df = filtered_df[filtered_df['Level'] == level]
-
-    matches_filtered = filtered_df[['Title', 'Desc', 'Rating']]
-    matches_filtered_json = matches_filtered.to_json(orient='records')
-    return matches_filtered_json
 
 
 if 'DB_NAME' not in os.environ:
