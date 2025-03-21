@@ -120,23 +120,29 @@ def exercises_search():
 
     simularity = []
     for i, document_vector in enumerate(tf_idf_matrix):
-        print(i, document_vector[414])
         s = cosine_similarity(query_vector, document_vector)
         simularity.append((i, s))
 
     sim_sorted = sorted(simularity, key=lambda x: x[1], reverse=True)
 
-    filtered_df = exercises
-    sim_sorted = sorted(simularity, key=lambda x: x[1], reverse=True)
+    if sim_sorted[0][1] == 0:
+        return [{
+            'Title': 'No Matches Found',
+            'Desc': 'No Matches Found',
+            'Rating': 'No Matches Found'
+        }]
+
     top_matches = []
-    print(sim_sorted[:10])
-    for idx, _ in sim_sorted:
+    for idx, s in sim_sorted:
+        if s == 0:
+            break
+
         doc = index_to_doc[idx]
 
         title, desc, body_part, equip, lvl, rating, ratingdesc = doc
 
         if equipment and equip != equipment:
-            continue 
+            continue
 
         match = {
             'Title': title,
