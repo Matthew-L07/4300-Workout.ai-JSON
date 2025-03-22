@@ -3,13 +3,52 @@ import os
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import pandas as pd
-# from sklearn.feature_extraction.text import TfidfVectorizer
-# from sklearn.metrics.pairwise import cosine_similarity
-from collections import defaultdict, Counter
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 import re
-import math
-import numpy as np
 
+
+def preprocess_text(text):
+    text = text.lower()
+    
+    phrase_replacements = {
+        'push up': 'push_up',
+        'pull up': 'pull_up',
+        'skull crusher': 'skull_crusher',
+        'sit up': 'sit_up',
+        'leg raise': 'leg_raise'
+    }
+    
+    for phrase, replacement in phrase_replacements.items():
+        text = text.replace(phrase, replacement)
+    
+    text = re.sub(r'[^a-zA-Z0-9_\s]', '', text)
+    
+    return text
+
+def edit_distance(s1, s2):
+    m, n = len(s1), len(s2)
+    dp = [[0]*(n+1) for _ in range(m+1)]
+    for i in range(m+1):
+        dp[i][0] = i
+    for j in range(n+1):
+        dp[0][j] = j
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            if s1[i-1] == s2[j-1]:
+                dp[i][j] = dp[i-1][j-1]
+            else:
+                dp[i][j] = 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1])
+    return dp[m][n]
+
+def get_similar_words(query_word, vocab, max_dist):
+    similar = []
+    for word in vocab:
+        if abs(len(word) - len(query_word)) > max_dist:
+            continue
+        if edit_distance(query_word, word) <= max_dist:
+            similar.append(word)
+    return similar
 
 os.environ['ROOT_PATH'] = os.path.abspath(os.path.join("..", os.curdir))
 
@@ -19,7 +58,7 @@ json_file_path = os.path.join(current_directory, 'init.json')
 with open(json_file_path, 'r') as file:
     data = json.load(file)
     datalist = data["Exercises"]
-    exercises = pd.DataFrame(data['Exercises'])
+    exercises_df = pd.DataFrame(datalist)
 
     documents = [
         (
@@ -34,115 +73,71 @@ with open(json_file_path, 'r') as file:
         for pt in datalist
     ]
 
-equipment_list = sorted(exercises['Equipment'].dropna().unique().tolist())
+equipment_list = sorted(exercises_df['Equipment'].dropna().unique().tolist())
+bodypart_list = sorted(exercises_df['BodyPart'].dropna().unique().tolist())
 
-# vectorizer = TfidfVectorizer(stop_words='english')
-# term_document_matrix = vectorizer.fit_transform(x[1] for x in documents)
-
-
-# calculates df_count for each word in each description and maps unique words
-word_to_index = {}
-index_to_doc = {}
-df = defaultdict(int)
-
-processed_docs = []
-
-index = 0
-for i, d in enumerate(documents):
-    desc = d[1].lower()
-    words_in_desc = re.findall(r'\b[a-zA-Z0-9]+\b', desc)
-    # unique_words = set(words_in_desc)
-
-    for w in words_in_desc:
-        if w not in word_to_index:
-            word_to_index[w] = index
-            index += 1
-        df[w] += 1
-    processed_docs.append(words_in_desc)
-    index_to_doc[i] = d
-
-total_docs = len(processed_docs)
-
-idf_vector = {}
-for word, count in df.items():
-    idf_vector[word] = max(math.log(total_docs / count, 2), 0)
-
-tf_idf_matrix = []
-
-for words in processed_docs:
-    tf = Counter(words)
-    total_terms = len(words)
-    tf_idf_vec = [0] * len(word_to_index)
-
-    for word, freq in tf.items():
-        if word in word_to_index:
-            tf_idf_vec[word_to_index[word]] = (
-                freq / total_terms) * idf_vector[word]
-
-    tf_idf_matrix.append(tf_idf_vec)
+muscle_groups = [bp.lower() for bp in bodypart_list]
 
 
-def cosine_similarity(vec1, vec2):
-    vec1 = np.array(vec1)
-    vec2 = np.array(vec2)
+descriptions = [preprocess_text((doc[0] + " ") * 10 + doc[1]) for doc in documents]
+vectorizer = TfidfVectorizer(stop_words='english')
+tfidf_matrix = vectorizer.fit_transform(descriptions)
 
-    if np.linalg.norm(vec1) == 0 or np.linalg.norm(vec2) == 0:
-        return 0
-
-    return np.dot(vec1, vec2) / (np.linalg.norm(vec2) * np.linalg.norm(vec1))
-
+vocab = set()
+for desc in descriptions:
+    for word in desc.split():
+        vocab.add(word)
 
 app = Flask(__name__)
 CORS(app)
-
 
 @app.route("/")
 def home():
     return render_template('base.html', title="Fitness Search",
                            equipment_list=equipment_list)
 
-
 @app.route("/exercises")
 def exercises_search():
     text = request.args.get("title", "")
-    equipment = request.args.get("equipment", "")
+    selected_equipment = request.args.get("equipment", "")
 
-    text = text.strip().lower()
-    query_words = re.findall(r'\b[\w-]+\b', text)
-    query_tf = Counter(query_words)
+    query_tokens =  preprocess_text(text).split()
 
-    total_terms = len(query_words)
-    query_vector = [0] * len(word_to_index)
-    for word, freq in query_tf.items():
-        if word in word_to_index:
-            tf_weight = freq / total_terms
-            query_vector[word_to_index[word]] = tf_weight * idf_vector[word]
+    query_muscle_groups = []
+    rel_query_tokens = []
 
-    simularity = []
-    for i, document_vector in enumerate(tf_idf_matrix):
-        s = cosine_similarity(query_vector, document_vector)
-        simularity.append((i, s))
+    for query_token in query_tokens:
+        if query_token in muscle_groups:
+            query_muscle_groups.append(query_token)
+        else:
+            rel_query_tokens.append(query_token)
 
-    sim_sorted = sorted(simularity, key=lambda x: x[1], reverse=True)
+    expanded_query_words = []
+    for query_token in rel_query_tokens:
+        matched = get_similar_words(query_token, vocab, max_dist=1)
+        if matched:
+            expanded_query_words.extend(matched)
+        else:
+            expanded_query_words.append(query_token) 
 
-    if sim_sorted[0][1] == 0:
-        return [{
-            'Title': 'No Matches Found',
-            'Desc': 'No Matches Found',
-            'Rating': 'No Matches Found'
-        }]
+    modified_query_text = ' '.join(expanded_query_words)
+
+    query_vector = vectorizer.transform([modified_query_text])
+
+    similarities = cosine_similarity(query_vector, tfidf_matrix).flatten()
+    sorted_indices = similarities.argsort()[::-1]
 
     top_matches = []
-    for idx, s in sim_sorted:
-        if s == 0:
-            break
-
-        doc = index_to_doc[idx]
-
+    for idx in sorted_indices:
+        doc = documents[idx]
         title, desc, body_part, equip, lvl, rating, ratingdesc = doc
 
-        if equipment and equip != equipment:
+        if selected_equipment and equip != selected_equipment:
             continue
+
+        if query_muscle_groups:
+            if body_part.lower() not in query_muscle_groups:
+                continue
 
         match = {
             'Title': title,
@@ -154,33 +149,7 @@ def exercises_search():
         if len(top_matches) >= 10:
             break
 
-    return top_matches
-
-    # for idx, _ in sim_sorted[:10]:
-    #     doc = index_to_doc[idx]
-    #     title = doc[0]
-    #     filtered_df = filtered_df[filtered_df['Title'].str.lower(
-    #     ).str.contains(text.lower())]
-
-    # matches_filtered = filtered_df[['Title', 'Desc', 'Rating']]
-    # matches_filtered_json = matches_filtered.to_json(orient='records')
-    # return matches_filtered_json
-
-    # query = request.args.get("query", "").strip().lower()
-
-    # if not query:
-    #     return None
-
-    # queryVec = vectorizer.transform([query])
-
-    # score = cosine_similarity(queryVec, term_document_matrix).flatten()
-
-    # topResults = score.argsort()[::-1][:10]
-
-    # results = filtered_df.iloc[topResults][[
-    #     'Title', 'Desc', 'BodyPart', 'Equipment', 'Level', 'Rating']].to_dict(orient='records')
-
-    # return jsonify(results)
+    return jsonify(top_matches)
 
 
 if 'DB_NAME' not in os.environ:
