@@ -6,20 +6,23 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import re
+import yt_dlp
 
 
 def preprocess_text(text):
     text = text.lower()
     
-    phrase_replacements = {
-        'push up': 'push_up',
-        'pull up': 'pull_up',
-        'skull crusher': 'skull_crusher',
-        'sit up': 'sit_up',
-        'leg raise': 'leg_raise'
+    common_phrases = {
+        r'push[-\s]up(s?)': 'push_up',
+        r'pu[-\s]up(s?)': 'push_up',
+        r'skull[-\s]crusher(s?)': 'skull_crusher',
+        r'sit[-\s]up(s?)': 'sit_up',
+        r'leg[-\s]raise(s?)': 'leg_raise',
+        r'dead[-\s]lift(s?)': 'deadlift',
+        r'bench[-\s]press(es?)': 'bench_press'
     }
     
-    for phrase, replacement in phrase_replacements.items():
+    for phrase, replacement in common_phrases.items():
         text = text.replace(phrase, replacement)
     
     text = re.sub(r'[^a-zA-Z0-9_\s]', '', text)
@@ -41,14 +44,14 @@ def edit_distance(s1, s2):
                 dp[i][j] = 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1])
     return dp[m][n]
 
-def get_similar_words(query_word, vocab, max_dist):
-    similar = []
+def fix_typos(query_word, vocab, max_dist):
+    fixed_typos = []
     for word in vocab:
         if abs(len(word) - len(query_word)) > max_dist:
             continue
         if edit_distance(query_word, word) <= max_dist:
-            similar.append(word)
-    return similar
+            fixed_typos.append(word)
+    return fixed_typos
 
 os.environ['ROOT_PATH'] = os.path.abspath(os.path.join("..", os.curdir))
 
@@ -95,61 +98,99 @@ CORS(app)
 def home():
     return render_template('base.html', title="Fitness Search",
                            equipment_list=equipment_list)
-
+    
 @app.route("/exercises")
 def exercises_search():
     text = request.args.get("title", "")
     selected_equipment = request.args.get("equipment", "")
 
-    query_tokens =  preprocess_text(text).split()
+    query_tokens = preprocess_text(text).split()
+    muscles_in_query = [t for t in query_tokens if t in muscle_groups]
+    rel_query_tokens = [t for t in query_tokens if t not in muscles_in_query]
 
-    query_muscle_groups = []
-    rel_query_tokens = []
-
-    for query_token in query_tokens:
-        if query_token in muscle_groups:
-            query_muscle_groups.append(query_token)
-        else:
-            rel_query_tokens.append(query_token)
-
-    expanded_query_words = []
-    for query_token in rel_query_tokens:
-        matched = get_similar_words(query_token, vocab, max_dist=1)
-        if matched:
-            expanded_query_words.extend(matched)
-        else:
-            expanded_query_words.append(query_token) 
-
-    modified_query_text = ' '.join(expanded_query_words)
-
-    query_vector = vectorizer.transform([modified_query_text])
-
-    similarities = cosine_similarity(query_vector, tfidf_matrix).flatten()
-    sorted_indices = similarities.argsort()[::-1]
-
-    top_matches = []
-    for idx in sorted_indices:
-        doc = documents[idx]
-        title, desc, body_part, equip, lvl, rating, ratingdesc = doc
-
+    filtered_indices = []
+    for idx, doc in enumerate(documents):
+        _, _, body_part, equip, _, _, _ = doc
+        
         if selected_equipment and equip != selected_equipment:
             continue
+            
+        if muscles_in_query and body_part.lower() not in muscles_in_query:
+            continue
+            
+        filtered_indices.append(idx)
 
-        if query_muscle_groups:
-            if body_part.lower() not in query_muscle_groups:
-                continue
+    if not filtered_indices:
+        return jsonify([])
 
-        match = {
+    query_words = []
+    for token in rel_query_tokens:
+        matched = fix_typos(token, vocab, max_dist=1)
+        query_words.extend(matched if matched else [token])
+
+    modified_query_text = ' '.join(query_words)
+    
+    query_vector = vectorizer.transform([modified_query_text])
+    filtered_mat = tfidf_matrix[filtered_indices] 
+    similarities = cosine_similarity(query_vector, filtered_mat).flatten()
+
+    top_matches = similarities.argsort()[::-1][:10] 
+    results = []
+    
+    for idx in top_matches:
+        original_idx = filtered_indices[idx] 
+        title, desc, _, _, _, rating, _ = documents[original_idx]
+        results.append({
             'Title': title,
             'Desc': desc,
             'Rating': rating
-        }
-        top_matches.append(match)
+        })
 
-        if len(top_matches) >= 10:
-            break
+    return jsonify(results)
 
-    return jsonify(top_matches)
+
+@app.route("/exercise/<title>")
+def exercise_page(title):
+    title = title.upper()
+    for doc in documents:
+        if doc[0] == title:
+            exercise = {
+                "Title": doc[0],
+                "Desc": doc[1],
+                "BodyPart": doc[2],
+                "Equipment": doc[3],
+                "Level": doc[4],
+                "Rating": doc[5],
+                "RatingDesc": doc[6],
+                "TutorialURL": find_youtube_tutorial(doc[0]),
+            }
+            return render_template("exercise_detail.html", exercise=exercise)
+    return "Exercise not found", 404
+
+
+def find_youtube_tutorial(query):
+    ydl_opts = {
+        'quiet': True,
+        'default_search': 'ytsearch1',  
+        'extract_flat': 'in_playlist', 
+        'force_generic_extractor': True,
+        'match_filter': lambda info: (  
+            info.get('duration') <= 900 and  
+            "tutorial" in info.get('title', '').lower()  
+        )
+    }
+
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            result = ydl.extract_info(f"{query}", download=False)
+            if result.get('entries'):
+                return result['entries'][0]['url'] 
+    except Exception as e:
+        print("Problem fetching video", e)
+
+    return "https://www.youtube.com/results?search_query=" + '+'.join(query.split() + ["tutorial"])
+
+
 
 
 if 'DB_NAME' not in os.environ:

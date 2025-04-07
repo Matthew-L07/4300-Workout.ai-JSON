@@ -39,12 +39,14 @@
 
     <script>
         function answerBoxTemplate(title, desc, rating) {
-            return `<div class='exercise-card'>
+            const detailUrl = `/exercise/${encodeURIComponent(title)}`;
+            return `<div class='exercise-card' onclick="goToExercise('${detailUrl}')">
                 <h3 class='exercise-title'>${title}</h3>
                 <p class='exercise-desc'>${desc}</p>
                 <p class='exercise-rating'>Rating: ${rating === null ? 'N/A' : rating}</p>
             </div>`;
         }
+
 
         function sendFocus() {
             document.getElementById('filter-text-val').focus();
@@ -76,7 +78,28 @@
                 filterText();
             }
         });
+
+        function goToExercise(url) {
+            document.getElementById("loading-spinner").style.display = "block";
+            setTimeout(() => {
+                window.location.href = url;
+            }, 100); 
+        }
+
+        window.addEventListener("pageshow", function(event) {
+            document.getElementById("loading-spinner").style.display = "none";
+        });
+
+        window.addEventListener("load", function() {
+            document.getElementById("loading-spinner").style.display = "none";
+        });
+
     </script>
+    
+    <div id="loading-spinner">
+        <div class="spinner-circle"></div>
+    </div>
+    
 </body>
 
 </html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ exercise.Title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="exercise-detail-container">
+        <h1>{{ exercise.Title }}</h1>
+        <p><strong>Description:</strong> {{ exercise.Desc }}</p>
+        <p><strong>Muscle Group:</strong> {{ exercise.BodyPart }}</p>
+        <p><strong>Equipment:</strong> {{ exercise.Equipment }}</p>
+        <p><strong>Level:</strong> {{ exercise.Level }}</p>
+        <p><strong>Rating:</strong> {{ exercise.Rating }} - {{ exercise.RatingDesc }}</p>
+        
+        <p><strong>Video Tutorial:</strong> 
+            <a href="{{ exercise.TutorialURL }}" target="_blank">Watch on YouTube</a>
+        </p>
+        
+        {% if exercise.ImagePath %}
+        <img src="{{ url_for('static', filename='images/' + exercise.Title.lower().replace(' ', '_') + '.jpg') }}" alt="{{ exercise.Title }}" style="max-width: 400px;">
+        {% endif %}
+
+        <p><a href="/">← Back to Search</a></p>
+    </div>
+</body>
+
+</html>
