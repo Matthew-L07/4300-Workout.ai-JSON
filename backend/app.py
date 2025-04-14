@@ -101,8 +101,10 @@ documents = [
         pt["BodyPart"],
         correct_equipment(pt["Title"], pt["Equipment"]),
         pt["Level"],
-        ratings_lookup.get(preprocess_text(pt["Title"]).replace(" ", "_").upper(), {}).get("Rating", pt["Rating"]),
-        ratings_lookup.get(preprocess_text(pt["Title"]).replace(" ", "_").upper(), {}).get("RatingDesc", pt["RatingDesc"])
+        ratings_lookup.get(preprocess_text(pt["Title"]).replace(
+            " ", "_").upper(), {}).get("Rating", pt["Rating"]),
+        ratings_lookup.get(preprocess_text(pt["Title"]).replace(
+            " ", "_").upper(), {}).get("RatingDesc", pt["RatingDesc"])
     )
     for pt in data
 ]
@@ -161,15 +163,17 @@ def exercises_search():
 
     modified_query = ' '.join(expanded_tokens)
 
-    query_embeddings = bert_model.encode(modified_query, normalize_embeddings=True)
+    query_embeddings = bert_model.encode(
+        modified_query, normalize_embeddings=True)
 
     scores = bert_embeddings[filtered_indices] @ query_embeddings
 
     min_rating = min(rating_scores)
     max_rating = max(rating_scores)
-    rating_range = max(max_rating - min_rating, 1e-6)  
+    rating_range = max(max_rating - min_rating, 1e-6)
 
-    rating_normalized = [(r - min_rating) / rating_range for r in rating_scores]
+    rating_normalized = [
+        (r - min_rating) / rating_range for r in rating_scores]
     scores = 0.75 * scores + 0.25 * np.array(rating_normalized)
     top_matches = np.argsort(scores)[::-1][:10]
 
@@ -206,12 +210,12 @@ def exercise_page(title):
 
 
 # Cache for tutorial URLs
-tutorial_cache = {}
+#tutorial_cache = {}
 
 
 def find_youtube_tutorial(query):
-    if query in tutorial_cache:
-        return tutorial_cache[query]
+    # if query in tutorial_cache:
+    # return tutorial_cache[query]
 
     ydl_opts = {
         'quiet': True,
@@ -228,18 +232,16 @@ def find_youtube_tutorial(query):
             result = ydl.extract_info(f"{query}", download=False)
             if result.get('entries'):
                 url = result['entries'][0]['url']
-                tutorial_cache[query] = url
+                #tutorial_cache[query] = url
                 return url
     except Exception as e:
         print("Problem fetching video", e)
 
     default_url = "https://www.youtube.com/results?search_query=" + \
         '+'.join(query.split() + ["tutorial"])
-    tutorial_cache[query] = default_url
+    #tutorial_cache[query] = default_url
     return default_url
 
 
 if __name__ == "__main__" and 'DB_NAME' not in os.environ:
     app.run(debug=True, host="0.0.0.0", port=5000)
-
-
