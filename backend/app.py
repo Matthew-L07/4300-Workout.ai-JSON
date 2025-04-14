@@ -21,10 +21,12 @@ with open(json_file_path, 'r') as file:
     exercises_df = pd.DataFrame(data)
 
 updated_equipment = {'E-Z Curl Bar': 'Barbell', 'Medicine Ball': 'Other'}
-exercises_df['Equipment'] = exercises_df['Equipment'].replace(updated_equipment)
+exercises_df['Equipment'] = exercises_df['Equipment'].replace(
+    updated_equipment)
 
 equipment_list = sorted(exercises_df['Equipment'].dropna().unique())
-equipment_keywords = [e.lower() for e in equipment_list if e not in {'Other', 'None'}]
+equipment_keywords = [e.lower()
+                      for e in equipment_list if e not in {'Other', 'None'}]
 bodypart_list = sorted(exercises_df['BodyPart'].dropna().unique())
 muscle_groups = [bp.lower() for bp in bodypart_list]
 
@@ -47,13 +49,28 @@ def preprocess_text(text):
 
     return text
 
+
+# Memoization for typo correction
+typo_cache = {}
+
+
 def fix_typos(query_word, vocab, max_dist):
+    if query_word in typo_cache:
+        return typo_cache[query_word]
+
+    # Skip very short words
+    if len(query_word) < 3:
+        typo_cache[query_word] = []
+        return []
+
     fixed_typos = []
     for word in vocab:
         if abs(len(word) - len(query_word)) > max_dist:
             continue
         if Levenshtein.distance(query_word, word) <= max_dist:
             fixed_typos.append(word)
+
+    typo_cache[query_word] = fixed_typos
     return fixed_typos
 
 
@@ -106,6 +123,7 @@ def home():
                            equipment_list=equipment_list,
                            bodypart_list=bodypart_list)
 
+
 @app.route("/exercises")
 def exercises_search():
     text = request.args.get("title", "")
@@ -115,7 +133,6 @@ def exercises_search():
     query_tokens = preprocess_text(text).split()
     muscle_terms = [t for t in query_tokens if t in muscle_groups]
     nonmuscle_terms = [t for t in query_tokens if t not in muscle_terms]
-
 
     filtered_indices = []
     for idx, doc in enumerate(documents):
@@ -165,41 +182,58 @@ def exercises_search():
 
     return jsonify(results)
 
+
 @app.route("/exercise/<title>")
 def exercise_page(title):
     title = title.upper()
     for doc in documents:
         if doc[0] == title:
             return render_template("exercise_detail.html", exercise={
-                "Title": doc[0], 
-                "Desc": doc[1], 
-                "BodyPart": doc[2], 
+                "Title": doc[0],
+                "Desc": doc[1],
+                "BodyPart": doc[2],
                 "Equipment": doc[3],
-                "Level": doc[4], 
-                "Rating": doc[5], 
+                "Level": doc[4],
+                "Rating": doc[5],
                 "RatingDesc": doc[6],
                 "TutorialURL": find_youtube_tutorial(doc[0])
             })
     return "Exercise not found", 404
 
+
+# Cache for tutorial URLs
+tutorial_cache = {}
+
+
 def find_youtube_tutorial(query):
+    if query in tutorial_cache:
+        return tutorial_cache[query]
+
     ydl_opts = {
         'quiet': True,
         'default_search': 'ytsearch1',
         'extract_flat': 'in_playlist',
         'force_generic_extractor': True,
         'match_filter': lambda info: (
-            info.get('duration') <= 900 and "tutorial" in info.get('title', '').lower()
+            info.get('duration') <= 900 and "tutorial" in info.get(
+                'title', '').lower()
         )
     }
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             result = ydl.extract_info(f"{query}", download=False)
             if result.get('entries'):
-                return result['entries'][0]['url']
+                url = result['entries'][0]['url']
+                tutorial_cache[query] = url
+                return url
     except Exception as e:
         print("Problem fetching video", e)
-    return "https://www.youtube.com/results?search_query=" + '+'.join(query.split() + ["tutorial"])
+
+    default_url = "https://www.youtube.com/results?search_query=" + \
+        '+'.join(query.split() + ["tutorial"])
+    tutorial_cache[query] = default_url
+    return default_url
+
 
 if 'DB_NAME' not in os.environ:
     app.run(debug=True, host="0.0.0.0", port=5000)
