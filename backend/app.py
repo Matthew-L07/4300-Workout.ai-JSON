@@ -58,7 +58,6 @@ def fix_typos(query_word, vocab, max_dist):
     if query_word in typo_cache:
         return typo_cache[query_word]
 
-    # Skip very short words
     if len(query_word) < 3:
         typo_cache[query_word] = []
         return []
@@ -91,6 +90,10 @@ synonym_dict = {
     "cardio": ["endurance", "aerobic"]
 }
 
+
+with open("exercise_ratings.json", "r") as f:
+    ratings_lookup = json.load(f)
+
 documents = [
     (
         pt["Title"].upper(),
@@ -98,21 +101,15 @@ documents = [
         pt["BodyPart"],
         correct_equipment(pt["Title"], pt["Equipment"]),
         pt["Level"],
-        pt["Rating"],
-        pt["RatingDesc"]
+        ratings_lookup.get(preprocess_text(pt["Title"]).replace(" ", "_").upper(), {}).get("Rating", pt["Rating"]),
+        ratings_lookup.get(preprocess_text(pt["Title"]).replace(" ", "_").upper(), {}).get("RatingDesc", pt["RatingDesc"])
     )
     for pt in data
 ]
 
-bert_model = SentenceTransformer("all-MiniLM-L6-v2")
-titles = [preprocess_text(doc[0]) for doc in documents]
 descs = [preprocess_text(doc[1]) for doc in documents]
-
-title_embeddings = bert_model.encode(titles, normalize_embeddings=True)
-desc_embeddings = bert_model.encode(descs, normalize_embeddings=True)
-
-bert_embeddings = 0.8 * title_embeddings + 0.2 * desc_embeddings
-bert_embeddings /= np.linalg.norm(bert_embeddings, axis=1, keepdims=True)
+bert_model = SentenceTransformer("all-MiniLM-L6-v2")
+bert_embeddings = bert_model.encode(descs, normalize_embeddings=True)
 
 vocab = set(word for desc in descs for word in desc.split())
 
@@ -135,6 +132,7 @@ def exercises_search():
     nonmuscle_terms = [t for t in query_tokens if t not in muscle_terms]
 
     filtered_indices = []
+    rating_scores = []
     for idx, doc in enumerate(documents):
         _, _, body_part, equip, _, _, _ = doc
         if selected_equipment and equip != selected_equipment:
@@ -145,6 +143,9 @@ def exercises_search():
             continue
 
         filtered_indices.append(idx)
+
+        _, _, _, _, _, rating, _ = documents[idx]
+        rating_scores.append(rating)
 
     if not filtered_indices:
         return jsonify([])
@@ -158,15 +159,18 @@ def exercises_search():
     for word in corrected_tokens:
         expanded_tokens.extend(synonym_dict.get(word, []))
 
-    title_query = preprocess_text(text)
-    desc_query = ' '.join(expanded_tokens)
+    modified_query = ' '.join(expanded_tokens)
 
-    title_vec = bert_model.encode(title_query, normalize_embeddings=True)
-    desc_vec = bert_model.encode(desc_query, normalize_embeddings=True)
-    query_vec = 0.8 * title_vec + 0.2 * desc_vec
-    query_vec /= np.linalg.norm(query_vec)
+    query_embeddings = bert_model.encode(modified_query, normalize_embeddings=True)
 
-    scores = bert_embeddings[filtered_indices] @ query_vec
+    scores = bert_embeddings[filtered_indices] @ query_embeddings
+
+    min_rating = min(rating_scores)
+    max_rating = max(rating_scores)
+    rating_range = max(max_rating - min_rating, 1e-6)  
+
+    rating_normalized = [(r - min_rating) / rating_range for r in rating_scores]
+    scores = 0.75 * scores + 0.25 * np.array(rating_normalized)
     top_matches = np.argsort(scores)[::-1][:10]
 
     results = []
@@ -235,5 +239,7 @@ def find_youtube_tutorial(query):
     return default_url
 
 
-if 'DB_NAME' not in os.environ:
+if __name__ == "__main__" and 'DB_NAME' not in os.environ:
     app.run(debug=True, host="0.0.0.0", port=5000)
+
+

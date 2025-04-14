@@ -1,0 +1,5318 @@
+{
+  "PARTNER_PLANK_BAND_ROW": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BANDED_CRUNCH_ISOMETRIC_HOLD": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "FYR_BANDED_PLANK_JACK": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BANDED_CRUNCH": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CRUNCH": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DECLINE_BAND_PRESS_SIT_UP": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BAND_LOWTOHIGH_TWIST": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BARBELL_ROLLOUT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_AB_ROLLOUT__ON_KNEES": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DECLINE_BAR_PRESS_SIT_UP": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BENCH_BARBELL_ROLLOUT": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SEATED_BAR_TWIST": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_LANDMINE_PULL_AND_PRESS": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BARBELL_AB_ROLL_OUT__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "30_BARBELL_FLOOR_WIPER": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "30_BARBELL_ROLLOUT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DECLINE_PLATE_SIT_UP": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KETTLEBELL_WINDMILL": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_3POINT_LEG_EXTENSION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BURPEE_OVER_KETTLEBELL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_TOETOUCH": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "KETTLEBELL_SWING": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on pull, lower, day."
+  },
+  "TWOWAY_SWING": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "KETTLEBELL_CRAB_REACH": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "DUMBBELL_VSIT_CROSS_JAB": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_SPELL_CASTER": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "DUMBBELL_SIDE_BEND": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DUMBBELL_CRUNCH": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_THOLD": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_HOLLOWBODY_FLOOR_PRESS": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DUMBBELL_CRUSHER": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_CRUNCH__GETHIN_VARIATION": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_DUMBBELL_CRUNCH": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_STRAIGHTLEGGED_HIP_RAISE": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SEATED_LEG_TUCK_WITH_DUMBBELL": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_DUMBBELL_KNEE_CRUNCH": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "LANDMINE_TWIST": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SUSPENDED_AB_FALLOUT": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DECLINE_REVERSE_CRUNCH": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "WEIGHTED_CRUNCHES": {
+    "Rating": 2.0,
+    "RatingDesc": "Mixed reception focused on sets, reps, day."
+  },
+  "AB_ROLLER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "OTISUP": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CAPTAINS_CHAIR_KNEE_RAISE": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SLEDGEHAMMER_SWING": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PALLOF_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "WEIGHTED_SIT_UP__WITH_BANDS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SUITCASE_CRUNCH": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "FYR_ROPE_JUMPING": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_PRESS_SIT_UP": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLEARM_BENTOVER_REAR_DELT_FLY": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CAPTAINS_CHAIR_LEG_RAISE": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "AB_TWIST__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "WEIGHTED_CRUNCH__GETHIN_VARIATION": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "AB_WHEEL_ROLLOUT__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BENCH_CRUNCH": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DECLINE_PLATE_SIT_UP_TWIST": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "REVERSE_AB_ROLLOUT": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "30_SEATED_TWIST_WITH_PVC_PIPE": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SUSPENDED_CRUNCH": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SUSPENDED_OBLIQUE_CRUNCH": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "WEIGHTED_SIT_UP": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "30_DECLINE_PRESS_SIT_UP": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_CABLE_LOWTOHIGH_TWIST": {
+    "Rating": 3.1,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SINGLEARM_HIGHCABLE_SIDE_BEND": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "KNEELING_CABLE_OBLIQUE_CRUNCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KNEELING_CABLE_CRUNCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ROPE_CRUNCH": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_CABLE_CRUNCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_CABLE_WOOD_CHOP": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_REVERSE_CRUNCH": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PALLOF_PRESS_WITH_ROTATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "EXERCISE_BALL_CABLE_CRUNCH__GETHIN_VARIATION": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STANDING_CABLE_HIGHTOLOW_TWIST": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_CABLE_CRUNCH__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_CABLE_CRUNCH": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_CABLE_TWIST": {
+    "Rating": 3.1,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "30_CABLE_ROPE_CRUNCH": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "30_CABLE_ROPE_OBLIQUE_CRUNCH": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CABLE_LYING_TWIST_ON_BALL": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "30_CABLE_PALLOF_PRESS": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "30_CABLE_REVERSE_CRUNCH_ON_BALL": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "30_CABLE_REVERSE_CRUNCH": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLEARM_CABLE_OUTWARDFACING_BICEPS_CURL": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "AB_CRUNCH_MACHINE": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SMITH_MACHINE_STRAIGHTLEGGED_HIP_RAISE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MACHINE_CRUNCH": {
+    "Rating": 3.7,
+    "RatingDesc": "Mixed reception focused on lbs, press, 20lbs."
+  },
+  "SMITH_MACHINE_VUP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ELBOW_PLANK": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BOTTOMS_UP": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SPIDER_CRAWL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "COCOONS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CROSSBODY_CRUNCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ELBOWTOKNEE_CRUNCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DECLINE_CRUNCH": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "HANGING_TOESTOBAR": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HANGING_OBLIQUE_KNEE_RAISE": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HANGING_LEG_RAISE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MOUNTAIN_CLIMBER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AB_BICYCLE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "34_SIT_UP": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "REVERSE_CRUNCH": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CRUNCHES": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DEAD_BUG_REACH": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "VUP": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "RUSSIAN_TWIST": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "FLAT_BENCH_LYING_LEG_RAISE": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "KNEES_TUCKED_CRUNCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "FEETELEVATED_OBLIQUE_CRUNCH": {
+    "Rating": 3.1,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "BENTKNEE_REVERSE_CRUNCH": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ALTERNATING_HEELTOUCH": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LYING_BENCH_REVERSE_CRUNCH": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SIT_UP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SIDE_BRIDGE": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LYING_OBLIQUE_CRUNCH": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LEG_PULLIN": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "TOE_TOUCHERS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "EXERCISE_BALL_TORSO_ROTATION": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "PARTNER_RESISTANCE_STANDING_TWIST": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HANGING_KNEE_RAISE_WITH_MANUAL_RESISTANCE": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "WALL_MOUNTAIN_CLIMBER": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PARTNER_LYING_LEG_RAISE_WITH_LATERAL_THROW_DOWN": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HANGING_LEG_RAISE_WITH_THROW_DOWN": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "PARTNER_SIT_UP_WITH_HIGHFIVE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "EXERCISE_BALL_KNEE_ROLLIN": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PARTNER_LYING_LEG_RAISE_WITH_THROW_DOWN": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CRAB_TOETOUCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SIDE_KICKTHROUGH": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PARTNER_TARGET_SIT_UP": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "JUMP_LUNGE": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SIDE_PLANK_HIP_DIP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ELBOW_PLANK_JACK": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "EXERCISE_BALL_VUP": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STANDING_TORSO_TWIST_STRETCH": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SLALOM_JUMPS": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BEAR_CRAWL": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CRAB_SINGLEARM_REACH": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SIDE_LUNGE_CROSSBODY_HEELTOUCH": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ALLIGATOR_CRAWL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LYING_CROSSOVER_LOWER_BACK_STRETCH": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HALF_BIRD_DOG": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SHOULDER_TAP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DOUBLE_CRUNCH": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FLUTTER_KICK": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SPRAWL": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SPIDER_PLANK_JACK": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BANDED_JUMPING_JACK": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SHIN_HUG": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_BEAR_CRAWL_FIRE_FEET": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BEAR_CRAWL_UPDOWN": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "FYR_CRAB_KICK": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BEAR_CRAWL_HOLD": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "TRAVELING_BEAR_CRAWL": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLELEG_VUP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "FYR_BEAR_CRAWL_SHOULDER_TAP": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ALTERNATING_SINGLELEG_SPRAWL": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "WIDE_MOUNTAIN_CLIMBER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PLANK_LEG_RAISE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "GLUTE_BRIDGE_STEPOUT": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KNEE_UPDOWN": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FYR_SPRAWL": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "REACH_CRUNCH": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "FYR_PUSH_UP_PLANK_HOLD": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FYR_HOLLOWBODY_ROCK": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "VUP_PLUS_KNEETOCHEST_COMBO": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SIDE_PLANK_LATERAL_RAISE": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SUPERHERO_BURPEE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HOLLOWBODY_ABDUCTION": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "TIPTOE_CRUNCH": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KNEETONOSE_PULSE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PLANK_WALKOUT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_VUP": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "LONG_SIT_UP": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_BREAKDANCER": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SEATED_LEG_LIFT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "GORILLA_BURPEE": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "KNEEIN_TO_VOUT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BEAR_CRAWL_PUSH_UP": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PLANK_REACH": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "EIFFEL_TOWER_LEG_RAISE": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STRAIGHTARM_PLANK": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PLANK_UPDOWN": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "FROG_KICK": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "FYR_KNEES_TO_CHEST": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "FRONT_KICKTHROUGH": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_SIT_UP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_LEG_LIFT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "TBS_TOESTOBAR": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_MOUNTAIN_CLIMBER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CROSSBODY_CRUNCH__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DECLINE_LEG_LIFT_WITH_TWIST": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HANGING_LEG_RAISE__VARIATION_GETHIN": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BUTTERFLY_CRUNCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CROSSBODY_MOUNTAIN_CLIMBER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FLAT_BENCH_LYING_LEG_RAISE__GETHIN_VARIATION": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LYING_LEG_LIFT": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HANGING_ALTERNATING_SINGLELEG_RAISE": {
+    "Rating": 2.3,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SIT_UP__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PLANK_PUSH_UP": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ALTERNATING_LYING_LEG_RAISE": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DECLINE_LEG_LIFT": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CRUNCH__GETHIN_VARIATION": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PLANK__GETHIN_VARIATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_FLOOR_WIPER": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "CROSSBODY_TOETOUCH": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TOY_SOLDIER": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LATERAL_APE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HOLLOWBODY_KNEE_TUCK": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "AM_LEG_LIFT": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_DECLINE_ABS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HANGING_CRUNCH": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SIDE_PLANK": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BIRD_DOG": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLELEG_CURL_UP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEKETTLEBELL_WINDMILL": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AB_WHEEL_ROLLOUT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BENCH_MOUNTAIN_CLIMBER": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "FEETELEVATED_BENCH_SIDE_PLANK": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CROSSBODY_SIT_UP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DECLINE_KAYAK": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "30_DECLINE_REVERSE_CRUNCH": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DECLINE_SIT_UP_TWIST": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "30_FLAT_BENCH_LEG_RAISE": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "30_FLUTTER_KICK": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CHINUP_CRUNCH": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "HALF_TURKISH_GETUP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "30_HANGING_OBLIQUE_CRUNCH": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "30_HOLLOWBODY_HOLD": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PARALLEL_BARS_KNEE_RAISE": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "30_LANDMINE_TWIST": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PARALLEL_BARS_LEG_RAISE": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "30_SHOULDER_TAP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "30_SPIDER_CRAWL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SPIDER_CRUNCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "TOETOUCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "30_HANGING_TOESTOBAR": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "30_VUP": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "COCOON_CRUNCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BENCH_OBLIQUE_CRUNCH": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FULL_MOON": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PUSH_UP_TO_SIDE_PLANK": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TOTAL_FITNESS_AB_TUCK": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ACTIVE_HANG_FROM_BAR": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CATCOW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CRAB_WALK": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LUNGE_WITH_OVERHEAD_REACH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HANG_FROM_BAR": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TOTAL_FITNESS_HOLLOW_HOLD": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "TOTAL_FITNESS_SIDE_PLANK": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SIDE_PLANK_PULSE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TOTAL_FITNESS_SPIDER_CRAWL_UNWEIGHTED": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "TOTAL_FITNESS_VUP": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "ALTERNATING_SITTHROUGH_WITH_CRUNCH": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "XBODY_VUP": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "HAND_SHIFT_PLANK": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CROSSBODY_PLANK_MARCH": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BENTKNEE_COPENHAGEN_HIP_ADDUCTION": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "COPENHAGEN_PLANK": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ACFT_HANGING_LEG_TUCK": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ALTERNATING_HANGING_KNEE_RAISE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DUMBBELL_SUITCASE_CRUNCH": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "MEDICINE_BALL_ROTATIONAL_THROW": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HOLLOWHOLD_BALL_TOSS": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "PARTNER_FRONT_RUSSIAN_TWIST_AND_PASS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SIT_UP_WITH_SINGLEARM_OVERHAND_THROW": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "MEDICINE_BALL_PARTNER_TWIST": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PARTNER_SIDE_RUSSIAN_TWIST_AND_PASS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MEDICINE_BALL_HALF_MOON": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "EXERCISE_BALL_ROLLOUT": {
+    "Rating": 3.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "MEDICINE_BALL_PASS": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PARTNER_MEDICINE_BALL_SIT_UP": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "MEDICINE_BALL_RUSSIAN_TWIST": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "30_MEDICINE_BALL_SLAM": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "MEDICINE_BALL_TWIST": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DECLINE_OBLIQUE_CRUNCH": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DECLINE_SIT_UP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HANGING_WINDSHIELD_WIPER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "EXERCISE_BALL_PULLIN": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "EXERCISE_BALL_CRUNCH": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FEETELEVATED_CRUNCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SWISS_BALL_AB_ROLLOUT": {
+    "Rating": 3.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "EXERCISE_BALL_SQUAT_AND_TWIST": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SWISS_BALL_VUP_WITH_FOOT_PASS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "EXERCISE_BALL_PIKE": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "EXERCISE_BALL_BIRD_DOG": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "EXERCISE_BALL_SUPERMAN": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BOSU_CROSSBODY_CRUNCH": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "EXERCISE_BALL_KNEE_TUCK__GETHIN_VARATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ALTERNATING_EXERCISE_BALL_KNEE_TUCKS__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_BALL_CRUNCH": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BOSU_KNEE_TUCK": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "30_SIDE_PLANK_ON_BALL": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HANGING_EXERCISE_BALL_LEG_RAISE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "FEETELEVATED_PLANK_ON_BALL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ILIOTIBIAL_BAND_SMR": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ADDUCTOR_SMR": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LATERAL_BOX_JUMP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "THIGH_ADDUCTOR": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "THIGH_ABDUCTOR": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LATERAL_HOP": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLELEG_LYING_CROSSOVER_STRETCH": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CARIOCA_QUICK_STEP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_HIP_CIRCLE": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LATERAL_CONE_HOP": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DYNAMIC_PIGEON_STRETCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CROSSOVER_JACK": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TRAVELING_THIGH_KILLA": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FYR_THIGH_KILLA": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SIDELYING_LEG_ADDUCTION_SCISSOR": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "INCLINE_DUMBBELL_BICEPS_CURL": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BANDED_BICEPS_CURL_IN_SQUAT_POSITION": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BANDED_HAMMER_PRESS__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BAND_STANDING_CONCENTRATION_CURL": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BRACHIALIS_SMR": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "WIDEGRIP_BARBELL_CURL": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "EZBAR_SPIDER_CURL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_CURL": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CLOSEGRIP_EZBAR_CURL": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PREACHER_CURL": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CLOSEGRIP_BARBELL_CURL": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DRAG_CURL": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "REVERSEGRIP_BARBELL_CURL": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SEATED_WIDEGRIP_CURL_TO_CLOSEGRIP_CURL": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SEATED_STRAIGHBAR_CURL_SUPERSET": {
+    "Rating": 3.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "REVERSEGRIP_EZBAR_CURL": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "EZBAR_SPIDER_CURL__GETHIN_VARIATION": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PAUL_CARTER_BARBELL_CURL": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_BAND_BICEPS_CURL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CLOSEGRIP_EZBAR_CURL__GETHIN_VARIATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_STANDING_BARBELL_CURL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "EZBAR_PREACHER_CURL": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HAMMER_CURLS": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BICEPS_CURL_TO_SHOULDER_PRESS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "CONCENTRATION_CURL": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_BICEP_CURL": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "CROSSBODY_HAMMER_CURL": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_ALTERNATE_BICEP_CURL": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_DUMBBELL_PREACHER_CURL": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ALTERNATE_INCLINE_DUMBBELL_CURL": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_CONCENTRATION_CURL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ALTERNATING_INCLINE_DUMBBELL_BICEPS_CURL": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ALTERNATE_HAMMER_CURL": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SEATED_DUMBBELL_BICEPS_CURL": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_PREACHER_CURL": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_DUMBBELL_REVERSE_CURL": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PALMSOUT_INCLINE_BICEPS_CURL": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STRAIGHTARM_PLANK_WITH_BICEPS_CURL": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "FACEDOWN_INCLINE_DUMBBELL_BICEPS_CURL": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_HAMMER_CURL": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PAUL_CARTER_INCLINE_DUMBBELL_BICEPS_CURL": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "PAUL_CARTER_CONCENTRATION_CURL": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_DUMBBELL_CURL": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_BICEPS_CURL_TO_UPRIGHT_ROW": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "FYR_DUMBBELL_HAMMER_CURL": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_OVERHEAD_HOLD_WITH_SINGLEARM_CURL": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "FYR_KNEELING_BICEPS": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LUNGE_HOLD_DUMBBELL_CURL": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "FYR_DUMBBELL_BICEPS_CURL": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ALTERNATING_DUMBBELL_SNATCH": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "TBS_INCLINE_DUMBBELL_CURL": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "TBS_HAMMER_CURL": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "REVERSEGRIP_DUMBBELL_CURL": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "INCLINE_DUMBBELL_CURL__GETHIN_VARIATION": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HAMMER_CURL": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_DUMBBELL_CURL__GETHIN_VARIATION": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_HAMMER_CURL__GETHIN_VARIATION": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_SEATED_DUMBBELL_CURL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LYING_CABLE_CURL__GETHIN_VARIATION": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_BICEPS_CURL": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "AM_HAMMER_CURLS": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "AM_SEATED_HAMMER_CURLS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SEATED_ALTERNATING_BICEPS_CURL": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ALTERNATING_HAMMER_CURL": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ALTERNATING_BICEPS_CURL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PLATE_HAMMER_CURL": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BARBELL_SPIDER_CURL": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BARBELL_FOREHEAD_CURL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "OVERHEAD_CABLE_CURL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_ONEARM_CABLE_CURL": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_BICEPS_CABLE_CURL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CABLE_ROPE_HAMMER_CURL": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LYING_CABLE_BICEPS_CURL": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_ROPE_PREACHER_HAMMER_CURL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LYING_CLOSEGRIP_BAR_CURL_ON_HIGH_PULLEY": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_EZBAR_PREACHER_CURL__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SQUATTING_CABLE_EZBAR_BICEPS_CURL": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CABLE_STRAIGHTBAR_BICEPS_CURL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_REVERSEGRIP_CABLE_CURL": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LYING_HIGHCABLE_BICEPS_CURL": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HIGHPULLEY_CABLE_CURL__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_HIGH_CABLE_CURL__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HIGH_CABLE_CURLS": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SEATED_CABLE_BICEPS_CURL": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "LYING_CLOSEGRIP_BAR_CURL_ON_HIGH_PULLEY__GETHIN_VARIATION": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_CABLE_CURL__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "AM_CABLE_BICEPS_CURL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLEARM_CABLE_BICEPS_CURL": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BFR_CABLE_ROPE_HAMMER_CURL": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MACHINE_PREACHER_CURLS": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_MACHINE_PREACHER_CURL": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "MACHINE_PREACHER_CURL": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SMITH_MACHINE_DRAG_CURL": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "TBS_CHINUP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PULLUP__GETHIN_VARIATION": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "EZBAR_CURL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "REVERSE_BARBELL_PREACHER_CURLS": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_EZBAR_CURL__GETHIN_VARIATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TBS_EZBAR_CURL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_EZBAR_CURL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CALF_SMR": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_BARBELL_CALF_RAISE": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SMITH_MACHINE_STANDING_CALF_RAISE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_DUMBBELL_CALF_RAISE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLELEG_STANDING_DUMBBELL_CALF_RAISE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_WALKING_CALF_RAISE": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "WEIGHTED_DONKEY_CALF_RAISE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLELEG_MACHINE_SEATED_CALF_RAISE": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SMITH_MACHINE_CALF_RAISE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_CALF_RAISES": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_CALF_RAISE": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CALF_PRESS_ON_THE_LEG_PRESS_MACHINE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CALF_PRESS": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_SINGLELEG_CALF_PRESS__GETHIN_VARIATION": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SEATED_CALF_RAISE__GETHIN_VARIATION": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DONKEY_CALF_RAISE__GETHIN_VARIATION": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_CALF_RAISE_FACING_HACK_SQUAT_MACHINE__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CALF_PRESS_ON_A_HACK_SQUAT_MACHINE__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SMITH_MACHINE_STANDING_CALF_RAISES__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HACK_SQUAT_CALF_RAISE": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SEATED_CALF_PRESS__GETHIN_VARIATION": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LEG_PRESS_CALF_RAISE": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MACHINE_SEATED_CALF_RAISE": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "WALL_CALF_STRETCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_CALF_RAISE": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BANDSUSPENDED_KETTLEBELL_BENCH_PRESS": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_BAND_BENCH_PRESS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BAND_PUSH_UP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BAND_CHEST_FLY": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "CLOSEGRIP_BENCH_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_BENCH_PRESS__MEDIUM_GRIP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DECLINE_BARBELL_BENCH_PRESS": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "WIDEGRIP_BENCH_PRESS": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BARBELL_INCLINE_BENCH_PRESS_MEDIUMGRIP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BOARD_BENCH_PRESS": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BARBELL_BENCH_PRESSWIDE_GRIP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PAUL_CARTER_INCLINE_BENCH_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "INCLINE_BENCH_PRESS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BENCH_PRESS": {
+    "Rating": 5,
+    "RatingDesc": "Nothing more to be said"
+  },
+  "TBS_CLOSEGRIP_BENCH_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "AM_FLAT_BENCH_BARBELL_PRESS": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "UP_BENCH_PRESS": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "UP_CLOSEGRIP_BENCH_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "KING_MAKER_BARBELL_BENCH_PRESS": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KING_MAKER_INCLINE_BARBELL_BENCH_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SPOTO_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_PLYO_PUSH_UP": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "KETTLEBELL_ALTERNATING_FLOOR_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PUSHUPS": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "INCLINE_PUSH_UP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HANDSELEVATED_PUSH_UP": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DECLINE_PUSH_UP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CLOSE_PUSH_UP_TO_WIDE_PUSH_UP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "WIDEGRIP_HANDSELEVATED_PUSH_UP": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FEETELEVATED_PUSH_UP": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ISOMETRIC_WIPERS": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CLOCK_PUSH_UP": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PUSH_UP_WIDE": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SPHINX_PUSH_UP": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CLOSEHANDS_PUSH_UP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "TIGERBEND_PUSH_UP": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PLYO_PUSH_UP": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CLOSEGRIP_HANDSELEVATED_PUSH_UP": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SUSPENDED_PUSH_UP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SIDETOSIDE_PUSH_UP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "TYPEWRITER_PUSH_UP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DIAMOND_PUSH_UP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "JUDO_PUSH_UP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "WIDE_PUSH_UP": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CLAPPING_PUSH_UP": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STAGGERED_PUSH_UP": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "REVERSEGRIP_HANDSELEVATED_PUSH_UP": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SIDE_KICKTHROUGH_PUSH_UP": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_PUSH_UP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FROG_PUSH_UP": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "WIDE_PUSH_UP_PLANK_HOLD": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CLOSE_PUSH_UP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PUSH_UP__GETHIN_VARIATION": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_CHEST_DIPS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PUSH_UP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "UP_PUSH_UP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TOTAL_FITNESS_PLYO_PUSH_UP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SCAPULAR_PUSH_UP": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KING_MAKER_PUSH_UP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "WARRIOR_PUSH_UP": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ACFT_HANDRELEASE_PUSH_UP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "15REP_PUSH_UP": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ACFT_TRIPLECLAP_PUSH_UP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ACFT_SUPERMAN_PUSH_UP": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CROSSOVER_PUSH_UP": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BUTTERFLY": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LEVERAGE_CHEST_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DECLINE_SMITH_PRESS": {
+    "Rating": 3.1,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SMITH_MACHINE_BENCH_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MACHINE_CHEST_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SMITH_MACHINE_INCLINE_BENCH_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SMITH_MACHINE_CLOSEGRIP_BENCH_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SMITH_MACHINE_DECLINE_PRESS": {
+    "Rating": 3.1,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SMITH_MACHINE_BENCH_PRESS_THROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MACHINE_CHEST_FLY": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "MACHINE_BENCH_PRESS": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "MACHINE_SEATED_CHEST_PRESS__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SMITH_MACHINE_WEIGHTED_PUSH_UP": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SMITH_MACHINE_DECLINE_BENCH_PRESS": {
+    "Rating": 3.1,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "AM_PEC_DEC": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SMITH_MACHINE_PUSH_UP": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LOWCABLE_CROSSOVER": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_CABLE_CHEST_FLY": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_CROSSOVER": {
+    "Rating": 1.7,
+    "RatingDesc": "Mixed reception focused on sets, reps, day."
+  },
+  "INCLINE_CABLE_CHEST_PRESS": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_CABLE_CROSSOVER": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "LYING_CABLE_CHEST_FLY": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "PAUL_CARTER_CABLE_CROSSOVER": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "ONEARM_CABLE_CROSSOVER__GETHIN_VARIATION": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "INCLINE_CABLE_FLY__GETHIN_VARIATION": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_CROSSOVER__GETHIN_VARIATION": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SEATED_CABLE_CHEST_FLY": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLEARM_INCLINE_CABLE_CROSSOVER": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HIGHTOLOW_CABLE_CHEST_FLY": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "UP_CABLE_CROSSOVER": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "MEDICINE_BALL_CHEST_PASS": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MEDICINE_BALL_SPRAWL_TO_CHEST_PRESS": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MEDICINE_BALL_PUSH_UP": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_BENCH_PRESS": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_FLYES": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "INCLINE_DUMBBELL_BENCH_PRESS": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DECLINE_DUMBBELL_FLYES": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "REVERSEGRIP_INCLINE_DUMBBELL_BENCH_PRESS": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_DUMBBELL_FLYES": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "NEUTRALGRIP_DUMBBELL_BENCH_PRESS": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DECLINE_DUMBBELL_BENCH_PRESS": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_KETTLEBELL_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STRAIGHTARM_DUMBBELL_PULLOVER": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BENTARM_DUMBBELL_PULLOVER": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CLOSEGRIP_DUMBBELL_BENCH_PRESS": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEDUMBBELL_PUSH_UP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "INCLINE_DUMBBELL_CHEST_FLY": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PAUL_CARTER_DUMBBELL_SHRUG": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_PUSH_UP_ROW": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TBS_DUMBBELL_INCLINE_PRESS": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_DUMBBELL_FLY__GETHIN_VARIATION": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "DECLINE_DUMBBELL_FLY_AND_PRESS": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_DUMBBELL_FLY_AND_PRESS": {
+    "Rating": 2.3,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_DECLINE_DUMBBELL_BENCH_PRESS": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_INCLINE_DUMBBELL_BENCH_PRESS": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_DUMBBELL_PRESS__GETHIN_VARIATION": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_CHEST_PRESS__GETHIN_VARIATION": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_FLOOR_PRESS__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DECLINE_DUMBBELL_PRESS__GETHIN_VARIATION": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_CHEST_FLY": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "MACHINE_REAR_DELT_FLY": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "AM_DUMBBELL_BENCH_PRESS": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "UP_INCLINE_DUMBBELL_PRESS": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "UP_INCLINE_DUMBBELL_FLY": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SINGLEARM_DUMBBELL_FLOOR_PRESS": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "TOTAL_FITNESS_WEIGHTED_PUSH_UP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KING_MAKER_STANDING_DUMBBELL_SHOULDER_PRESS": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BODYWEIGHT_FLYES": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "CLOSEGRIP_EZBAR_BENCH_PRESS": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "CHEST_DIP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PASSTHROUGH_STRETCH_WITH_BAND": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "WEIGHTED_PUSH_UP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SVEND_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BAR_PUSH_UP_SMITH_MACHINE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PLATEWEIGHTED_PUSH_UP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DOUBLEBAR_ROLLOUT_CHEST_FLY": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "EXERCISE_BALL_CHEST_STRETCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FEETELEVATED_PUSH_UP_ON_BALL": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STANDING_ALTERNATING_BAND_SPEED_ROW": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BAND_ROUNDHOUSE_ELBOW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PALMSDOWN_WRIST_CURL_OVER_BENCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PALMSUP_WRIST_CURL_OVER_BENCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_BEHINDTHEBACK_WRIST_CURL": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_FINGER_CURL": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SEATED_PALMSUP_WRIST_CURL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_PALMSDOWN_WRIST_CURL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PARTNER_FARMERS_WALK": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "DUMBBELL_SUITCASE_CARRY": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SUITCASE_DUMBBELL_CARRY": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SIDE_PLANK_WITH_DUMBBELL_EXTERNAL_ROTATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_FARMERS_WALK": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LANDMINE_PRESS_AND_CATCH": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PLATE_HALO": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_CABLE_PUSHDOWN": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "PIRIFORMIS_SMR": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BARBELL_GLUTE_BRIDGE": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_HIP_THRUST": {
+    "Rating": 5,
+    "RatingDesc": "A fan favorite glute exercise"
+  },
+  "KETTLEBELL_THRUSTER": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_TRICEPS_KICKBACK": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLELEG_CABLE_HIP_EXTENSION": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "CABLE_ROPE_PULLTHROUGH_DEADLIFT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "GLUTE_BRIDGE": {
+    "Rating": 4.5,
+    "RatingDesc": "Mixed reception focused on bench, press, form."
+  },
+  "SINGLELEG_GLUTE_BRIDGE": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STEPUP_WITH_KNEE_RAISE": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_HIP_EXTENSION": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "LYING_GLUTE_STRETCH": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "LUNGE_KICK": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CURTSY_LUNGE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ALTERNATING_STANDING_GLUTE_STRETCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SIDELYING_LEG_LIFT": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_PROGRESSIVE_HIGH_KNEE": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "GLUTEHAM_RAISE__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LUNGE_GLUTE_STRETCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "NATURAL_GLUTE_HAM_RAISE__GETHIN_VARIATION": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "GROINER": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "WALKING_LUNGE": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "TOTAL_FITNESS_BEAR_CRAWL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PIGEON_STRETCH": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LEVITATING_SIDE_KICKTHROUGH": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_SINGLELEG_HIP_THRUST": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "MEDICINE_BALL_DUCK_WALK": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "EXERCISE_BALL_HIP_THRUST": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_DEADLIFT": {
+    "Rating": 5,
+    "RatingDesc": "One of the core three, just make sure you have good form!"
+  },
+  "SUMO_DEADLIFT": {
+    "Rating": 4.3,
+    "RatingDesc": "Mixed reception focused on squat, deadlift, bench."
+  },
+  "POWER_CLEAN": {
+    "Rating": 4.5,
+    "RatingDesc": "Mixed reception focused on power, squat, day."
+  },
+  "GOOD_MORNING": {
+    "Rating": 4.3,
+    "RatingDesc": "Mixed reception focused on weight, work, deadlift."
+  },
+  "BARBELL_STIFFLEGGED_DEADLIFT": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ROMANIAN_DEADLIFT": {
+    "Rating": 4.4,
+    "RatingDesc": "Mixed reception focused on program, sets, back."
+  },
+  "STIFFLEGGED_DEADLIFT": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KETTLEBELL_PASSTHROUGH_LUNGE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "KETTLEBELL_ONELEGGED_DEADLIFT": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_KETTLEBELL_CLEAN": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLELEG_KETTLEBELL_DEADLIFT": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_KETTLEBELL_SWING": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ROMANIAN_DEADLIFT_WITH_DUMBBELLS": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STIFFLEGGED_DUMBBELL_DEADLIFT": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BOX_JUMP": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on pull, lower, day."
+  },
+  "BOX_JUMP_MULTIPLE_RESPONSE": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SLED_PUSH": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HAMSTRING_SLIDE": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LYING_CABLE_LEG_CURL": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "STANDING_CABLE_LEG_CURL": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LYING_LEG_CURLS": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "GLUTE_HAM_RAISE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SEATED_LEG_CURL": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SMITH_MACHINE_STIFFLEGGED_DEADLIFT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LYING_LEG_CURL__GETHIN_VARIATION": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "PAUL_CARTER_LEG_EXTENSION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LYING_LEG_CURL": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SEATED_HAMSTRING_CURL__GETHIN_VARIATION": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SINGLELEG_LYING_LEG_CURL": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LEG_CURL": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "LEG_EXTENSION__GETHIN_VARIATION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLELEG_LEG_EXTENSION": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "LYING_HAMSTRING_CURLS__GETHIN_VARIATION": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "AM_SEATED_HAMSTRING_CURL": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "UP_HAMSTRING_CURL": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "NATURAL_GLUTE_HAM_RAISE": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STANDING_LEG_SWING": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KNEE_TUCK_JUMP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "INCHWORM": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LYING_GROIN_STRETCH_WITH_BAND": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "WORLDS_GREATEST_STRETCH": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLELEG_BALANCE_AND_REACH": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_HAMSTRING_STRETCH": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "REVERSE_LUNGE": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on program, body, would."
+  },
+  "TOTAL_FITNESS_HAMSTRING_SLIDE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LYING_HAMSTRING_STRETCH_WITH_BAND": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ALTERNATING_LUNGE_JUMP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "EXERCISE_BALL_LEG_CURL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BALL_HAMSTRING_HAT_TRICK": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BANDASSISTED_PULLUP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ASSISTED_CHINUP": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_BAND_LOW_ROW": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LATISSIMUS_DORSI_SMR": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BENTARM_BARBELL_PULLOVER": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_PULLOVER_TO_PRESS": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_BARBELL_BENTOVER_ROW": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SIDE_KICKTHROUGH_TO_KETTLEBELL_HIGH_PULL": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PJR_PULLOVER": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_SEAL_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "INCLINE_DUMBBELL_ROW__GETHIN_VARIATION": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "FYR_BENTOVER_DUMBBELL_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STRAIGHTARM_DUMBBELL_PULLOVER__GETHIN_VARIATION": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BENTOVER_DUMBBELL_ROW__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BENTOVER_DUMBBELL_REAR_DELT_FLY": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "TOTAL_FITNESS_DUMBBELL_ISOMETRIC_ROW_HOLD": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_RENEGADE_ROW": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "WEIGHTED_PULLUP": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FLOOR_ROPE_CLIMB": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "AROUNDTHEWORLD_PULLUP": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "LSIT_CHINUP": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BACK_FLYES__GETHIN_VARIATION": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "INCLINE_STRAIGHTARM_PULLOVER": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "MACHINE_HIGH_ROW": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CLOSEGRIP_PULLDOWN": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SHOTGUN_ROW": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CLOSEGRIP_FRONT_LAT_PULLDOWN": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STRAIGHTARM_ROPE_PULLDOWN": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "LAT_PULLDOWN": {
+    "Rating": 5,
+    "RatingDesc": "Great way to get good at pushups. Also very effecient and fun."
+  },
+  "STRAIGHTARM_PULLDOWN": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_KNEELING_LAT_PULLDOWN": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ELEVATED_CABLE_ROWS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KNEELING_LAT_PULLDOWN": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BEHINDTHENECK_PULLDOWN": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "STRAIGHTARM_CABLE_PULLOVER": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_STRAIGHTARM_PULLDOWN__GETHIN_VARIATION": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ROPE_LAT_PULLDOWN__GETHIN_VARIATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STRAIGHTARM_PULLDOWN__GETHIN_VARIATION": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HIGHCABLE_STANDING_ROW": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LAT_PULLDOWN__GETHIN_VARIATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "WIDEGRIP_LAT_PULLDOWN__GETHIN_VARIATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BEHINDTHENECK_PULLDOWN__GETHIN_VARIATION": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SINGLEARM_CABLE_ROW__GETHIN_VARIATION": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_CLOSEGRIP_PULLDOWN": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_WIDEGRIP_PULLDOWN": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "UP_LAT_PULLDOWN": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "REVERSEGRIP_LAT_PULLDOWN": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "MACHINE_SEATED_ROW": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "MACHINEASSISTED_PULLUP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_PULLDOWN": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_MACHINE_HIGH_ROW": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_MACHINE_ROW__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "KING_MAKER_LAT_PULLDOWN": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PULLUPS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PULLUP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ROPE_CLIMB": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "NEUTRALGRIP_PULLUP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ONE_HANDED_HANG": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_SIDE_BEND_STRETCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BURPEE_TO_PULLUP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "NEGATIVE_PULLUP": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CHINUP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_PULLUP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "JUMP_TO_PULLUP": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "BENTOVER_SCAPULAR_SLIDE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "IRON_CROSS_STRETCH": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "KING_MAKER_PULLUP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MEDICINE_BALL_SLAM": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "BAND_GOOD_MORNING": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BAND_DEADLIFT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LOWER_BACK_SMR": {
+    "Rating": 1.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BARBELL_DEFICIT_DEADLIFT": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "RACK_PULL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PAUL_CARTER_ROMANIAN_DEADLIFT": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "TBS_GOOD_MORNING": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "TBS_ROMANIAN_DEADLIFT": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DEADLIFT__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_GOOD_MORNING": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "UP_CONVENTIONAL_DEADLIFT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_SUMO_DEADLIFT_HIGH_PULL": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KETTLEBELL_DEADLIFT": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_SKIER": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "TBS_DUMBBELL_ROMANIAN_DEADLIFT": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STIFFLEGGED_DUMBBELL_DEADLIFT__GETHIN_VARIATION": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DUMBBELL_KICKSTAND_DEADLIFT": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLELEG_STIFFLEGGED_DEADLIFT_TO_ROW": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PARTNER_FLATBENCH_BACK_EXTENSION": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PARTNER_BENCH_BACK_EXTENSION": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "RACK_PULL__GETHIN_VARIATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HEX_BAR_DEADLIFT__GETHIN_VARIATION": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ACFT_LOWHANDLE_TRAP_BAR_DEADLIFT": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "NEUTRALGRIP_LAT_PULLDOWN": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SEATED_CABLE_DEADLIFT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CABLE_STIFFLEGGED_DEADLIFT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLELEG_CABLE_STIFFLEGGED_DEADLIFT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BACK_EXTENSION": {
+    "Rating": 3.9,
+    "RatingDesc": "Mixed reception focused on like, press, knee."
+  },
+  "SUPERMAN": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "CHILDS_POSE": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PARTNER_SUPERMAN_WITH_ALTERNATING_HIGHFIVE": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "YOGA_PLEX": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TBS_BACK_EXTENSION": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LOWER_BACK_STRETCH__YATES_VARIATION": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HYPEREXTENSION__GETHIN_VARIATION": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BACK_EXTENSION__GETHIN_VARIATION": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "WEIGHTED_BACK_EXTENSION": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "EXERCISE_BALL_WEIGHTED_HYPEREXTENSION": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "EXERCISE_BALL_REAR_DELT_FLY": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "LYING_REAR_DELT_Y": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "PARTNER_SIDE_PLANK_BAND_ROW": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BANDASSISTED_CHINUP": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BAND_BENTOVER_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HEAVY_BAND_BENTOVER_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "REVERSEGRIP_BENTOVER_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ONEARM_LONG_BAR_ROW": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BENT_OVER_BARBELL_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PENDLAY_ROW": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BARBELL_SEAL_ROW": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_DEADLIFT_BENT_ROW_COMPLEX": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "TBS_DEFICIT_DEADLIFT": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BENTOVER_BARBELL_ROW__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_BENTOVER_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_DEADLIFT_BENTOVER_ROW_COMPLEX": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "KETTLEBELL_ALTERNATING_RENEGADE_ROW": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_BENTOVER_ROW_TO_CLEAN": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "UP_DEFICIT_KETTLEBELL_STIFFLEGGED_DEADLIFT": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ONEARM_DUMBBELL_ROW": {
+    "Rating": 4.7,
+    "RatingDesc": "Personal favorite :)"
+  },
+  "INCLINE_DUMBBELL_ROW": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "MANMAKER": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "DUMBBELL_BENTOVER_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_PULLOVER_TO_SKULLCRUSHER": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DUMBBELL_SEAL_ROW__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DECLINE_DUMBBELL_CHEST_FLY": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "TBS_BENTOVER_DUMBBELL_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_SINGLE_ARM_ROW": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_STIFFLEGGED_DEADLIFT": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_BENCH_DUMBBELL_ROW": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SEATED_CABLE_ROWS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "UPSIDEDOWN_PULLUP": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SMITH_MACHINE_INVERTED_ROW": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SUSPENDED_ROW": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_BENTOVER_REAR_DELT_RAISE__GETHIN_VARIATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_CABLE_SEATED_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PAUL_CARTER_LAT_PULLDOWN": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ONEARM_CABLE_READ_DELT_FLY__GETHIN_VARIATION": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "UP_SEATED_CABLE_ROW": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "UP_CABLE_STRAIGHTARM_PULLDOWN": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ROWER": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SMITH_MACHINE_BENTOVER_ROW": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LEVERAGE_HIGH_ROW": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "MACHINE_LOW_ROW": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_LAT_PULLDOWN": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "RHOMBOIDS_SMR": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ACFT_MEDICINE_BALL_OVERHEAD_POWER_THROW": {
+    "Rating": 2.3,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BAND_SEATED_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_SHRUG": {
+    "Rating": 3.5,
+    "RatingDesc": "Mixed reception focused on ive, work, traps."
+  },
+  "BARBELL_BEHINDTHEBACK_SHRUG": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_INVERTED_ROW": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "KETTLEBELL_SUMO_DEADLIFT_HIGH_PULL": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STANDING_DUMBBELL_SHRUG": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_DUMBBELL_UPRIGHT_ROW": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_PULLOVER": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STANDING_DUMBBELL_SHRUG__GETHIN_VARIATION": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_DUMBBELL_ROW": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "CABLE_STRAIGHTBAR_UPRIGHT_ROW": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_SHRUG": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SMITH_MACHINE_SHRUG": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SMITH_MACHINE_BEHINDTHEBACK_SHRUG": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SMITH_MACHINE_UPRIGHT_ROW": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SMITH_MACHINE_SINGLEARM_SHRUG": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLELEG_DEPTH_SQUAT": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "BANDED_JUMP_SQUAT": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SPEED_BOX_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BAND_SPLIT_SQUAT": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BAND_FRONT_SQUAT": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SQUAT_HOLD_WITH_BAND_PULLAPART": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BANDED_SQUAT_TOE_TAP": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BAND_OVERHEAD_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "QUADRICEPS_SMR": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BARBELL_FULL_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_BACK_SQUAT_TO_BOX": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PUSHPRESS": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "POWER_SNATCH": {
+    "Rating": 4.4,
+    "RatingDesc": "Mixed reception focused on lifts, week, power."
+  },
+  "BARBELL_WALKING_LUNGE": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "NARROWSTANCE_SQUAT": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BARBELL_SQUAT": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on barbell, bench, sets."
+  },
+  "BARBELL_FRONT_SQUAT": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BARBELL_FORWARD_LUNGE": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SMITH_MACHINE_BOX_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_STEPUP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_BULGARIAN_SPLIT_SQUAT": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "BARBELL_HACK_SQUAT": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HACK_SQUAT": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on sets, work, bands."
+  },
+  "BARBELL_THRUSTER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PUSHJERK": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_BACK_SQUAT": {
+    "Rating": 5.0,
+    "RatingDesc": "One of the most highly reccommended leg exercises!"
+  },
+  "ZERCHER_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_SIDE_SPLIT_SQUAT": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BARBELL_SPEED_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_SIDE_DEADLIFT": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BARBELL_SQUAT_TO_A_BENCH": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BARBELL_REVERSE_LUNGE": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CLOSESTANCE_DUMBBELL_FRONT_SQUAT": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BARBELL_FRONT_SQUAT_TO_BACK_SQUAT": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "BARBELL_FRONTTOBACK_SQUAT": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "FRONT_SQUAT_BODYBUILDER": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BARBELL_STEPDOWN_REVERSE_LUNGE": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "PAUL_CARTER_BACK_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PAUL_CARTER_BARBELL_SPLIT_SQUAT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "TBS_HIGHBAR_BACK_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TBS_BARBELL_FRONT_SQUAT": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SQUAT__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_LUNGE__GETHIN_VARIATION": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "RACK_DEADLIFT__GETHIN_VARIATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_SQUAT__GETHIN_VARIATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_GOOD_MORNING__GETHIN_VARIATION": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "AM_BARBELL_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "UP_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KING_MAKER_BARBELL_BACK_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KING_MAKER_BARBELL_DEADLIFT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "GOBLET_SQUAT": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_KETTLEBELL_OVERHEAD_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_SIDE_SQUAT": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_SUMO_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_THRUSTER_PROGRESSION": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KETTLEBELL_POWER_CLEAN": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_FIRE_FEET": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLE_ARM_OVERHEAD_KETTLEBELL_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PULSING_GOBLET_SQUAT": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DOUBLEKETTLEBELL_ALTERNATING_LUNGE_TO_CLEAN": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FYR_GOBLET_SQUAT": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_KETTLEBELL_SUMO_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DOUBLEKETTLEBELL_FRONT_SQUAT": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_KETTLEBELL_SQUAT_CLEAN": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_KETTLEBELL_FRONT_SQUAT": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_FRONT_RACK_LUNGE": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_GOBLET_SQUAT": {
+    "Rating": 3.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_SQUAT": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_LUNGES": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_REVERSE_LUNGE": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on program, body, would."
+  },
+  "SPLIT_SQUAT_WITH_DUMBBELLS": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_SUMO_SQUAT": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_SEATED_BOX_JUMP": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DUMBBELL_STEPUP": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_WALKING_LUNGE": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_THRUSTER": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_FRONT_SQUAT": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_LATERAL_HOP": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "DUMBBELL_LUNGE_WITH_BICEPS_CURL": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_JUMP_SQUAT": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLELEG_DUMBBELL_ROMANIAN_DEADLIFT": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SEESAW_LUNGE": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "FYR_DUMBBELL_FRONT_SQUAT": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_SPLIT_SQUAT": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_DEADLIFT": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SINGLEARM_STIFFLEGGED_DEADLIFT": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "DUMBBELL_RACKED_REVERSE_LUNGE": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "TOTAL_FITNESS_DUMBBELL_REVERSE_LUNGE": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_DUMBBELL_SNATCH": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "TOTAL_FITNESS_DUMBBELL_STEPUP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_DUMBBELL_FRONT_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KING_MAKER_WEIGHTED_JUMP_SQUAT": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "3D_DUMBBELL_LUNGE": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_JUMP_SQUAT_WITH_ROTATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DUMBBELL_STEPDOWN_REVERSE_LUNGE": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "TIRE_FLIP": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BEAR_CRAWL_SLED_DRAG": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HEXBAR_DEADLIFT": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "WEIGHTED_SISSY_SQUAT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BENCH_SKIP": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "BARBELL_SQUAT_WITH_PLATE_SLIDE": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SUSPENDED_SPLIT_SQUAT": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BURPEE_OVER_BARBELL": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLECONE_SPRINT_DRILL": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLELEG_KNEETAP_SQUAT": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PLATE_PUSH": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HYBRID_DEADLIFT": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LANDMINE_SQUAT": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_BULGARIAN_SPLIT_SQUAT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ACFT_SPRINTDRAGCARRY": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLELEG_PRESS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STAIR_CLIMBER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LEG_PRESS": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ELLIPTICAL_TRAINER": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "NARROWSTANCE_LEG_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STAIRMASTER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SMITH_MACHINE_BACK_SQUAT": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LEG_EXTENSIONS": {
+    "Rating": 3.8,
+    "RatingDesc": "Mixed reception focused on reps, 12s, sets."
+  },
+  "TREADMILL_RUNNING": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STATIONARY_BIKE": {
+    "Rating": 1.7,
+    "RatingDesc": "Mixed reception focused on something, horrible, lower."
+  },
+  "TREADMILL_JOGGING": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SMITH_MACHINE_LEG_PRESS": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SEATED_LEG_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SMITH_MACHINE_PISTOL_SQUAT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TBS_HACK_SQUAT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LEG_EXTENSIONS__GETHIN_VARIATION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SMITH_MACHINE_FRONT_SQUAT": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLELEG_HACK_SQUAT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "NARROWSTANCE_HACK_SQUAT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STIFFLEGGED_DEADLIFT__GETHIN_VARIATION": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLELEG_PRESS__GETHIN_VARIATION": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SMITH_MACHINE_LUNGE_SQUAT": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HACK_SQUAT__GETHIN_VARIATION": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LEG_PRESS__GETHIN_VARIATION": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "AM_LEG_PRESS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "LEG_EXTENSION": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on leg, bench, deadlift."
+  },
+  "UP_QUAD_EXTENSION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "UP_SINGLELEG_PRESS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "UP_LEG_PRESS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KING_MAKER_LEG_PRESS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLELEG_LEG_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "KING_MAKER_HACK_SQUAT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "JUMPING_ROPE": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FORWARD_LUNGE": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SIDETOSIDE_BOX_SKIP": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "BODYWEIGHT_SQUAT": {
+    "Rating": 4.0,
+    "RatingDesc": "Mixed reception focused on smolov, deadlift, squat."
+  },
+  "BROAD_JUMP": {
+    "Rating": 4.3,
+    "RatingDesc": "Mixed reception focused on testing, broad, jump."
+  },
+  "BURPEE": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SCISSORS_JUMP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "JUMPING_JACK": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ARMSCROSSED_JUMP_SQUAT": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BODYWEIGHT_REVERSE_LUNGE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "TREADMILL_WALKING": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DEPTH_JUMP_BOX_JUMP": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BODYWEIGHT_WALKING_LUNGE": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LATERAL_LUNGE": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "JUMP_SQUAT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "OVER_BENCH_JUMP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SPLIT_JUMP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "90DEGREE_JUMP_SQUAT": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SKIP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KNEELING_HIP_FLEXOR_STRETCH": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "LYING_QUAD_STRETCH_WITH_BAND": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "THIGH_KILLA": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SOUTHPAW_SPRAWL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "WALL_SQUAT": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SPRAWL_FROG_KICK": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "POP_SQUAT": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SIDE_LUNGE_TOUCHING_HEEL": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLELEG_BOX_SQUAT": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "JUMP_LUNGE_HEEL_KICK": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BURPEE_BOX_JUMP": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "HIGH_KNEES": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "RUNNING_LUNGE": {
+    "Rating": 3.5,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "INOUT_JUMP_SQUAT": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "GORILLA_SQUAT": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BURPEE_TUCK_JUMP": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SPEED_SKATER": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "JUMPING_KNEE_UPDOWN": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ALTERNATING_STANDING_KNEEPULL_STRETCH": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEAL_JACK": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KNEELING_QUAD_THORACIC_STRETCH": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLELEG_SQUAT_WITH_KNEE_TAP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SHUTTLE_RUN": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SQUAT_ISOMETRIC_HOLD": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "WALL_SIT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "WALKING_LUNGE_WITH_HIP_EXTENSION": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SQUAT_WITH_ALTERNATING_SIDE_LEG_RAISE": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "LATERAL_SQUATS": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "WALKING_LUNGE_WITH_TWIST": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FYR_AIR_SQUAT": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_TUCK_JUMP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PUSH_UP_SPRAWL_TUCK_JUMP": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FYR_RUNNING_LUNGE": {
+    "Rating": 3.5,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "FYR_JUMPING_LUNGE": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FYR_SPRAWL_FROG_KICK": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SINGLELEG_BURPEE": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FYR_GORILLA_SQUAT": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BANDED_COMPASS_JUMP_SQUAT": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INOUT_SPRAWL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KNEETUCK_KICKUP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BEAR_CRAWL_DONKEY_KICK": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SOUTHPAW_SPRAWL_WITH_PUSH_UP": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BOUNCING_LUNGE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BODYWEIGHT_SQUAT__GETHIN_VARIATION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_ALTERNATING_LUNGE": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "BODYWEIGHT_WALKING_LUNGE__GETHIN_VARIATION": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "AM_JUMP_SQUAT": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "AM_BODYWEIGHT_SQUAT": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HIGH_KNEES_SPRAWL_DRILL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "UP_BULGARIAN_SPLIT_SQUAT": {
+    "Rating": 3.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BOOTSTRAPPER_SQUAT": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TOTAL_FITNESS_BROAD_JUMP": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TOTAL_FITNESS_LATERAL_LUNGE": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "LATERAL_SHUFFLE": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TOTAL_FITNESS_SKIP": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TOTAL_FITNESS_SPIDER_LUNGE": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SPIDER_LUNGE_STRETCH": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SPIDER_LUNGE_WITH_TROTATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_QUAD_STRETCH": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "VERTICAL_JUMP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KING_MAKER_BURPEE": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KING_MAKER_EXPLOSIVE_HIGH_JUMP": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "LUNGE_HIGHKNEE_CLAP": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SPRINTER_BURPEE": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SHUTTLE_RUN_TRAINING": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MEDICINE_BALL_NINJA": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_AIR_BALL_PLUS_MEDICINE_BALL_JUMPING_SPRAWL": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "MEDICINE_BALL_COWBOY_SQUAT": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MEDICINE_BALL_JUMPING_JILL": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_LATERAL_HOP_TO_SPRINT": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SMITH_MACHINE_LUNGE_SPRINT": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SISSY_SQUAT": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "WALL_BALL_TOSS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "EXERCISE_BALL_BULGARIAN_SPLIT_SQUAT": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BAND_PULL_APART": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BAND_SHOULDER_PRESS": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BAND_LATERAL_RAISE": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BAND_UPRIGHT_ROW": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STAGGEREDSTANCE_BAND_SHOULDER_PRESS": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_BANDED_LANDMINE_PRESS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BAND_FRONT_RAISE_REAR_FLY_ROW_COMBO": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CLEAN_AND_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CLEAN_AND_JERK": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on day, squat, snatch."
+  },
+  "MILITARY_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SEATED_BARBELL_SHOULDER_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_BRADFORD_PRESS": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_SHOULDER_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_REAR_DELT_BENTOVER_ROW": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BARBELL_UPRIGHT_ROW": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "LYING_REAR_DELT_FLY": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "MACHINE_SHOULDER_MILITARY_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_BARBELL_PRESS_BEHIND_NECK": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BARBELL_FRONT_RAISE": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "OVERHEAD_BAR_FRONT_RAISE": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_BARBELL_SHOULDER_PROTRACTION": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BEHINDTHEHEAD_PUSHPRESS": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SEATED_EZBAR_SHRUG": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PAUL_CARTER_BARBELL_SEATED_MILITARY_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TBS_BARBELL_MILITARY_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "INCLINE_FRONT_BARBELL_RAISE__GETHIN_VARIATION": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BARBELL_FRONT_RAISE__GETHIN_VARIATION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_BARBELL_LATERAL_RAISE": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "AM_UPRIGHT_ROW": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "AM_BARBELL_SHOULDER_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_BARBELL_SHOULDER_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KING_MAKER_BARBELL_THRUSTER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BARBELL_BEAR_COMPLEX": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_KETTLEBELL_PUSHPRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_KETTLEBELL_SNATCH": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_KETTLEBELL_CLEAN_AND_JERK": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_PIRATE_SHIP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DOUBLE_KETTLEBELL_PUSH_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DOUBLEKETTLEBELL_WINDMILL": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FYR_KETTLEBELL_POWER_CLEAN": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KETTLEBELL_UPRIGHT_ROW": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KETTLEBELL_UPRIGHT_ROW_AND_PRESS": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLEARM_KETTLEBELL_THRUSTER": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DOUBLEKETTLEBELL_SHOULDER_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DOUBLEKETTLEBELL_PUSHPRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_FRONT_RAISE_TO_LATERAL_RAISE": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_PALMIN_DUMBBELL_SHOULDER_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_PALMSIN_SHOULDER_PRESS": {
+    "Rating": 3.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SEATED_DUMBBELL_PRESS": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_DUMBBELL_SHOULDER_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_LATERAL_RAISE": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "INCLINE_DUMBBELL_REVERSE_FLY": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "OVERHEAD_DUMBBELL_FRONT_RAISE": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SEATED_DUMBBELL_SHOULDER_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ALTERNATING_STANDING_SHOULDER_PRESS": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_INCLINE_REAR_DELT_RAISE": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ALTERNATING_DUMBBELL_FRONT_RAISE": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ALTERNATING_DELTOID_RAISE": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLEDUMBBELL_FRONT_RAISE": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ARNOLD_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLEARM_STANDING_SHOULDER_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_FRONT_RAISE": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BENTOVER_DUMBBELL_REAR_DELT_ROW": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "INCLINE_DUMBBELL_FRONT_RAISE": {
+    "Rating": 3.4,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SIDE_LATERAL_RAISE": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_EXTERNAL_SHOULDER_ROTATION": {
+    "Rating": 2.4,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_INCLINE_LATERAL_RAISE": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_REAR_DELT_FLY": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_SIDE_LATERAL_RAISE": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_LYING_REAR_LATERAL_RAISE": {
+    "Rating": 2.3,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "HEADONBENCH_DUMBBELL_REAR_DELT_RAISE": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "CUBAN_PRESS": {
+    "Rating": 3.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_SIDE_LYING_REAR_FLY": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_DUMBBELL_UPRIGHT_ROW": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_HALFKNEELING_SHOULDER_PRESS": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_SHOULDER_PRESS_WITH_BODY_ROTATION": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PAUL_CARTER_REARDELT_FLY": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "FYR_DUMBBELL_SHOULDER_PRESS": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "FYR_SINGLEARM_DUMBBELL_PRESS": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FYR_DUMBBELL_TEMPO_LRAISE": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_SEESAW_SHOULDER_PRESS": {
+    "Rating": 2.5,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "FYR_DUMBBELL_FRONT_RAISE_TO_LATERAL_RAISE": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "FYR_DUMBBELL_ARNOLD_PRESS": {
+    "Rating": 3.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "FYR_DUMBBELL_THRUSTER": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_HANG_SNATCH": {
+    "Rating": 2.3,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SURFER_SPRAWL": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "DUMBBELL_CLEAN_AND_PRESS": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "STANDING_ONEARM_SHOULDER_PRESS__GETHIN_VARIATION": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "INCLINE_FRONT_DUMBBELL_RAISE__GETHIN_VARIATION": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_LATERAL_RAISE": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "INCLINE_REARDELT_FLY__GETHIN_VARIATION": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "INCLINE_BENCH_REAR_DUMBBELL_FLY__GETHIN_VARIATION": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "DUMBBELL_FRONT_RAISE_AND_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "ROTATOR_CUFF_WARMUP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_LATERAL_RAISE__GETHIN_VARIATION": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_DUMBBELL_ARC_ROW": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_REAR_DELT_RAISES__GETHIN_VARIATION": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_DUMBBELL_LATERAL_RAISE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "AM_DUMBBELL_SHOULDER_PRESS": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "AM_DUMBBELL_SIDE_RAISE": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_FRONT_RAISE": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "UP_DUMBBELL_LATERAL_RAISE": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "UP_SEATED_DUMBBELL_OVERHEAD_PRESS": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELL_RACKED_CARRY": {
+    "Rating": 3.8,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DUMBBELL_CLEAN_AND_PUSHPRESS": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TOTAL_FITNESS_DUMBBELL_FARMERS_CARRY": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_DUMBBELL_RACKED_CARRY": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "KING_MAKER_DUMBBELL_LATERAL_RAISE": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_SHADOW_BOXING": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KING_MAKER_DUMBBELL_FARMERS_CARRY": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "KING_MAKER_DUMBBELL_SHRUG": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CAR_DRIVER": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FRONT_PLATE_RAISE": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BATTLE_ROPES": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on seconds, clean, press."
+  },
+  "LANDMINE_LINEAR_JAMMER": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BAR_SHOULDER_EXTENSION_STRETCH": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PLATE_SHOULDER_CIRCLE_BIG_TO_SMALL": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STANDING_SUSPENDED_REAR_DELT_FLY": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "WAITERS_CARRY": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "TOWEL_DUMBBELL_FRONT_RAISE": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "REACHROLLLIFT_COMBO": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "UPRIGHT_ROW__GETHIN_VARIATION": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PLATE_LATERAL_RAISE": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_MILITARY_PRESS__GETHIN_VARIATION": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BENTOVER_PLATE_REAR_DELT_RAISE": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_LANDMINE_PRESS": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PLATE_FRONT_RAISE": {
+    "Rating": 3.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_LANDMINE_PUSHPRESS": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_CABLE_FRONT_RAISE": {
+    "Rating": 2.3,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SEATED_FACE_PULL": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_BENTOVER_CABLE_REAR_DELT_FLY": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SEATED_CABLE_SHOULDER_PRESS": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STANDING_FACE_PULL": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "STANDING_CABLE_REAR_DELT_ROW": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_LOWPULLEY_DELTOID_RAISE": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_CROSSEDCABLE_REAR_DELT_FLY": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_LYING_CABLE_FRONT_RAISE": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LYING_CABLE_FRONT_RAISE": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_REAR_DELT_FLY__GETHIN_VARIATION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ONEARM_CABLE_SIDE_RAISE__GETHIN_VARIATION": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ROPE_FACE_PULL__GETHIN_VARIATION": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "LYING_CABLE_LATERAL_RAISE": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_SEATED_ROW": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_CABLE_LATERAL_RAISE": {
+    "Rating": 2.3,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "UP_CABLE_FACE_PULL": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SMITH_MACHINE_SHOULDER_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MACHINE_SHOULDER_PRESS": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "REVERSE_MACHINE_FLYES": {
+    "Rating": 3.7,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SINGLEARM_SMITH_MACHINE_UPRIGHT_ROW": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SMITH_MACHINE_BEHINDTHENECK_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SMITH_MACHINE_BEHINDTHENECK_PRESS__GETHIN_VARIATION": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "HANDSTAND_PUSH_UP": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "CROSSBODY_SHOULDER_STRETCH": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ARM_CIRCLE": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "HAND_STAND_PUSH_UP": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "WALL_WALK": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "WALL_SHOULDER_TAP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BEAR_CRAWL_SHOULDER_TAP": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SHADOW_BOXING": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BEAR_CRAWL_FIRE_FEET": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "WALL_SPRAWL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BENT_OVER_SHOULDER_Y": {
+    "Rating": 2.0,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SHOULDER_L": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TBS_INVERTED_ROW": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SHOULDER_T": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "FLOOR_ANGEL": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "SHOULDER_EXTENSION_STRETCH": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MEDICINE_BALL_SCOOP_THROW": {
+    "Rating": 2.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_FACEDOWN_BAR_FRONT_RAISE": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "INCLINE_ANTIGRAVITY_SHOULDER_PRESS": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BENTOVER_SHOULDER_ROTATION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BAND_OVERHEAD_TRICEPS_PRESS": {
+    "Rating": 4.1,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BAND_OVERHEAD_TRICEPS_EXTENSION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BAND_STRAIGHTARM_PULLDOWN": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BAND_SKULLCRUSHER": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_BAND_KICKBACK": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_EZBAR_SKULLCRUSHER": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BEHINDTHEHEAD_SKULLCRUSHER": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STANDING_BARBELL_OVERHEAD_TRICEPS_EXTENSION": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "REVERSEGRIP_BENCH_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "DECLINE_BARBELL_TRICEPS_EXTENSION__GETHIN_VARIATION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "AM_SKULLCRUSHER": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DUMBBELL_FLOOR_PRESS": {
+    "Rating": 1.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SEATED_TRICEPS_PRESS": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TRICEP_DUMBBELL_KICKBACK": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "DOUBLEARM_TRICEPS_KICKBACK": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_DUMBBELL_TRICEPS_EXTENSION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_SKULLCRUSHER": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "STANDING_BENTOVER_ONEARM_DUMBBELL_TRICEPS_EXTENSION": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "VSIT_WITH_OVERHEAD_TRICEPS_EXTENSION": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "PAUL_CARTER_DUMBBELL_KICKBACK": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "SINGLEARM_DUMBBELL_SKULLCRUSHER": {
+    "Rating": 2.7,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DUMBBELLSTOGETHER_INCLINE_BENCH_PRESS": {
+    "Rating": 3.2,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "INCLINE_DUMBBELL_OVERHEAD_TRICEPS_EXTENSION": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "TOTAL_FITNESS_CLOSEGRIP_DUMBBELL_PRESS": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_ROW_TO_TRICEPS_KICKBACK": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "ROLLING_TRICEPS_PRESS": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DUMBBELL_SAW_TRICEPS_SKULLCRUSHER": {
+    "Rating": 2.2,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BODY_TRICEPS_PRESS_USING_FLAT_BENCH": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "SEATED_TRICEPS_PUSHDOWN": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "MACHINE_TRICEPS_EXTENSION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_VBAR_PUSHDOWN": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "REVERSE_GRIP_TRICEPS_PUSHDOWN": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on sets, reps, 81012."
+  },
+  "KNEELING_CABLE_TRICEPS_EXTENSION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "SINGLEARM_CABLE_TRICEPS_EXTENSION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "DIP_MACHINE": {
+    "Rating": 2.2,
+    "RatingDesc": "Mixed reception focused on sharp, pain, could."
+  },
+  "TRICEPS_PUSHDOWN": {
+    "Rating": 4.7,
+    "RatingDesc": "Mixed reception focused on sets, reps, 81012."
+  },
+  "LOW_CABLE_OVERHEAD_TRICEPS_EXTENSION": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "LYING_CABLE_TRICEPS_EXTENSION": {
+    "Rating": 1.8,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_OVERHEAD_TRICEPS_EXTENSION": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_LOW_CABLE_TRICEPS_EXTENSION": {
+    "Rating": 2.1,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_CABLE_STRAIGHTBAR_TRICEPS_EXTENSION": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PAUL_CARTER_OVERHEAD_ROPE_TRICEPS_EXTENSION": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "TBS_ROPE_CABLE_PUSHDOWN": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_CABLE_TRICEPS_KICKBACK": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "INCLINE_CABLE_ROPE_TRICEPS_EXTENSION": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "REVERSEGRIP_CABLE_STRAIGHTBAR_PUSHDOWN": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "KNEELING_CABLE_TRICEPS_EXTENSION__GETHIN_VARIATION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_OVERHEAD_TRICEPS_EXTENSION__GETHIN_VARIATION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "REVERSEGRIP_CABLE_TRICEPS_PUSHDOWN__GETHIN_VARIATION": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "CABLE_TRICEPS_EXTENSION__GETHIN_VARIATION": {
+    "Rating": 4.7,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SINGLEARM_INCLINE_TRICEPS_EXTENSION": {
+    "Rating": 3.9,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "TRICEPS_OVERHEAD_EXTENSION_WITH_ROPE__GETHIN_VARIATION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "CABLE_ROPE_PUSHDOWN": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "CABLE_STRAIGHTBAR_PUSHDOWN": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "STRAIGHTARM_BAR_PULLDOWN": {
+    "Rating": 4.0,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "AM_ROPE_TRICEPS_PUSHDOWN": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "AM_BAR_TRICEPS_PUSHDOWN": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "ROPE_OVERHEAD_TRICEPS_EXTENSION": {
+    "Rating": 4.5,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "UP_ROPE_PUSHDOWN": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "UP_TRICEPS_EXTENSION_STRAIGHTBAR_PUSHDOWN": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BFR_UNDERHAND_STRAIGHTBAR_PUSHDOWN": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BFR_OVERHAND_STRAIGHTBAR_PUSHDOWN": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BFR_CABLE_ROPE_PUSHDOWN": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "SMITH_MACHINE_ENDGRIP_SHOULDER_PRESS": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "ASSIST_MACHINE_TRICEPS_PUSHDOWN": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "MACHINE_TRICEPS_EXTENSION__GETHIN_VARIATION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "OVERHEAD_MACHINE_TRICEPS_EXTENSION__GETHIN_VARIATION": {
+    "Rating": 2.6,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "TRICEPS_DIP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "WEIGHTED_BENCH_DIP": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "PUSH_UP__CLOSE_TRICEPS_POSITION": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "PARALLEL_BAR_DIP": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "RING_DIP": {
+    "Rating": 4.4,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "FEETELEVATED_BENCH_DIP": {
+    "Rating": 2.9,
+    "RatingDesc": "This might not be worth your time or might risk injury."
+  },
+  "BODYWEIGHT_TRICEPS_PRESS": {
+    "Rating": 3.3,
+    "RatingDesc": "This exercise might be more situational."
+  },
+  "RUSSIAN_BAR_DIP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "STRAIGHTARM_PLANK_WITH_KICKBACK": {
+    "Rating": 3.6,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "TBS_DIP": {
+    "Rating": 3.5,
+    "RatingDesc": "This is a pretty good exercise."
+  },
+  "BENCH_DIPS__GETHIN_VARIATION": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BANDED_DIP": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "BENCH_DIP__GETHIN_VARIATION": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "BENCH_DIP": {
+    "Rating": 4.3,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "DECLINE_EZBAR_SKULLCRUSHER": {
+    "Rating": 4.6,
+    "RatingDesc": "People really enjoy this exercise and find it efficient!"
+  },
+  "EZBAR_SKULLCRUSHER": {
+    "Rating": 4.2,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "EZBAR_SKULLCRUSHER__GETHIN_VARIATION": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  },
+  "TBS_SKULLCRUSHER": {
+    "Rating": 4.3,
+    "RatingDesc": "This is an efficient exercise for working out."
+  }
+}
