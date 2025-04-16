@@ -4,115 +4,204 @@
 <head>
     <title>{% block title %}{% endblock %} - Fitness Finder</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+    <div id="background-image"></div>
     <div class="full-body-container">
         <div class="top-text">
-            <h1>Find Your Exercise</h1>
+            <h1 class="main-title">Workout.ai</h1>
+            <h2 class="sub-title">Get the right workout for your gear and goals.</h2>
 
             <!-- Search box -->
-            <div class="input-box" onclick="sendFocus()">
-                <input placeholder="Search for a fitness exercise" id="filter-text-val">
+            <div class="input-box">
+                <input placeholder="What exercise are you looking for?" id="filter-text-val">
+                <button id="search-button" onclick="filterText()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="filter-row-container">
+                <div class="filter-box">
+                    <p class="filter-label">Equipment</p>
+                    <div class="filter-group" id="equipment-filters">
+                        <button class="filter-btn active" data-type="equipment" data-value="">All</button>
+                        <button class="filter-btn" data-type="equipment" data-value="Dumbbell">Dumbbell</button>
+                        <button class="filter-btn" data-type="equipment" data-value="Barbell">Barbell</button>
+                        <button class="filter-btn" data-type="equipment" data-value="Cable">Cable</button>
+                        <button class="filter-btn" data-type="equipment" data-value="Dumbell">Dumbell</button>
+                        <button class="filter-btn" data-type="equipment" data-value="Exercise Ball">Exercise
+                            Ball</button>
+                        <button class="filter-btn" data-type="equipment" data-value="Foam Roll">Foam Roll</button>
+                        <button class="filter-btn" data-type="equipment" data-value="Kettlebells">Kettlebells</button>
+                        <button class="filter-btn" data-type="equipment" data-value="Machine">Machine</button>
+                        <button class="filter-btn" data-type="equipment" data-value="None">None</button>
+                        <button class="filter-btn" data-type="equipment" data-value="Other">Other</button>
+                    </div>
+                </div>
+
+                <div class="filter-box">
+                    <p class="filter-label">Target</p>
+                    <div class="filter-group" id="bodypart-filters">
+                        <button class="filter-btn active" data-type="bodypart" data-value="">All</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Abdominals">Abdominals</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Abductors">Abductors</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Adductors">Adductors</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Biceps">Biceps</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Calves">Calves</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Chest">Chest</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Forearms">Forearms</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Glutes">Glutes</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Hamstrings">Hamstrings</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Lats">Lats</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Lower Back">Lower Back</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Middle Back">Middle Back</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Quadriceps">Quadriceps</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Shoulders">Shoulders</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Traps">Traps</button>
+                        <button class="filter-btn" data-type="bodypart" data-value="Triceps">Triceps</button>
+                    </div>
+                </div>
             </div>
 
-            <!-- Equipment Dropdown -->
-            <div class="dropdown-container">
-                <label for="equipment-select">Equipment:</label>
-                <select id="equipment-select">
-                    <option value="">All</option>
-                    {% for eq in equipment_list %}
-                    <option value="{{ eq }}">{{ eq }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-
-            <!-- Bodypart Dropdown -->
-            <div class="dropdown-container">
-                <label for="bodypart-select">Bodypart:</label>
-                <select id="bodypart-select">
-                    <option value="">All</option>
-                    {% for bod in bodypart_list %}
-                    <option value="{{ bod }}">{{ bod }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-
+            <!-- Results box -->
+            <div id="answer-box"></div>
         </div>
 
-        <!-- Results box -->
-        <div id="answer-box"></div>
-    </div>
-
-    <div class="left-icon">
+        <!-- <div class="left-icon">
         <img src="static/images/gym.png" alt="Workout Icon" />
-    </div>
+    </div> -->
 
-    <script>
-        function answerBoxTemplate(title, desc, rating) {
-            const detailUrl = `/exercise/${encodeURIComponent(title)}`;
-            return `<div class='exercise-card' onclick="goToExercise('${detailUrl}')">
-                <h3 class='exercise-title'>${title}</h3>
-                <p class='exercise-desc'>${desc}</p>
-                <p class='exercise-rating'>Rating: ${rating === null ? 'N/A' : rating}</p>
-            </div>`;
-        }
+        <script>
+            function goToExercise(url) {
+                document.getElementById("loading-spinner").style.display = "block";
+                setTimeout(() => {
+                    window.location.href = url;
+                }, 100);
+            }
 
+            function expandCard(card) {
+                document.querySelectorAll('.card-expanded').forEach(expanded => {
+                    expanded.style.display = 'none';
+                    if (expanded.previousElementSibling) {
+                        expanded.previousElementSibling.style.display = 'block';
+                    }
+                });
 
-        function sendFocus() {
-            document.getElementById('filter-text-val').focus();
-        }
+                card.style.display = "none";
+                const expanded = card.nextElementSibling;
+                expanded.style.display = "block";
+                expanded.style.opacity = 0;
 
-        function filterText() {
-            document.getElementById("answer-box").innerHTML = "";
+                requestAnimationFrame(() => {
+                    expanded.style.opacity = 1;
+                });
+            }
 
-            let query = document.getElementById("filter-text-val").value;
-            let equipment = document.getElementById("equipment-select").value;
-            let bodypart = document.getElementById("bodypart-select").value;
+            function closeCard(btn) {
+                const expanded = btn.parentElement;
+                expanded.style.display = "none";
+                expanded.previousElementSibling.style.display = "block";
+            }
 
-            let params = { title: query };
-            if (equipment) params.equipment = equipment;
-            if (bodypart) params.bodypart = bodypart;
+            document.addEventListener("DOMContentLoaded", function () {
+                let selectedEquipment = "";
+                let selectedBodypart = "";
+                let lastScrollTop = 0;
 
-            fetch("/exercises?" + new URLSearchParams(params).toString())
-                .then((response) => response.json())
-                .then((data) => {
+                function answerBoxTemplate(row) {
+                    return `
+    <div class='exercise-card'>
+        <div class='card-front' onclick="expandCard(this)">
+            <h3 class='exercise-title'>${row.Title}</h3>
+            <p class='exercise-desc'>${row.Desc}</p>
+            <p><strong>Rating:</strong> ${row.Rating === null ? 'N/A' : row.Rating}</p>
+        </div>
+        <div class='card-expanded'>
+            <button class='close-btn' onclick="closeCard(this)">×</button>
+            <p><strong>Description:</strong> ${row.Desc}</p>
+            <p><strong>Muscle Group:</strong> ${row.Bodypart}</p>
+            <p><strong>Equipment:</strong> ${row.Equipment}</p>
+            <p><strong>Level:</strong> ${row.Level}</p>
+            <p><strong>Rating:</strong> ${row.Rating}</p>
+            <p><strong>Video:</strong> <a href="${row.Video}" target="_blank">Watch on YouTube</a></p>
+        </div>
+    </div>`;
+                }
+
+                function filterText() {
                     document.getElementById("answer-box").innerHTML = "";
-                    data.forEach(row => {
-                        let tempDiv = document.createElement("div");
-                        tempDiv.innerHTML = answerBoxTemplate(row.Title, row.Desc, row.Rating);
-                        document.getElementById("answer-box").appendChild(tempDiv);
+
+                    let query = document.getElementById("filter-text-val").value;
+
+                    let params = { title: query };
+                    if (selectedEquipment) params.equipment = selectedEquipment;
+                    if (selectedBodypart) params.bodypart = selectedBodypart;
+
+                    fetch("/exercises?" + new URLSearchParams(params).toString())
+                        .then(response => response.json())
+                        .then(data => {
+                            const answerBox = document.getElementById("answer-box");
+                            answerBox.innerHTML = "";
+
+                            if (data.length === 0) {
+                                const noResultsMessage = document.createElement("div");
+                                noResultsMessage.classList.add("no-results");
+                                noResultsMessage.textContent = "No workouts found. Try another search.";
+                                answerBox.appendChild(noResultsMessage);
+                                return;
+                            }
+
+                            data.forEach(row => {
+                                const tempDiv = document.createElement("div");
+                                tempDiv.innerHTML = answerBoxTemplate(row);
+                                answerBox.appendChild(tempDiv);
+                            });
+                        });
+                }
+
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const type = btn.dataset.type;
+                        const value = btn.dataset.value;
+
+                        document.querySelectorAll(`.filter-btn[data-type="${type}"]`)
+                            .forEach(b => b.classList.remove('active'));
+
+                        btn.classList.add('active');
+
+                        if (type === "equipment") selectedEquipment = value;
+                        if (type === "bodypart") selectedBodypart = value;
                     });
                 });
-        }
 
-        document.getElementById("filter-text-val").addEventListener("keypress", function (event) {
-            if (event.key === "Enter") {
-                filterText();
-            }
-        });
+                document.getElementById("filter-text-val").addEventListener("keypress", function (event) {
+                    if (event.key === "Enter") {
+                        filterText();
+                    }
+                });
 
-        function goToExercise(url) {
-            document.getElementById("loading-spinner").style.display = "block";
-            setTimeout(() => {
-                window.location.href = url;
-            }, 100); 
-        }
+                document.getElementById("search-button").addEventListener("click", filterText);
 
-        window.addEventListener("pageshow", function(event) {
-            document.getElementById("loading-spinner").style.display = "none";
-        });
+                window.addEventListener("pageshow", function () {
+                    document.getElementById("loading-spinner").style.display = "none";
+                });
 
-        window.addEventListener("load", function() {
-            document.getElementById("loading-spinner").style.display = "none";
-        });
+                window.addEventListener("load", function () {
+                    document.getElementById("loading-spinner").style.display = "none";
+                });
+            });
 
-    </script>
-    
-    <div id="loading-spinner">
-        <div class="spinner-circle"></div>
-    </div>
-    
+            document.addEventListener("DOMContentLoaded", function () {
+                let scrollOffset = 0;
+                const runner = document.getElementById("runner");
+            });
+        </script>
+
+        <div id="loading-spinner">
+            <div class="spinner-circle"></div>
+        </div>
+
 </body>
 
 </html>
