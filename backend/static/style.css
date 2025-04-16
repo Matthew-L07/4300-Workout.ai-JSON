@@ -277,21 +277,45 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
     background-color: rgba(30, 30, 30, 0.95);
     padding: 2rem;
+    border-left: 5px solid #ff4c4c;
     border-radius: 1rem;
-    border: 1px solid #444;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     color: #fff;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.75;
     position: relative;
+}
+
+.card-expanded p {
+    margin: 1.1rem 0;
+}
+
+.card-expanded strong {
+    color: #ff4c4c;
+    margin-right: 0.4rem;
 }
 
 .card-expanded.show {
     display: block;
     opacity: 1;
     transform: scale(1);
+}
+
+.card-expanded a {
+    display: inline-block;
+    /* background-color: #ff4c4c; */
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.card-expanded a:hover {
+    background-color: #3a3a3c;
 }
 
 .exercise-card:hover {

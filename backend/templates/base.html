@@ -65,7 +65,12 @@
             </div>
 
             <!-- Results box -->
-            <div id="answer-box"></div>
+            <div id="answer-box">
+                {% for exercise in exercises %}
+                {% set e = exercise %}
+                {% include 'exercise_detail.html' %}
+                {% endfor %}
+            </div>
         </div>
 
         <!-- <div class="left-icon">
@@ -93,10 +98,30 @@
                 expanded.style.display = "block";
                 expanded.style.opacity = 0;
 
+                const title = card.querySelector(".exercise-title").innerText;
+
+                const videoElem = expanded.querySelector(".video-link");
+                if (videoElem) {
+                    fetch(`/video/${encodeURIComponent(title)}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.Video) {
+                                videoElem.innerHTML = `<a href="${data.Video}" target="_blank">Watch on YouTube</a>`;
+                            } else {
+                                videoElem.textContent = "N/A";
+                            }
+                        })
+                        .catch(() => {
+                            videoElem.textContent = "N/A";
+                        });
+                }
+
                 requestAnimationFrame(() => {
                     expanded.style.opacity = 1;
                 });
             }
+
+
 
             function closeCard(btn) {
                 const expanded = btn.parentElement;
@@ -120,11 +145,12 @@
         <div class='card-expanded'>
             <button class='close-btn' onclick="closeCard(this)">×</button>
             <p><strong>Description:</strong> ${row.Desc}</p>
-            <p><strong>Muscle Group:</strong> ${row.Bodypart}</p>
-            <p><strong>Equipment:</strong> ${row.Equipment}</p>
-            <p><strong>Level:</strong> ${row.Level}</p>
-            <p><strong>Rating:</strong> ${row.Rating}</p>
-            <p><strong>Video:</strong> <a href="${row.Video}" target="_blank">Watch on YouTube</a></p>
+            <p><strong><i class="fas fa-dumbbell"></i> Muscle Group:</strong> ${row.BodyPart}</p>
+            <p><strong><i class="fas fa-cogs"></i> Equipment:</strong> ${row.Equipment}</p>
+            <p><strong><i class="fas fa-signal"></i> Level:</strong> ${row.Level}</p>
+            <p><strong><i class="fas fa-star"></i> Rating:</strong> ${row.Rating}</p>
+            <p><strong><i class="fab fa-youtube"></i> Video:</strong> <span class="video-link">Loading...</span></p>
+
         </div>
     </div>`;
                 }
@@ -141,6 +167,7 @@
                     fetch("/exercises?" + new URLSearchParams(params).toString())
                         .then(response => response.json())
                         .then(data => {
+                            console.log(data);
                             const answerBox = document.getElementById("answer-box");
                             answerBox.innerHTML = "";
 

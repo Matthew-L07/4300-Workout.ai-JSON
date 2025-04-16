@@ -110,7 +110,6 @@ def home():
                            equipment_list=equipment_list,
                            bodypart_list=bodypart_list)
 
-
 @app.route("/exercises")
 def exercises_search():
     text = request.args.get("title", "")
@@ -173,7 +172,11 @@ def exercises_search():
         results.append({
             'Title': title,
             'Desc': desc,
-            'Rating': rating
+            'BodyPart': documents[original_idx][2],
+            'Equipment': documents[original_idx][3],
+            'Level': documents[original_idx][4],
+            'Rating': rating,
+            'RatingDesc': documents[original_idx][6]
         })
 
     return jsonify(results)
@@ -196,6 +199,13 @@ def exercise_page(title):
             })
     return "Exercise not found", 404
 
+@app.route("/video/<title>")
+def fetch_video(title):
+    try:
+        url = find_youtube_tutorial(title)
+        return jsonify({"Video": url})
+    except Exception as e:
+        return jsonify({"Video": None, "Error": str(e)})
 
 def find_youtube_tutorial(query):
 

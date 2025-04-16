@@ -1,30 +1,28 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <title>{{ exercise.Title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-
-<body>
-    <div class="exercise-detail-container">
-        <h1>{{ exercise.Title }}</h1>
-        <p><strong>Description:</strong> {{ exercise.Desc }}</p>
-        <p><strong>Muscle Group:</strong> {{ exercise.BodyPart }}</p>
-        <p><strong>Equipment:</strong> {{ exercise.Equipment }}</p>
-        <p><strong>Level:</strong> {{ exercise.Level }}</p>
-        <p><strong>Rating:</strong> {{ exercise.Rating }} - {{ exercise.RatingDesc }}</p>
-        
-        <p><strong>Video Tutorial:</strong> 
-            <a href="{{ exercise.TutorialURL }}" target="_blank">Watch on YouTube</a>
-        </p>
-        
-        {% if exercise.ImagePath %}
-        <img src="{{ url_for('static', filename='images/' + exercise.Title.lower().replace(' ', '_') + '.jpg') }}" alt="{{ exercise.Title }}" style="max-width: 400px;">
-        {% endif %}
-
-        <p><a href="/">← Back to Search</a></p>
+<div class="exercise-card">
+    <div class="card-front" onclick="expandCard(this)">
+        <h3 class="exercise-title">{{ e.Title }}</h3>
+        <p class="exercise-desc">{{ e.Desc }}</p>
+        <p><strong>Rating:</strong> {{ e.Rating if e.Rating else 'N/A' }}</p>
     </div>
-</body>
+    <div class="card-expanded">
+        <button class="close-btn" onclick="closeCard(this)">×</button>
+        <p><strong>Description:</strong> {{ e.Desc }}</p>
+        <p><strong>Muscle Group:</strong> {{ e.BodyPart or 'N/A' }}</p>
+        <p><strong>Equipment:</strong> {{ e.Equipment or 'N/A' }}</p>
+        <p><strong>Level:</strong> {{ e.Level or 'N/A' }}</p>
+        <p><strong>Rating:</strong> {{ e.Rating }}</p>
+        <p><strong>Video:</strong>
+            {% if e.Video %}
+            <a href="{{ e.Video }}" target="_blank">Watch on YouTube</a>
+            {% else %}
+            N/A
+            {% endif %}
+        </p>
+    </div>
+</div>
+
 
 </html>
