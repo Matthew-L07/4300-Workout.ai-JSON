@@ -8,7 +8,8 @@ from flask_cors import CORS
 from sentence_transformers import SentenceTransformer
 from rapidfuzz.distance import Levenshtein
 import yt_dlp
-
+import random
+from sklearn.metrics.pairwise import cosine_similarity
 
 app = Flask(__name__)
 CORS(app)
@@ -79,6 +80,7 @@ synonym_dict = {
 }
 
 
+
 with open("exercise_ratings.json", "r") as f:
     ratings_lookup = json.load(f)
 
@@ -103,12 +105,59 @@ bert_embeddings = bert_model.encode(descs, normalize_embeddings=True)
 
 vocab = set(word for desc in descs for word in desc.split())
 
+def deduplicate_exercises(exercise_indices, threshold=0.85):
+    unique_indices = []
+    for idx in exercise_indices:
+        if not any(cosine_similarity(
+            [bert_embeddings[idx]], [bert_embeddings[i]])[0][0] > threshold
+            for i in unique_indices):
+            unique_indices.append(idx)
+    return unique_indices
+
+
+def get_target_muscle_groups(query):
+    query_tokens = preprocess_text(query).split() 
+    expanded = set()
+    for token in query_tokens:
+        expanded.update(synonym_dict.get(token.lower(), [token.lower()]))  
+    return [bp for bp in bodypart_list if bp.lower() in expanded]
+
+
+def generate_workout_routine(target_muscles, selected_equipment=""):
+    routine = []
+    for muscle in target_muscles:
+        filtered = [
+            idx for idx, doc in enumerate(documents)
+            if doc[2].lower() == muscle.lower() and 
+               (not selected_equipment or doc[3] == selected_equipment)
+        ]
+        if not filtered:
+            continue
+
+        filtered = deduplicate_exercises(filtered)
+
+        random.shuffle(filtered)
+        selected_indices = filtered[:2]
+
+        for idx in selected_indices:
+            doc = documents[idx]
+            routine.append({
+                "Title": doc[0],
+                "Desc": doc[1],
+                "BodyPart": doc[2],
+                "Equipment": doc[3],
+                "Level": doc[4],
+                "Rating": doc[5],
+                "RatingDesc": doc[6]
+            })
+    return routine
 
 @app.route("/")
 def home():
     return render_template("base.html", title="Fitness Search",
                            equipment_list=equipment_list,
-                           bodypart_list=bodypart_list)
+                           bodypart_list=bodypart_list,
+                           exercises=[])
 
 @app.route("/exercises")
 def exercises_search():
@@ -206,6 +255,22 @@ def fetch_video(title):
         return jsonify({"Video": url})
     except Exception as e:
         return jsonify({"Video": None, "Error": str(e)})
+    
+@app.route("/routine")
+def workout_routine():
+    query = request.args.get("title", "")
+    selected_equipment = request.args.get("equipment", "")
+    target_muscles = get_target_muscle_groups(query)
+
+    if not target_muscles:
+        return jsonify([])
+
+    routines = []
+    for _ in range(3):  
+        routine = generate_workout_routine(target_muscles, selected_equipment)
+        routines.append(routine)
+
+    return jsonify(routines)
 
 def find_youtube_tutorial(query):
 

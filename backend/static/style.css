@@ -422,3 +422,80 @@ body {
     color: #ff4c4c;
     text-decoration: underline;
 }
+
+.routine-wrapper {
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1e1e1e;
+}
+
+.routine-toggle {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #292929;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.routine-toggle:hover {
+    background-color: #383838;
+}
+
+.routine-content {
+    padding: 10px 20px;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    border-radius: 40px;
+    padding: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.input-box input {
+    flex: 1;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-family: inherit;
+}
+
+.generate-btn {
+    background-color: #ef4a41;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: inherit;
+    border-radius: 40px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+    height: 100%;
+}
+
+.generate-btn:hover {
+    background-color: #ff6158;
+}
+
+.left-btn {
+    margin-left: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
