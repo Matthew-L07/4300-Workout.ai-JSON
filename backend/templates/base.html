@@ -78,27 +78,35 @@
         <script>
             let selectedEquipment = "";
             let selectedBodypart = "";
-
+        
+            function showSpinner() {
+                document.getElementById("loading-spinner").style.display = "flex";
+            }
+        
+            function hideSpinner() {
+                document.getElementById("loading-spinner").style.display = "none";
+            }
+        
             function goToExercise(url) {
-                document.getElementById("loading-spinner").style.display = "block";
+                showSpinner();
                 setTimeout(() => window.location.href = url, 100);
             }
-
+        
             function expandCard(card) {
                 document.querySelectorAll('.card-expanded').forEach(expanded => {
                     expanded.style.display = 'none';
                     if (expanded.previousElementSibling)
                         expanded.previousElementSibling.style.display = 'block';
                 });
-
+        
                 card.style.display = "none";
                 const expanded = card.nextElementSibling;
                 expanded.style.display = "block";
                 expanded.style.opacity = 0;
-
+        
                 const title = card.querySelector(".exercise-title").innerText;
                 const videoElem = expanded.querySelector(".video-link");
-
+        
                 if (videoElem) {
                     fetch(`/video/${encodeURIComponent(title)}`)
                         .then(res => res.json())
@@ -107,16 +115,16 @@
                         })
                         .catch(() => videoElem.textContent = "N/A");
                 }
-
+        
                 requestAnimationFrame(() => expanded.style.opacity = 1);
             }
-
+        
             function closeCard(btn) {
                 const expanded = btn.parentElement;
                 expanded.style.display = "none";
                 expanded.previousElementSibling.style.display = "block";
             }
-
+        
             function answerBoxTemplate(row) {
                 return `
                     <div class='exercise-card'>
@@ -136,111 +144,97 @@
                         </div>
                     </div>`;
             }
-
+        
             function filterText() {
                 document.getElementById("answer-box").innerHTML = "";
-
+                showSpinner();
+        
                 const query = document.getElementById("filter-text-val").value;
                 const params = { title: query };
                 if (selectedEquipment) params.equipment = selectedEquipment;
                 if (selectedBodypart) params.bodypart = selectedBodypart;
-
+        
                 fetch("/exercises?" + new URLSearchParams(params))
                     .then(res => res.json())
                     .then(data => {
                         const answerBox = document.getElementById("answer-box");
-                        answerBox.innerHTML = "";
-
-                        if (data.length === 0) {
-                            const msg = document.createElement("div");
-                            msg.classList.add("no-results");
-                            msg.textContent = "No workouts found. Try another search.";
-                            answerBox.appendChild(msg);
+                        if (!data.length) {
+                            answerBox.innerHTML = "<div class='no-results'>No workouts found. Try another search.</div>";
                             return;
                         }
-
+        
                         data.forEach(row => {
                             const div = document.createElement("div");
                             div.innerHTML = answerBoxTemplate(row);
                             answerBox.appendChild(div);
                         });
-                    });
+                    })
+                    .finally(hideSpinner);
             }
-
+        
             function generateRoutine() {
                 document.getElementById("answer-box").innerHTML = "";
-
+                showSpinner();
+        
                 const query = document.getElementById("filter-text-val").value;
                 const params = { title: query };
                 if (selectedEquipment) params.equipment = selectedEquipment;
-
+        
                 fetch("/routine?" + new URLSearchParams(params))
                     .then(res => res.json())
                     .then(routines => {
                         const answerBox = document.getElementById("answer-box");
                         if (!routines.length) {
-                            const msg = document.createElement("div");
-                            msg.classList.add("no-results");
-                            msg.textContent = "No routine found. Try a query like 'arms', 'core', or 'legs'.";
-                            answerBox.appendChild(msg);
+                            answerBox.innerHTML = "<div class='no-results'>No routine found. Try a query like 'arms', 'core', or 'legs'.</div>";
                             return;
                         }
-
+        
                         routines.forEach((routine, index) => {
                             const wrapper = document.createElement("div");
                             wrapper.className = "routine-wrapper";
-
+        
                             const toggle = document.createElement("button");
                             toggle.className = "routine-toggle";
                             toggle.textContent = `Routine ${index + 1} ▼`;
-                            toggle.onclick = () => {
-                                content.style.display = content.style.display === "none" ? "block" : "none";
-                            };
-
+        
                             const content = document.createElement("div");
                             content.className = "routine-content";
                             content.style.display = "none";
-
+        
+                            toggle.onclick = () => {
+                                content.style.display = content.style.display === "none" ? "block" : "none";
+                            };
+        
                             routine.forEach(ex => {
                                 const div = document.createElement("div");
                                 div.innerHTML = answerBoxTemplate(ex);
                                 content.appendChild(div);
                             });
-
+        
                             wrapper.appendChild(toggle);
                             wrapper.appendChild(content);
                             answerBox.appendChild(wrapper);
                         });
-                    });
+                    })
+                    .finally(hideSpinner);
             }
-
-            document.addEventListener("DOMContentLoaded", function () {
+        
+            document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll('.filter-btn').forEach(btn => {
                     btn.addEventListener('click', () => {
-                        const type = btn.dataset.type;
-                        const value = btn.dataset.value;
+                        const { type, value } = btn.dataset;
                         document.querySelectorAll(`.filter-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
                         btn.classList.add('active');
                         if (type === "equipment") selectedEquipment = value;
                         if (type === "bodypart") selectedBodypart = value;
                     });
                 });
-
+        
                 document.getElementById("filter-text-val").addEventListener("keypress", e => {
                     if (e.key === "Enter") filterText();
                 });
-
-                document.getElementById("search-button").addEventListener("click", filterText);
-
-                window.addEventListener("pageshow", () => {
-                    document.getElementById("loading-spinner").style.display = "none";
-                });
-
-                window.addEventListener("load", () => {
-                    document.getElementById("loading-spinner").style.display = "none";
-                });
             });
-        </script>
+        </script>        
 
         <div id="loading-spinner">
             <div class="spinner-circle"></div>

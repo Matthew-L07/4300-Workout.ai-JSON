@@ -391,28 +391,29 @@ body {
 #loading-spinner {
     display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1000;
-    transform: translate(-50%, -50%);
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
 }
 
 .spinner-circle {
-    border: 8px solid #333;
-    border-top: 8px solid #ff4c4c;
+    width: 60px;
+    height: 60px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
-@keyframes fadeInExpand {
-    0% {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
+
 
 .card-expanded p {
     margin: 0.8rem 0;
