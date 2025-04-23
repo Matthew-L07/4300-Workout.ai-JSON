@@ -37,6 +37,8 @@ comment_texts, reddit_comments = [], []
 for i, utt in enumerate(corpus.iter_utterances()):
     if i >= MAX_UTTERANCES:
         break
+    if i >= MAX_UTTERANCES:
+        break
     text = utt.text
     if len(text) >= 20 and "http" not in text:
         reddit_comments.append(text)
@@ -183,6 +185,7 @@ def basic_desc(rating):
         return "This exercise has mixed reactions."
     else:
         return "Most users do not prefer this exercise."
+
 
 ratings_lookup = {}
 for _, row in exercises_df.iterrows():

@@ -35,7 +35,6 @@
                         <button class="filter-btn" data-type="equipment" data-value="Dumbbell">Dumbbell</button>
                         <button class="filter-btn" data-type="equipment" data-value="Barbell">Barbell</button>
                         <button class="filter-btn" data-type="equipment" data-value="Cable">Cable</button>
-                        <button class="filter-btn" data-type="equipment" data-value="Dumbell">Dumbell</button>
                         <button class="filter-btn" data-type="equipment" data-value="Exercise Ball">Exercise
                             Ball</button>
                         <button class="filter-btn" data-type="equipment" data-value="Foam Roll">Foam Roll</button>
@@ -219,21 +218,48 @@
                     .finally(hideSpinner);
             }
         
-            document.addEventListener("DOMContentLoaded", () => {
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        const { type, value } = btn.dataset;
-                        document.querySelectorAll(`.filter-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
-                        btn.classList.add('active');
-                        if (type === "equipment") selectedEquipment = value;
-                        if (type === "bodypart") selectedBodypart = value;
-                    });
-                });
+            // document.addEventListener("DOMContentLoaded", () => {
+            //     document.querySelectorAll('.filter-btn').forEach(btn => {
+            //         btn.addEventListener('click', () => {
+            //             const { type, value } = btn.dataset;
+            //             document.querySelectorAll(`.filter-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
+            //             btn.classList.add('active');
+            //             if (type === "equipment") selectedEquipment = value;
+            //             if (type === "bodypart") selectedBodypart = value;
+            //         });
+            //     });
         
-                document.getElementById("filter-text-val").addEventListener("keypress", e => {
-                    if (e.key === "Enter") filterText();
+            //     document.getElementById("filter-text-val").addEventListener("keypress", e => {
+            //         if (e.key === "Enter") filterText();
+            //     });
+            // });
+
+            document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const { type, value } = btn.dataset;
+                    document.querySelectorAll(`.filter-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    if (type === "equipment") selectedEquipment = value;
+                    if (type === "bodypart") selectedBodypart = value;
+
+                    const useRoutine = document.getElementById("routine-button").classList.contains("active");
+
+            // Automatically refresh results
+                    const query = document.getElementById("filter-text-val").value.trim();
+                    if (useRoutine) {
+                        generateRoutine();
+                    } else {
+                        filterText();
+                    }
                 });
             });
+
+            document.getElementById("filter-text-val").addEventListener("keypress", e => {
+                if (e.key === "Enter") filterText();
+            });
+        });
         </script>        
 
         <div id="loading-spinner">

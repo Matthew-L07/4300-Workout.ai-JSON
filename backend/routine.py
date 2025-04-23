@@ -1,3 +1,4 @@
+
 import random
 from sklearn.metrics.pairwise import cosine_similarity
 from utils import preprocess_text, synonym_dict
@@ -7,11 +8,17 @@ def get_target_muscle_groups(query):
     expanded = {word for token in tokens for word in synonym_dict.get(token, [token])}
     return list(expanded)
 
-def generate_workout_routine(query, selected_equipment, documents, query_embed, bert_embeddings):
+def generate_workout_routine(query, selected_equipment, documents, query_embed, bert_embeddings, used_exercises=set()):
     query_embedding, expanded_tokens = query_embed(query)
 
     scores = []
+    muscle_groups_in_routine = set()  
+    routine = []
+
     for i, doc in enumerate(documents):
+        if i in used_exercises:
+            continue
+        
         if selected_equipment and doc[3] != selected_equipment:
             continue
 
@@ -24,11 +31,15 @@ def generate_workout_routine(query, selected_equipment, documents, query_embed, 
         return []
 
     scores.sort(reverse=True)
-    top_indices = [i for _, i in scores[:4]]
+    top_indices = [i for _, i in scores[:10]]  
 
-    routine = []
     for i in top_indices:
         doc = documents[i]
+        muscle_group = doc[2].lower()  
+
+        if muscle_group in muscle_groups_in_routine:
+            continue
+
         routine.append({
             "Title": doc[0],
             "Desc": doc[1],
@@ -38,6 +49,10 @@ def generate_workout_routine(query, selected_equipment, documents, query_embed, 
             "Rating": doc[5],
             "RatingDesc": doc[6]
         })
+        used_exercises.add(i)
+        muscle_groups_in_routine.add(muscle_group) 
+
+        if len(routine) >= 5: 
+            break
 
     return routine
-
