@@ -140,7 +140,7 @@ def fetch_video(title):
 def workout_routine():
     query = request.args.get("title", "")
     selected_equipment = request.args.get("equipment", "")
-    
+
     target_muscles_list = get_target_muscle_groups(query)
     target_muscles_str = " ".join(target_muscles_list) if target_muscles_list else query
 
@@ -150,11 +150,13 @@ def workout_routine():
     main_exercises = generate_workout_routine(target_muscles_str, selected_equipment, documents)
     related = get_related_exercises(main_exercises)
 
-    return jsonify({
-        "main": main_exercises,
-        "related": related
-    })
+    main_wrapped = [(ex, f"This is a good {ex['BodyPart'].lower()} exercise.") for ex in main_exercises]
+    related_wrapped = [(ex, f"This is a related {ex['BodyPart'].lower()} exercise.") for ex in related]
 
+    return jsonify({
+        "main": main_wrapped,
+        "related": related_wrapped
+    })
 
 if __name__ == "__main__" and 'DB_NAME' not in os.environ:
     app.run(debug=True, host="0.0.0.0", port=5000)

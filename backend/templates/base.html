@@ -125,24 +125,28 @@
             }
         
             function answerBoxTemplate(row) {
+                const [exercise, explanation] = row;
+
                 return `
                     <div class='exercise-card'>
                         <div class='card-front' onclick="expandCard(this)">
-                            <h3 class='exercise-title'>${row.Title}</h3>
-                            <p class='exercise-desc'>${row.Desc}</p>
-                            <p><strong>Rating:</strong> ${row.Rating ?? 'N/A'}</p>
+                            <h3 class='exercise-title'>${exercise.Title}</h3>
+                            <p class='exercise-desc'>${exercise.Desc}</p>
+                            <p><strong>Rating:</strong> ${exercise.Rating ?? 'N/A'}</p>
+                            <p class='explanation'><em>${explanation}</em></p>
                         </div>
                         <div class='card-expanded'>
                             <button class='close-btn' onclick="closeCard(this)">×</button>
-                            <p><strong>Description:</strong> ${row.Desc}</p>
-                            <p><strong><i class="fas fa-dumbbell"></i> Muscle Group:</strong> ${row.BodyPart}</p>
-                            <p><strong><i class="fas fa-cogs"></i> Equipment:</strong> ${row.Equipment}</p>
-                            <p><strong><i class="fas fa-signal"></i> Level:</strong> ${row.Level}</p>
-                            <p><strong><i class="fas fa-star"></i> Rating:</strong> ${row.Rating}</p>
-                            <p><strong><i class="fas fa-battery-half"></i> Fatigue Level:</strong> ${row.FatigueLevel}</p>
+                            <p><strong>Description:</strong> ${exercise.Desc}</p>
+                            <p><strong><i class="fas fa-dumbbell"></i> Muscle Group:</strong> ${exercise.BodyPart}</p>
+                            <p><strong><i class="fas fa-cogs"></i> Equipment:</strong> ${exercise.Equipment}</p>
+                            <p><strong><i class="fas fa-signal"></i> Level:</strong> ${exercise.Level}</p>
+                            <p><strong><i class="fas fa-star"></i> Rating:</strong> ${exercise.Rating}</p>
+                            <p><strong><i class="fas fa-battery-half"></i> Fatigue Level:</strong> ${exercise.FatigueLevel}</p>
                             <p><strong><i class="fab fa-youtube"></i> Video:</strong> <span class="video-link">Loading...</span></p>
                         </div>
-                    </div>`;
+                    </div>
+                `;
             }
         
             function filterText() {
