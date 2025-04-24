@@ -1,64 +1,42 @@
+from rapidfuzz.distance import Levenshtein
+from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
-from flask import jsonify
-from utils import preprocess_text
 
-import numpy as np
-from flask import jsonify
-from utils import preprocess_text
+def get_related_exercises(documents, bert_embeddings_np, main_exercises, count=3):
+    if not main_exercises:
+        return []
 
+    main_titles = {ex["Title"].upper() for ex in main_exercises}
+    main_bodyparts = {ex["BodyPart"] for ex in main_exercises}
+    title_lower = {title.lower() for title in main_titles}
 
-def search_exercises(request, documents, query_embed, bert_embeddings, muscle_groups):
-    text = request.args.get("title", "")
-    selected_equipment = request.args.get("equipment", "")
-    selected_bodypart = request.args.get("bodypart", "").lower()
-
-    query_tokens = preprocess_text(text).split()
-    filtered_indices = []
-    rating_scores = []
-
-    for idx, doc in enumerate(documents):
-        _, _, body_part, equip, _, _, _, _ = doc
-        if selected_equipment and equip != selected_equipment:
-            continue
-        if selected_bodypart and body_part.lower() != selected_bodypart:
-            continue
-        filtered_indices.append(idx)
-        rating_scores.append(doc[5])
+    filtered_indices = [
+        idx for idx, doc in enumerate(documents)
+        if doc[0] not in main_titles and
+        doc[2] in main_bodyparts and
+        doc[0].lower() not in title_lower and
+        all(Levenshtein.distance(doc[0].lower(), t) >= 5 for t in title_lower)
+    ]
 
     if not filtered_indices:
-        return jsonify([])
+        return []
 
-    query_embedding, _ = query_embed(text)
-    bert_subset = [bert_embeddings[i] for i in filtered_indices]
+    main_indices = [i for i, doc in enumerate(
+        documents) if doc[0] in main_titles]
+    if not main_indices:
+        return []
 
-    min_rating = min(rating_scores)
-    max_rating = max(rating_scores)
-    rating_range = max(max_rating - min_rating, 1e-6)
-    rating_normalized = [
-        (r - min_rating) / rating_range for r in rating_scores]
-    scores = bert_subset @ query_embedding
-    scores = 0.75 * scores + 0.25 * np.array(rating_normalized)
-    top_matches = np.argsort(scores)[::-1][:10]
+    mean_embed = np.mean(
+        bert_embeddings_np[main_indices], axis=0, keepdims=True)
+    candidate_embeds = bert_embeddings_np[filtered_indices]
 
-    query_word_embeds = {word: query_embed(word)[0] for word in query_tokens}
+    sims = cosine_similarity(mean_embed, candidate_embeds).flatten()
+    top_indices = np.argpartition(-sims, count)[:count]
 
     results = []
-    for idx in top_matches:
-        doc = documents[filtered_indices[idx]]
-        exercise_embed = bert_embeddings[filtered_indices[idx]]
-        best_word = ""
-        best_score = -1
-
-        for word, emb in query_word_embeds.items():
-            sim = np.dot(exercise_embed, emb)
-            if sim > best_score:
-                best_score = sim
-                best_word = word
-
-        explanation = f"This exercise matches well with the term '{best_word}' from your query."
-        review = f"Reddit Based Review: {doc[6]}"
-
-        exercise = {
+    for i in top_indices:
+        doc = documents[filtered_indices[i]]
+        results.append({
             'Title': doc[0],
             'Desc': doc[1],
             'BodyPart': doc[2],
@@ -66,9 +44,7 @@ def search_exercises(request, documents, query_embed, bert_embeddings, muscle_gr
             'Level': doc[4],
             'Rating': doc[5],
             'RatingDesc': doc[6],
-            "FatigueLevel": doc[7]
-        }
+            'FatigueLevel': doc[7]
+        })
 
-        results.append((exercise, review, explanation))
-
-    return jsonify(results)
+    return results

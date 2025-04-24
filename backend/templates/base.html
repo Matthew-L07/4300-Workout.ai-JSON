@@ -172,43 +172,6 @@
                 `;
             }
 
-            function filterText() {
-                // document.getElementById("answer-box").innerHTML = "";
-                const answerBox = document.getElementById("answer-box");
-                answerBox.classList.add("fading-out");
-
-                setTimeout(() => {
-                    answerBox.innerHTML = "";
-                    generateAndInsertNewCards(data); // your render logic
-                    answerBox.classList.remove("fading-out");
-                    answerBox.classList.add("fading-in");
-                    setTimeout(() => answerBox.classList.remove("fading-in"), 300);
-                }, 150);
-                showSpinner();
-
-                const query = document.getElementById("filter-text-val").value;
-                const params = { title: query };
-                if (selectedEquipment) params.equipment = selectedEquipment;
-                if (selectedBodypart) params.bodypart = selectedBodypart;
-
-                fetch("/exercises?" + new URLSearchParams(params))
-                    .then(res => res.json())
-                    .then(data => {
-                        const answerBox = document.getElementById("answer-box");
-                        if (!data.length) {
-                            answerBox.innerHTML = "<div class='no-results'>No workouts found. Try another search.</div>";
-                            return;
-                        }
-
-                        data.forEach(row => {
-                            const div = document.createElement("div");
-                            div.innerHTML = answerBoxTemplate(row);
-                            answerBox.appendChild(div);
-                        });
-                    })
-                    .finally(hideSpinner);
-            }
-
             function generateRoutine() {
                 const query = document.getElementById("filter-text-val").value;
                 const params = { title: query };
