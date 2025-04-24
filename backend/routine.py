@@ -24,23 +24,30 @@ TARGET_MAPPINGS = {
     "full body": ["Quadriceps", "Chest", "Back", "Shoulders"]
 }
 
-def get_targets(query):
-    """Map user query to target muscle groups using exact labels from data"""
+def get_targets(query, explicit_bodypart=None):
+    """Map user query and bodypart tag to target muscle groups using exact labels from data"""
     query = str(query).lower()
-    
+    result = set()
+
     for keyword, targets in TARGET_MAPPINGS.items():
         if keyword in query:
-            return targets
-            
-    if "upper" in query:
-        return ["Biceps", "Triceps", "Shoulders", "Chest"]
-    if "lower" in query:
-        return ["Quadriceps", "Hamstrings", "Glutes", "Calves"]
-    
-    return ["Quadriceps", "Chest", "Back", "Shoulders"]
+            result.update(targets)
 
-def generate_workout_routine(query, selected_equipment=None, documents=None, used_exercises=set()):
-    targets = set(get_targets(query))
+    if explicit_bodypart:
+        result.add(explicit_bodypart)
+
+    if not result:
+        if "upper" in query:
+            result.update(["Biceps", "Triceps", "Shoulders", "Chest"])
+        elif "lower" in query:
+            result.update(["Quadriceps", "Hamstrings", "Glutes", "Calves"])
+        else:
+            result.update(["Quadriceps", "Chest", "Back", "Shoulders"])
+
+    return list(result)
+
+def generate_workout_routine(query, selected_equipment=None, documents=None, bodypart_filter=None, used_exercises=set()):
+    targets = set(get_targets(query, explicit_bodypart=bodypart_filter))
     used_set = set(used_exercises)
 
     if not documents:
@@ -97,5 +104,3 @@ def generate_workout_routine(query, selected_equipment=None, documents=None, use
         }
         for doc in routine_sorted
     ]
-
-

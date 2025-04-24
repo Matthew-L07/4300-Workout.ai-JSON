@@ -17,9 +17,7 @@
             <!-- Search box -->
             <div class="input-box">
                 <input placeholder="What exercise are you looking for?" id="filter-text-val">
-                <button class="generate-btn left-btn" id="search-button" onclick="filterText()">Generate
-                    Exercises</button>
-                <button class="generate-btn" id="routine-button" onclick="generateRoutine()">Generate Full
+                <button class="generate-btn" id="routine-button" onclick="generateRoutine()">Generate
                     Routine</button>
             </div>
 
@@ -31,17 +29,23 @@
                 <div class="filter-box">
                     <p class="filter-label">Equipment</p>
                     <div class="filter-group" id="equipment-filters">
-                        <button class="filter-btn active" data-type="equipment" data-value="">All</button>
-                        <button class="filter-btn" data-type="equipment" data-value="Dumbbell">Dumbbell</button>
-                        <button class="filter-btn" data-type="equipment" data-value="Barbell">Barbell</button>
-                        <button class="filter-btn" data-type="equipment" data-value="Cable">Cable</button>
-                        <button class="filter-btn" data-type="equipment" data-value="Exercise Ball">Exercise
+                        <button type="button" class="filter-btn active" data-type="equipment" data-value="">All</button>
+                        <button type="button" class="filter-btn" data-type="equipment"
+                            data-value="Dumbbell">Dumbbell</button>
+                        <button type="button" class="filter-btn" data-type="equipment"
+                            data-value="Barbell">Barbell</button>
+                        <button type="button" class="filter-btn" data-type="equipment" data-value="Cable">Cable</button>
+                        <button type="button" class="filter-btn" data-type="equipment"
+                            data-value="Exercise Ball">Exercise
                             Ball</button>
-                        <button class="filter-btn" data-type="equipment" data-value="Foam Roll">Foam Roll</button>
-                        <button class="filter-btn" data-type="equipment" data-value="Kettlebells">Kettlebells</button>
-                        <button class="filter-btn" data-type="equipment" data-value="Machine">Machine</button>
-                        <button class="filter-btn" data-type="equipment" data-value="None">None</button>
-                        <button class="filter-btn" data-type="equipment" data-value="Other">Other</button>
+                        <button type="button" class="filter-btn" data-type="equipment" data-value="Foam Roll">Foam
+                            Roll</button>
+                        <button type="button" class="filter-btn" data-type="equipment"
+                            data-value="Kettlebells">Kettlebells</button>
+                        <button type="button" class="filter-btn" data-type="equipment"
+                            data-value="Machine">Machine</button>
+                        <button type="button" class="filter-btn" data-type="equipment" data-value="None">None</button>
+                        <button type="button" class="filter-btn" data-type="equipment" data-value="Other">Other</button>
                     </div>
                 </div>
 
@@ -49,23 +53,36 @@
                 <div class="filter-box">
                     <p class="filter-label">Target</p>
                     <div class="filter-group" id="bodypart-filters">
-                        <button class="filter-btn active" data-type="bodypart" data-value="">All</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Abdominals">Abdominals</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Abductors">Abductors</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Adductors">Adductors</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Biceps">Biceps</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Calves">Calves</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Chest">Chest</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Forearms">Forearms</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Glutes">Glutes</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Hamstrings">Hamstrings</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Lats">Lats</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Lower Back">Lower Back</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Middle Back">Middle Back</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Quadriceps">Quadriceps</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Shoulders">Shoulders</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Traps">Traps</button>
-                        <button class="filter-btn" data-type="bodypart" data-value="Triceps">Triceps</button>
+                        <button type="button" class="filter-btn active" data-type="bodypart" data-value="">All</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Abdominals">Abdominals</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Abductors">Abductors</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Adductors">Adductors</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Biceps">Biceps</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Calves">Calves</button>
+                        <button type="button" class="filter-btn" data-type="bodypart" data-value="Chest">Chest</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Forearms">Forearms</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Glutes">Glutes</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Hamstrings">Hamstrings</button>
+                        <button type="button" class="filter-btn" data-type="bodypart" data-value="Lats">Lats</button>
+                        <button type="button" class="filter-btn" data-type="bodypart" data-value="Lower Back">Lower
+                            Back</button>
+                        <button type="button" class="filter-btn" data-type="bodypart" data-value="Middle Back">Middle
+                            Back</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Quadriceps">Quadriceps</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Shoulders">Shoulders</button>
+                        <button type="button" class="filter-btn" data-type="bodypart" data-value="Traps">Traps</button>
+                        <button type="button" class="filter-btn" data-type="bodypart"
+                            data-value="Triceps">Triceps</button>
                     </div>
                 </div>
             </div>
@@ -77,35 +94,37 @@
         <script>
             let selectedEquipment = "";
             let selectedBodypart = "";
-        
+
             function showSpinner() {
-                document.getElementById("loading-spinner").style.display = "flex";
+                const spinner = document.getElementById("loading-spinner");
+                spinner.classList.add("active");
             }
-        
+
             function hideSpinner() {
-                document.getElementById("loading-spinner").style.display = "none";
+                const spinner = document.getElementById("loading-spinner");
+                spinner.classList.remove("active");
             }
-        
+
             function goToExercise(url) {
                 showSpinner();
                 setTimeout(() => window.location.href = url, 100);
             }
-        
+
             function expandCard(card) {
                 document.querySelectorAll('.card-expanded').forEach(expanded => {
                     expanded.style.display = 'none';
                     if (expanded.previousElementSibling)
                         expanded.previousElementSibling.style.display = 'block';
                 });
-        
+
                 card.style.display = "none";
                 const expanded = card.nextElementSibling;
                 expanded.style.display = "block";
                 expanded.style.opacity = 0;
-        
+
                 const title = card.querySelector(".exercise-title").innerText;
                 const videoElem = expanded.querySelector(".video-link");
-        
+
                 if (videoElem) {
                     fetch(`/video/${encodeURIComponent(title)}`)
                         .then(res => res.json())
@@ -114,29 +133,31 @@
                         })
                         .catch(() => videoElem.textContent = "N/A");
                 }
-        
+
                 requestAnimationFrame(() => expanded.style.opacity = 1);
             }
-        
+
             function closeCard(btn) {
                 const expanded = btn.parentElement;
                 expanded.style.display = "none";
                 expanded.previousElementSibling.style.display = "block";
             }
-        
+
             function answerBoxTemplate(row) {
                 const [exercise, review, explanation] = row;
 
                 return `
                     <div class='exercise-card'>
                         <div class='card-front' onclick="expandCard(this)">
-                            <h3 class='exercise-title'>${exercise.Title}</h3>
-                            <p class='exercise-desc'>${exercise.Desc}</p>
-                            <p><strong>Rating:</strong> ${exercise.Rating ?? 'N/A'}</p>
-                            <p><strong>Fatigue Level:</strong> ${exercise.FatigueLevel ?? 'N/A'}</p>
-                            <p class='review'><em>${review}</em></p>
-                            <p class='explanation'><em>${explanation}</em></p>
-                        </div>
+                                    <h3 class='exercise-title'>${exercise.Title}</h3>
+                                    <p class='exercise-desc'>${exercise.Desc}</p>
+                                    <div class='card-meta'>
+                                        <p><strong>Rating:</strong> ${exercise.Rating ?? 'N/A'}</p>
+                                        <p><strong>Fatigue Level:</strong> ${exercise.FatigueLevel ?? 'N/A'}</p>
+                                    </div>
+                                    ${review ? `<p class='review'><em>${review}</em></p>` : ""}
+                                    ${explanation ? `<p class='explanation'><em>${explanation}</em></p>` : ""}
+                                </div>
                         <div class='card-expanded'>
                             <button class='close-btn' onclick="closeCard(this)">×</button>
                             <p><strong>Description:</strong> ${exercise.Desc}</p>
@@ -150,16 +171,16 @@
                     </div>
                 `;
             }
-        
+
             function filterText() {
                 document.getElementById("answer-box").innerHTML = "";
                 showSpinner();
-        
+
                 const query = document.getElementById("filter-text-val").value;
                 const params = { title: query };
                 if (selectedEquipment) params.equipment = selectedEquipment;
                 if (selectedBodypart) params.bodypart = selectedBodypart;
-        
+
                 fetch("/exercises?" + new URLSearchParams(params))
                     .then(res => res.json())
                     .then(data => {
@@ -168,7 +189,7 @@
                             answerBox.innerHTML = "<div class='no-results'>No workouts found. Try another search.</div>";
                             return;
                         }
-        
+
                         data.forEach(row => {
                             const div = document.createElement("div");
                             div.innerHTML = answerBoxTemplate(row);
@@ -177,7 +198,7 @@
                     })
                     .finally(hideSpinner);
             }
-        
+
             function generateRoutine() {
                 document.getElementById("answer-box").innerHTML = "";
                 showSpinner();
@@ -185,94 +206,75 @@
                 const query = document.getElementById("filter-text-val").value;
                 const params = { title: query };
                 if (selectedEquipment) params.equipment = selectedEquipment;
+                if (selectedBodypart) params.bodypart = selectedBodypart;
 
                 fetch("/routine?" + new URLSearchParams(params))
                     .then(res => res.json())
                     .then(data => {
                         const answerBox = document.getElementById("answer-box");
-                        
-                        if (!data.main || !data.main.length) {
+                        answerBox.innerHTML = "";
+
+                        if (data.main && data.main.length) {
+                            const mainWrapper = document.createElement("div");
+                            mainWrapper.className = "routine-wrapper";
+                            mainWrapper.innerHTML = `<h3 class="routine-heading">Main Routine</h3>`;
+
+                            data.main.forEach(ex => {
+                                const div = document.createElement("div");
+                                div.innerHTML = answerBoxTemplate(ex);
+                                mainWrapper.appendChild(div);
+                            });
+
+                            answerBox.appendChild(mainWrapper);
+                        } else {
                             answerBox.innerHTML = "<div class='no-results'>No routine found. Try a query like 'arms', 'core', or 'legs'.</div>";
                             return;
                         }
 
-                        const mainWrapper = document.createElement("div");
-                        mainWrapper.className = "routine-wrapper";
-                        mainWrapper.innerHTML = `<h3>Main Routine</h3>`;
-                        
-                        data.main.forEach(ex => {
-                            const div = document.createElement("div");
-                            div.innerHTML = answerBoxTemplate(ex);
-                            mainWrapper.appendChild(div);
-                        });
-
                         if (data.related && data.related.length) {
                             const relatedWrapper = document.createElement("div");
                             relatedWrapper.className = "routine-wrapper";
-                            relatedWrapper.innerHTML = `<h3>Related Exercises</h3>`;
-                            
+                            relatedWrapper.innerHTML = `<h3>Additional Exercises</h3>`;
+
                             data.related.forEach(ex => {
                                 const div = document.createElement("div");
                                 div.innerHTML = answerBoxTemplate(ex);
                                 relatedWrapper.appendChild(div);
                             });
-                            
-                            mainWrapper.appendChild(relatedWrapper);
-                        }
 
-                        answerBox.appendChild(mainWrapper);
+                            answerBox.appendChild(relatedWrapper);
+                        }
                     })
                     .catch(error => {
                         console.error("Error fetching routine:", error);
-                        document.getElementById("answer-box").innerHTML = 
+                        document.getElementById("answer-box").innerHTML =
                             "<div class='no-results'>Error loading routine. Please try again.</div>";
                     })
                     .finally(hideSpinner);
             }
-        
-            // document.addEventListener("DOMContentLoaded", () => {
-            //     document.querySelectorAll('.filter-btn').forEach(btn => {
-            //         btn.addEventListener('click', () => {
-            //             const { type, value } = btn.dataset;
-            //             document.querySelectorAll(`.filter-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
-            //             btn.classList.add('active');
-            //             if (type === "equipment") selectedEquipment = value;
-            //             if (type === "bodypart") selectedBodypart = value;
-            //         });
-            //     });
-        
-            //     document.getElementById("filter-text-val").addEventListener("keypress", e => {
-            //         if (e.key === "Enter") filterText();
-            //     });
-            // });
 
             document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const { type, value } = btn.dataset;
-                    document.querySelectorAll(`.filter-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.addEventListener('click', e => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const { type, value } = btn.dataset;
 
-                    if (type === "equipment") selectedEquipment = value;
-                    if (type === "bodypart") selectedBodypart = value;
+                        document.querySelectorAll(`.filter-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
 
-                    const useRoutine = document.getElementById("routine-button").classList.contains("active");
+                        if (type === "equipment") selectedEquipment = value;
+                        if (type === "bodypart") selectedBodypart = value;
 
-            // Automatically refresh results
-                    const query = document.getElementById("filter-text-val").value.trim();
-                    if (useRoutine) {
                         generateRoutine();
-                    } else {
-                        filterText();
-                    }
+                    });
+                });
+
+                document.getElementById("filter-text-val").addEventListener("keypress", e => {
+                    if (e.key === "Enter") generateRoutine();
                 });
             });
-
-            document.getElementById("filter-text-val").addEventListener("keypress", e => {
-                if (e.key === "Enter") filterText();
-            });
-        });
-        </script>        
+        </script>
 
         <div id="loading-spinner">
             <div class="spinner-circle"></div>

@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from utils import create_query_embedder, find_youtube_tutorial, preprocess_text, correct_equipment, get_target_muscle_groups, synonym_dict
 from exercise import search_exercises
-from routine import generate_workout_routine
+from routine import generate_workout_routine, get_targets
 from sentence_transformers import SentenceTransformer
 from rapidfuzz.distance import Levenshtein
 from sklearn.metrics.pairwise import cosine_similarity
@@ -152,16 +152,20 @@ def fetch_video(title):
 def workout_routine():
     query = request.args.get("title", "")
     selected_equipment = request.args.get("equipment", "")
+    selected_bodypart = request.args.get("bodypart", "")
 
-    target_muscles_list = get_target_muscle_groups(query)
-    target_muscles_str = " ".join(
-        target_muscles_list) if target_muscles_list else query
+    target_muscles_list = get_targets(query, explicit_bodypart=selected_bodypart)
+    target_muscles_str = " ".join(target_muscles_list)
 
     if not target_muscles_str:
         return jsonify({"main": [], "related": []})
 
     main_exercises = generate_workout_routine(
-        target_muscles_str, selected_equipment, documents)
+                    target_muscles_str,
+                    selected_equipment,
+                    documents,
+                    bodypart_filter=selected_bodypart        
+                )
     related = get_related_exercises(main_exercises)
 
     main_wrapped = [
