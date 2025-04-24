@@ -173,7 +173,17 @@
             }
 
             function filterText() {
-                document.getElementById("answer-box").innerHTML = "";
+                // document.getElementById("answer-box").innerHTML = "";
+                const answerBox = document.getElementById("answer-box");
+                answerBox.classList.add("fading-out");
+
+                setTimeout(() => {
+                    answerBox.innerHTML = "";
+                    generateAndInsertNewCards(data); // your render logic
+                    answerBox.classList.remove("fading-out");
+                    answerBox.classList.add("fading-in");
+                    setTimeout(() => answerBox.classList.remove("fading-in"), 300);
+                }, 150);
                 showSpinner();
 
                 const query = document.getElementById("filter-text-val").value;
@@ -200,48 +210,67 @@
             }
 
             function generateRoutine() {
-                document.getElementById("answer-box").innerHTML = "";
-                showSpinner();
-
                 const query = document.getElementById("filter-text-val").value;
                 const params = { title: query };
                 if (selectedEquipment) params.equipment = selectedEquipment;
                 if (selectedBodypart) params.bodypart = selectedBodypart;
 
+                showSpinner();
+
                 fetch("/routine?" + new URLSearchParams(params))
                     .then(res => res.json())
                     .then(data => {
                         const answerBox = document.getElementById("answer-box");
-                        answerBox.innerHTML = "";
 
-                        if (data.main && data.main.length) {
-                            const mainWrapper = document.createElement("div");
+                        let mainWrapper = answerBox.querySelector(".routine-wrapper");
+                        if (!mainWrapper) {
+                            mainWrapper = document.createElement("div");
                             mainWrapper.className = "routine-wrapper";
-                            mainWrapper.innerHTML = `<h3 class="routine-heading">Main Routine</h3>`;
-
-                            data.main.forEach(ex => {
-                                const div = document.createElement("div");
-                                div.innerHTML = answerBoxTemplate(ex);
-                                mainWrapper.appendChild(div);
-                            });
-
                             answerBox.appendChild(mainWrapper);
-                        } else {
-                            answerBox.innerHTML = "<div class='no-results'>No routine found. Try a query like 'arms', 'core', or 'legs'.</div>";
-                            return;
                         }
 
-                        if (data.related && data.related.length) {
-                            const relatedWrapper = document.createElement("div");
-                            relatedWrapper.className = "routine-wrapper";
-                            relatedWrapper.innerHTML = `<h3>Additional Exercises</h3>`;
+                        let heading = mainWrapper.querySelector(".routine-heading");
+                        if (!heading) {
+                            heading = document.createElement("h3");
+                            heading.className = "routine-heading";
+                            heading.textContent = "Main Routine";
+                            mainWrapper.prepend(heading);
+                        }
 
-                            data.related.forEach(ex => {
+                        const existingCards = mainWrapper.querySelectorAll(".exercise-card");
+                        const newLength = data.main.length;
+
+                        data.main.forEach((ex, i) => {
+                            let card;
+                            if (i < existingCards.length) {
+                                card = existingCards[i];
+                                updateCardText(card, ex);
+                            } else {
+                                card = document.createElement("div");
+                                card.classList.add("exercise-card");
+                                card.innerHTML = answerBoxTemplate(ex);
+                                mainWrapper.appendChild(card);
+                            }
+                        });
+
+                        for (let i = data.main.length; i < existingCards.length; i++) {
+                            existingCards[i].remove();
+                        }
+
+                        const related = data.related || [];
+                        const existingRelated = answerBox.querySelector(".routine-wrapper.related");
+                        if (existingRelated) existingRelated.remove();
+
+                        if (related.length) {
+                            const relatedWrapper = document.createElement("div");
+                            relatedWrapper.className = "routine-wrapper related";
+                            relatedWrapper.innerHTML = `<h3>Additional Exercises</h3>`;
+                            related.forEach(ex => {
                                 const div = document.createElement("div");
+                                div.classList.add("exercise-card");
                                 div.innerHTML = answerBoxTemplate(ex);
                                 relatedWrapper.appendChild(div);
                             });
-
                             answerBox.appendChild(relatedWrapper);
                         }
                     })
@@ -252,6 +281,7 @@
                     })
                     .finally(hideSpinner);
             }
+
 
             document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -274,6 +304,43 @@
                     if (e.key === "Enter") generateRoutine();
                 });
             });
+
+            function updateCardText(card, ex) {
+                const front = card.querySelector(".card-front");
+                if (!front) return;
+
+                front.querySelector(".exercise-title").textContent = ex[0].Title;
+                front.querySelector(".exercise-desc").textContent = ex[0].Desc;
+
+                const rating = front.querySelector(".card-meta p:nth-child(1)");
+                const fatigue = front.querySelector(".card-meta p:nth-child(2)");
+                if (rating) rating.innerHTML = `<strong>Rating:</strong> ${ex[0].Rating}`;
+                if (fatigue) fatigue.innerHTML = `<strong>Fatigue Level:</strong> ${ex[0].FatigueLevel}`;
+
+                const review = front.querySelector(".review");
+                const explanation = front.querySelector(".explanation");
+
+                if (review) {
+                    if (ex[1]) review.innerHTML = `<em>${ex[1]}</em>`;
+                    else review.remove();
+                } else if (ex[1]) {
+                    const r = document.createElement("p");
+                    r.className = "review";
+                    r.innerHTML = `<em>${ex[1]}</em>`;
+                    front.appendChild(r);
+                }
+
+                if (explanation) {
+                    if (ex[2]) explanation.innerHTML = `<em>${ex[2]}</em>`;
+                    else explanation.remove();
+                } else if (ex[2]) {
+                    const e = document.createElement("p");
+                    e.className = "explanation";
+                    e.innerHTML = `<em>${ex[2]}</em>`;
+                    front.appendChild(e);
+                }
+            }
+
         </script>
 
         <div id="loading-spinner">
