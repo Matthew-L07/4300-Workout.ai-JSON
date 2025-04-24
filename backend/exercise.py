@@ -6,6 +6,7 @@ import numpy as np
 from flask import jsonify
 from utils import preprocess_text
 
+
 def search_exercises(request, documents, query_embed, bert_embeddings, muscle_groups):
     text = request.args.get("title", "")
     selected_equipment = request.args.get("equipment", "")
@@ -33,7 +34,8 @@ def search_exercises(request, documents, query_embed, bert_embeddings, muscle_gr
     min_rating = min(rating_scores)
     max_rating = max(rating_scores)
     rating_range = max(max_rating - min_rating, 1e-6)
-    rating_normalized = [(r - min_rating) / rating_range for r in rating_scores]
+    rating_normalized = [
+        (r - min_rating) / rating_range for r in rating_scores]
     scores = bert_subset @ query_embedding
     scores = 0.75 * scores + 0.25 * np.array(rating_normalized)
     top_matches = np.argsort(scores)[::-1][:10]
@@ -54,6 +56,7 @@ def search_exercises(request, documents, query_embed, bert_embeddings, muscle_gr
                 best_word = word
 
         explanation = f"This exercise matches well with the term '{best_word}' from your query."
+        review = f"Reddit Based Review: {doc[6]}"
 
         exercise = {
             'Title': doc[0],
@@ -66,6 +69,6 @@ def search_exercises(request, documents, query_embed, bert_embeddings, muscle_gr
             "FatigueLevel": doc[7]
         }
 
-        results.append((exercise, explanation))
+        results.append((exercise, review, explanation))
 
     return jsonify(results)

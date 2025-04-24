@@ -125,7 +125,7 @@
             }
         
             function answerBoxTemplate(row) {
-                const [exercise, explanation] = row;
+                const [exercise, review, explanation] = row;
 
                 return `
                     <div class='exercise-card'>
@@ -134,6 +134,7 @@
                             <p class='exercise-desc'>${exercise.Desc}</p>
                             <p><strong>Rating:</strong> ${exercise.Rating ?? 'N/A'}</p>
                             <p><strong>Fatigue Level:</strong> ${exercise.FatigueLevel ?? 'N/A'}</p>
+                            <p class='review'><em>${review}</em></p>
                             <p class='explanation'><em>${explanation}</em></p>
                         </div>
                         <div class='card-expanded'>
