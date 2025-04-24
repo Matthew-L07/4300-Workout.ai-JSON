@@ -161,23 +161,51 @@ def workout_routine():
         return jsonify({"main": [], "related": []})
 
     main_exercises = generate_workout_routine(
-                    target_muscles_str,
-                    selected_equipment,
-                    documents,
-                    bodypart_filter=selected_bodypart        
-                )
-    related = get_related_exercises(main_exercises)
+        target_muscles_str,
+        selected_equipment,
+        documents,
+        bodypart_filter=selected_bodypart        
+    )
 
+    related_exercises = get_related_exercises(main_exercises, count=8)
+
+    combined = []
+    seen_titles = set()
+
+    for ex in main_exercises + related_exercises:
+        title = ex["Title"]
+        if title not in seen_titles:
+            combined.append(ex)
+            seen_titles.add(title)
+        if len(combined) >= 8:
+            break
+
+    full_routine = combined
+
+    search_result = search_exercises(request, documents, query_embed, bert_embeddings, bodypart_list)
+    if hasattr(search_result, "json"):
+        search_result = search_result.json
+
+    all_titles = {ex["Title"] for ex in full_routine}
+    full_routine_titles = {ex["Title"] for ex in full_routine}
+    def is_similar(title1, title2, max_dist=5):
+        return Levenshtein.distance(title1.lower(), title2.lower()) < max_dist
+
+    additional = []
+    for r in search_result:
+        new_title = r[0]["Title"]
+        if not any(is_similar(new_title, existing["Title"]) for existing in full_routine):
+            additional.append(r)
+        if len(additional) >= 5:
+            break    
     main_wrapped = [
-        (ex, "Reddit Review: " +
-         ex["RatingDesc"], f"This is a good {ex['BodyPart'].lower()} exercise.")
-        for ex in main_exercises
+        (ex, f"Reddit Review: {ex['RatingDesc']}", f"This is a good {ex['BodyPart'].lower()} exercise.")
+        for ex in full_routine
     ]
+
     related_wrapped = [
-        (ex, "Reddit Review: " +
-         ex["RatingDesc"], f"This is a related {ex['BodyPart'].lower()} exercise.")
-        for ex in related
-    ]
+        (ex[0], ex[1], ex[2]) for ex in additional
+    ] if additional else []
 
     return jsonify({
         "main": main_wrapped,

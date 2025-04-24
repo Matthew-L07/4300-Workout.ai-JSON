@@ -270,7 +270,6 @@ body {
 }
 
 .exercise-card:hover {
-    transform: scale(1.03);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
@@ -280,7 +279,6 @@ body {
     border-radius: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: scale(1);
     cursor: pointer;
 }
 
@@ -465,11 +463,10 @@ body {
     text-decoration: underline;
 }
 
-.routine-wrapper {
+/* .routine-wrapper {
     margin-bottom: 20px;
     border-radius: 8px;
-    overflow: hidden;
-}
+} */
 
 .routine-toggle {
     width: 100%;
