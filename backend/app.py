@@ -23,17 +23,21 @@ with open("exercise_ratings.json", "r") as f:
     ratings_lookup = json.load(f)
 
 exercises_df = pd.DataFrame(data)
-exercises_df['Equipment'] = exercises_df['Equipment'].replace({'E-Z Curl Bar': 'Barbell', 'Medicine Ball': 'Other'})
+exercises_df['Equipment'] = exercises_df['Equipment'].replace(
+    {'E-Z Curl Bar': 'Barbell', 'Medicine Ball': 'Other'})
 equipment_list = sorted(exercises_df['Equipment'].dropna().unique())
-equipment_keywords = [e.lower() for e in equipment_list if e not in {'Other', 'None'}]
+equipment_keywords = [e.lower()
+                      for e in equipment_list if e not in {'Other', 'None'}]
 bodypart_list = sorted(exercises_df['BodyPart'].dropna().unique())
 
 documents = []
 for ex in data:
     title_clean = preprocess_text(ex["Title"]).replace(" ", "_").upper()
     rating = ratings_lookup.get(title_clean, {}).get("Rating", ex["Rating"])
-    rating_desc = ratings_lookup.get(title_clean, {}).get("RatingDesc", ex["RatingDesc"])
-    fatigue_level = ratings_lookup.get(title_clean, {}).get("FatigueLevel", 3.0)
+    rating_desc = ratings_lookup.get(title_clean, {}).get(
+        "RatingDesc", ex["RatingDesc"])
+    fatigue_level = ratings_lookup.get(
+        title_clean, {}).get("FatigueLevel", 3.0)
     documents.append((
         ex["Title"].upper(),
         ex["Desc"],
@@ -54,6 +58,7 @@ vocab = set(word for desc in descs for word in desc.split())
 
 query_embed = create_query_embedder(vocab, bert_model, synonym_dict)
 
+
 def get_related_exercises(main_exercises, count=3):
     if not main_exercises:
         return []
@@ -65,19 +70,21 @@ def get_related_exercises(main_exercises, count=3):
     filtered_indices = [
         idx for idx, doc in enumerate(documents)
         if doc[0] not in main_titles and
-           doc[2] in main_bodyparts and
-           doc[0].lower() not in title_lower and
-           all(Levenshtein.distance(doc[0].lower(), t) >= 5 for t in title_lower)
+        doc[2] in main_bodyparts and
+        doc[0].lower() not in title_lower and
+        all(Levenshtein.distance(doc[0].lower(), t) >= 5 for t in title_lower)
     ]
 
     if not filtered_indices:
         return []
 
-    main_indices = [i for i, doc in enumerate(documents) if doc[0] in main_titles]
+    main_indices = [i for i, doc in enumerate(
+        documents) if doc[0] in main_titles]
     if not main_indices:
         return []
 
-    mean_embed = np.mean(bert_embeddings_np[main_indices], axis=0, keepdims=True)
+    mean_embed = np.mean(
+        bert_embeddings_np[main_indices], axis=0, keepdims=True)
     candidate_embeds = bert_embeddings_np[filtered_indices]
 
     sims = cosine_similarity(mean_embed, candidate_embeds).flatten()
@@ -99,6 +106,7 @@ def get_related_exercises(main_exercises, count=3):
 
     return results
 
+
 @app.route("/")
 def home():
     return render_template("base.html", title="Fitness Search",
@@ -106,9 +114,11 @@ def home():
                            bodypart_list=bodypart_list,
                            exercises=[])
 
+
 @app.route("/exercises")
 def exercises_search():
     return search_exercises(request, documents, query_embed, bert_embeddings, bodypart_list)
+
 
 @app.route("/exercise/<title>")
 def exercise_page(title):
@@ -128,6 +138,7 @@ def exercise_page(title):
             })
     return "Exercise not found", 404
 
+
 @app.route("/video/<title>")
 def fetch_video(title):
     try:
@@ -136,27 +147,39 @@ def fetch_video(title):
     except Exception as e:
         return jsonify({"Video": None, "Error": str(e)})
 
+
 @app.route("/routine")
 def workout_routine():
     query = request.args.get("title", "")
     selected_equipment = request.args.get("equipment", "")
 
     target_muscles_list = get_target_muscle_groups(query)
-    target_muscles_str = " ".join(target_muscles_list) if target_muscles_list else query
+    target_muscles_str = " ".join(
+        target_muscles_list) if target_muscles_list else query
 
     if not target_muscles_str:
         return jsonify({"main": [], "related": []})
 
-    main_exercises = generate_workout_routine(target_muscles_str, selected_equipment, documents)
+    main_exercises = generate_workout_routine(
+        target_muscles_str, selected_equipment, documents)
     related = get_related_exercises(main_exercises)
 
-    main_wrapped = [(ex, f"This is a good {ex['BodyPart'].lower()} exercise.") for ex in main_exercises]
-    related_wrapped = [(ex, f"This is a related {ex['BodyPart'].lower()} exercise.") for ex in related]
+    main_wrapped = [
+        (ex, "Reddit Review: " +
+         ex["RatingDesc"], f"This is a good {ex['BodyPart'].lower()} exercise.")
+        for ex in main_exercises
+    ]
+    related_wrapped = [
+        (ex, "Reddit Review: " +
+         ex["RatingDesc"], f"This is a related {ex['BodyPart'].lower()} exercise.")
+        for ex in related
+    ]
 
     return jsonify({
         "main": main_wrapped,
         "related": related_wrapped
     })
+
 
 if __name__ == "__main__" and 'DB_NAME' not in os.environ:
     app.run(debug=True, host="0.0.0.0", port=5000)
