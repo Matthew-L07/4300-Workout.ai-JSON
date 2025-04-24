@@ -28,6 +28,11 @@ def preprocess_text(text):
     text = re.sub(r'[^a-zA-Z0-9_\s]', '', text)
     return text
 
+def get_target_muscle_groups(query):
+    tokens = preprocess_text(query).split()
+    expanded = {word for token in tokens for word in synonym_dict.get(token, [token])}
+    return list(expanded)
+
 def fix_typos(query_word, vocab, max_dist):
     return [word for word in vocab if abs(len(word) - len(query_word)) <= max_dist and Levenshtein.distance(query_word, word) <= max_dist]
 

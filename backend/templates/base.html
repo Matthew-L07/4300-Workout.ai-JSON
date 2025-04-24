@@ -175,46 +175,51 @@
             function generateRoutine() {
                 document.getElementById("answer-box").innerHTML = "";
                 showSpinner();
-        
+
                 const query = document.getElementById("filter-text-val").value;
                 const params = { title: query };
                 if (selectedEquipment) params.equipment = selectedEquipment;
-        
+
                 fetch("/routine?" + new URLSearchParams(params))
                     .then(res => res.json())
-                    .then(routines => {
+                    .then(data => {
                         const answerBox = document.getElementById("answer-box");
-                        if (!routines.length) {
+                        
+                        if (!data.main || !data.main.length) {
                             answerBox.innerHTML = "<div class='no-results'>No routine found. Try a query like 'arms', 'core', or 'legs'.</div>";
                             return;
                         }
-        
-                        routines.forEach((routine, index) => {
-                            const wrapper = document.createElement("div");
-                            wrapper.className = "routine-wrapper";
-        
-                            const toggle = document.createElement("button");
-                            toggle.className = "routine-toggle";
-                            toggle.textContent = `Routine ${index + 1} ▼`;
-        
-                            const content = document.createElement("div");
-                            content.className = "routine-content";
-                            content.style.display = "none";
-        
-                            toggle.onclick = () => {
-                                content.style.display = content.style.display === "none" ? "block" : "none";
-                            };
-        
-                            routine.forEach(ex => {
+
+                        const mainWrapper = document.createElement("div");
+                        mainWrapper.className = "routine-wrapper";
+                        mainWrapper.innerHTML = `<h3>Main Routine</h3>`;
+                        
+                        data.main.forEach(ex => {
+                            const div = document.createElement("div");
+                            div.innerHTML = answerBoxTemplate(ex);
+                            mainWrapper.appendChild(div);
+                        });
+
+                        if (data.related && data.related.length) {
+                            const relatedWrapper = document.createElement("div");
+                            relatedWrapper.className = "routine-wrapper";
+                            relatedWrapper.innerHTML = `<h3>Related Exercises</h3>`;
+                            
+                            data.related.forEach(ex => {
                                 const div = document.createElement("div");
                                 div.innerHTML = answerBoxTemplate(ex);
-                                content.appendChild(div);
+                                relatedWrapper.appendChild(div);
                             });
-        
-                            wrapper.appendChild(toggle);
-                            wrapper.appendChild(content);
-                            answerBox.appendChild(wrapper);
-                        });
+                            
+                            mainWrapper.appendChild(relatedWrapper);
+                        }
+
+                        answerBox.appendChild(mainWrapper);
+                    })
+                    .catch(error => {
+                        console.error("Error fetching routine:", error);
+                        document.getElementById("answer-box").innerHTML = 
+                            "<div class='no-results'>Error loading routine. Please try again.</div>";
                     })
                     .finally(hideSpinner);
             }

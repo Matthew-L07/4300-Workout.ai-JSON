@@ -1,46 +1,73 @@
-
 import random
-from sklearn.metrics.pairwise import cosine_similarity
-from utils import preprocess_text, synonym_dict
 
-def get_target_muscle_groups(query):
-    tokens = preprocess_text(query).split()
-    expanded = {word for token in tokens for word in synonym_dict.get(token, [token])}
-    return list(expanded)
+TARGET_MAPPINGS = {
+    "butt": ["Glutes"],
+    "glutes": ["Glutes"],
+    "legs": ["Quadriceps", "Hamstrings", "Calves", "Adductors", "Abductors"],
+    "thighs": ["Quadriceps", "Hamstrings"],
+    "calves": ["Calves"],
+    
+    "arms": ["Biceps", "Triceps", "Forearms"],
+    "biceps": ["Biceps"],
+    "triceps": ["Triceps"],
+    "shoulders": ["Shoulders"],
+    "chest": ["Chest"],
+    "back": ["Lats", "Traps", "Middle Back", "Lower Back"],
+    
+    "abs": ["Abdominals"],
+    "core": ["Abdominals", "Lower Back"],
+    
+    "crossfit": ["Quadriceps", "Chest", "Back", "Shoulders"],
+    "hiit": ["Quadriceps", "Chest", "Back", "Shoulders"],
+    "cardio": ["Quadriceps", "Chest", "Back", "Shoulders"],
+    "strength": ["Quadriceps", "Chest", "Back", "Shoulders"],
+    "full body": ["Quadriceps", "Chest", "Back", "Shoulders"]
+}
 
-def generate_workout_routine(query, selected_equipment, documents, query_embed, bert_embeddings, used_exercises=set()):
-    query_embedding, expanded_tokens = query_embed(query)
+def get_targets(query):
+    """Map user query to target muscle groups using exact labels from data"""
+    query = str(query).lower()
+    
+    for keyword, targets in TARGET_MAPPINGS.items():
+        if keyword in query:
+            return targets
+            
+    if "upper" in query:
+        return ["Biceps", "Triceps", "Shoulders", "Chest"]
+    if "lower" in query:
+        return ["Quadriceps", "Hamstrings", "Glutes", "Calves"]
+    
+    return ["Quadriceps", "Chest", "Back", "Shoulders"]
 
-    scores = []
-    muscle_groups_in_routine = set()  
-    routine = []
+def generate_workout_routine(query, selected_equipment=None, documents=None, used_exercises=set()):
+    targets = set(get_targets(query))
+    used_set = set(used_exercises)
 
-    for i, doc in enumerate(documents):
-        if i in used_exercises:
-            continue
-        
-        if selected_equipment and doc[3] != selected_equipment:
-            continue
-
-        bodypart = doc[2].lower()
-        if any(token in bodypart for token in expanded_tokens):
-            sim = cosine_similarity([query_embedding], [bert_embeddings[i]])[0][0]
-            scores.append((sim, i))
-
-    if not scores:
+    if not documents:
         return []
 
-    scores.sort(reverse=True)
-    top_indices = [i for _, i in scores[:10]]  
+    ex_in_muscle_group = [
+        doc for doc in documents
+        if doc[0] not in used_set and
+           (not selected_equipment or doc[3] == selected_equipment) and
+           doc[2] in targets
+    ]
 
-    for i in top_indices:
-        doc = documents[i]
-        muscle_group = doc[2].lower()  
+    if len(ex_in_muscle_group) < 4:
+        ex_in_muscle_group = [
+            doc for doc in documents
+            if doc[0] not in used_set and
+               (not selected_equipment or doc[3] == selected_equipment)
+        ]
 
-        if muscle_group in muscle_groups_in_routine:
-            continue
+    if not ex_in_muscle_group:
+        return []
 
-        routine.append({
+    random.shuffle(ex_in_muscle_group)
+    selected = ex_in_muscle_group[:4]
+
+    return [
+        {
             "Title": doc[0],
             "Desc": doc[1],
             "BodyPart": doc[2],
@@ -49,11 +76,6 @@ def generate_workout_routine(query, selected_equipment, documents, query_embed, 
             "Rating": doc[5],
             "RatingDesc": doc[6],
             "FatigueLevel": doc[7]
-        })
-        used_exercises.add(i)
-        muscle_groups_in_routine.add(muscle_group) 
-
-        if len(routine) >= 5: 
-            break
-
-    return routine
+        }
+        for doc in selected
+    ]
