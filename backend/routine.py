@@ -46,25 +46,43 @@ def generate_workout_routine(query, selected_equipment=None, documents=None, use
     if not documents:
         return []
 
-    ex_in_muscle_group = [
+    filtered = [
         doc for doc in documents
         if doc[0] not in used_set and
            (not selected_equipment or doc[3] == selected_equipment) and
            doc[2] in targets
     ]
 
-    if len(ex_in_muscle_group) < 4:
-        ex_in_muscle_group = [
+    if len(filtered) < 5:
+        filtered = [
             doc for doc in documents
             if doc[0] not in used_set and
                (not selected_equipment or doc[3] == selected_equipment)
         ]
 
-    if not ex_in_muscle_group:
+    if not filtered:
         return []
 
-    random.shuffle(ex_in_muscle_group)
-    selected = ex_in_muscle_group[:4]
+    filtered_sorted = sorted(filtered, key=lambda doc: (doc[5], doc[7]), reverse=True)
+
+    routine = []
+    seen_muscles = set()
+
+    for doc in filtered_sorted:
+        if doc[2] not in seen_muscles:
+            routine.append(doc)
+            seen_muscles.add(doc[2])
+        if len(routine) == 5:
+            break
+
+    if len(routine) < 5:
+        for doc in filtered_sorted:
+            if doc not in routine:
+                routine.append(doc)
+            if len(routine) == 5:
+                break
+
+    routine_sorted = sorted(routine, key=lambda doc: doc[7], reverse=True)
 
     return [
         {
@@ -77,5 +95,7 @@ def generate_workout_routine(query, selected_equipment=None, documents=None, use
             "RatingDesc": doc[6],
             "FatigueLevel": doc[7]
         }
-        for doc in selected
+        for doc in routine_sorted
     ]
+
+
