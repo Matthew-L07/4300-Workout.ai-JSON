@@ -3,13 +3,11 @@ import json
 import pandas as pd
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-from utils import create_query_embedder, find_youtube_tutorial, preprocess_text, correct_equipment, synonym_dict
+from utils import create_query_embedder, find_youtube_tutorial, preprocess_text, correct_equipment, get_target_muscle_groups, synonym_dict
 from exercise import get_related_exercises
-from routine import generate_workout_routine, get_targets
+from routine import generate_workout_routine
 from sentence_transformers import SentenceTransformer
 import numpy as np
-from rapidfuzz.distance import Levenshtein
-
 
 app = Flask(__name__)
 CORS(app)
@@ -58,13 +56,13 @@ vocab = set(word for desc in descs for word in desc.split())
 
 query_embed = create_query_embedder(vocab, bert_model, synonym_dict)
 
+
 @app.route("/")
 def home():
     return render_template("base.html", title="Fitness Search",
                            equipment_list=equipment_list,
                            bodypart_list=bodypart_list,
                            exercises=[])
-
 
 @app.route("/exercise/<title>")
 def exercise_page(title):
@@ -98,57 +96,27 @@ def fetch_video(title):
 def workout_routine():
     query = request.args.get("title", "")
     selected_equipment = request.args.get("equipment", "")
-    selected_bodypart = request.args.get("bodypart", "")
 
-    target_muscles_list = get_targets(query, explicit_bodypart=selected_bodypart)
-    target_muscles_str = " ".join(target_muscles_list)
+    target_muscles_list = get_target_muscle_groups(query)
+    target_muscles_str = " ".join(
+        target_muscles_list) if target_muscles_list else query
 
     if not target_muscles_str:
         return jsonify({"main": [], "related": []})
 
-    main_exercises = generate_workout_routine(
-        target_muscles_str,
-        selected_equipment,
-        documents,
-        bodypart_filter=selected_bodypart        
-    )
+    main_exercises = generate_workout_routine(target_muscles_str, selected_equipment, documents)
+    related = get_related_exercises(documents, bert_embeddings_np, main_exercises, count=8)
 
-    related_exercises = get_related_exercises(documents, bert_embeddings_np, main_exercises, count=8)
-
-    combined = []
-    seen_titles = set()
-
-    for ex in main_exercises + related_exercises:
-        title = ex["Title"]
-        if title not in seen_titles:
-            combined.append(ex)
-            seen_titles.add(title)
-        if len(combined) >= 8:
-            break
-
-    full_routine = combined
-
-    if hasattr(search_result, "json"):
-        search_result = search_result.json
-
-    def is_similar(title1, title2, max_dist=5):
-        return Levenshtein.distance(title1.lower(), title2.lower()) < max_dist
-
-    additional = []
-    for r in search_result:
-        new_title = r[0]["Title"]
-        if not any(is_similar(new_title, existing["Title"]) for existing in full_routine):
-            additional.append(r)
-        if len(additional) >= 5:
-            break    
     main_wrapped = [
-        (ex, f"Reddit Review: {ex['RatingDesc']}", f"This is a good {ex['BodyPart'].lower()} exercise.")
-        for ex in full_routine
+        (ex, "Reddit Review: " +
+         ex["RatingDesc"], f"This is a good {ex['BodyPart'].lower()} exercise.")
+        for ex in main_exercises
     ]
-
     related_wrapped = [
-        (ex[0], ex[1], ex[2]) for ex in additional
-    ] if additional else []
+        (ex, "Reddit Review: " +
+         ex["RatingDesc"], f"This is a related {ex['BodyPart'].lower()} exercise.")
+        for ex in related
+    ]
 
     return jsonify({
         "main": main_wrapped,
