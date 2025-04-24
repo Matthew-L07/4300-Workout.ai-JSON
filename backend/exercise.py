@@ -14,7 +14,7 @@ def search_exercises(request, documents, query_embed, bert_embeddings, muscle_gr
     filtered_indices = []
     rating_scores = []
     for idx, doc in enumerate(documents):
-        _, _, body_part, equip, _, _, _ = doc
+        _, _, body_part, equip, _, _, _, _ = doc
         if selected_equipment and equip != selected_equipment:
             continue
         if selected_bodypart and body_part.lower() != selected_bodypart:
@@ -50,7 +50,8 @@ def search_exercises(request, documents, query_embed, bert_embeddings, muscle_gr
             'Equipment': doc[3],
             'Level': doc[4],
             'Rating': doc[5],
-            'RatingDesc': doc[6]
+            'RatingDesc': doc[6],
+            "FatigueLevel": doc[7]
         })
 
     return jsonify(results)

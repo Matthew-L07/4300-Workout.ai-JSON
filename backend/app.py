@@ -30,6 +30,7 @@ for ex in data:
     title_clean = preprocess_text(ex["Title"]).replace(" ", "_").upper()
     rating = ratings_lookup.get(title_clean, {}).get("Rating", ex["Rating"])
     rating_desc = ratings_lookup.get(title_clean, {}).get("RatingDesc", ex["RatingDesc"])
+    fatigue_level = ratings_lookup.get(title_clean, {}).get("FatigueLevel", 3.0)
     documents.append((
         ex["Title"].upper(),
         ex["Desc"],
@@ -37,7 +38,8 @@ for ex in data:
         correct_equipment(ex["Title"], ex["Equipment"], equipment_keywords),
         ex["Level"],
         rating,
-        rating_desc
+        rating_desc,
+        fatigue_level
     ))
 
 
@@ -73,6 +75,7 @@ def exercise_page(title):
                 "Level": doc[4],
                 "Rating": doc[5],
                 "RatingDesc": doc[6],
+                "FatigueLevel": doc[7],
                 "TutorialURL": find_youtube_tutorial(doc[0])
             })
     return "Exercise not found", 404

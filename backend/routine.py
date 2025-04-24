@@ -47,7 +47,8 @@ def generate_workout_routine(query, selected_equipment, documents, query_embed, 
             "Equipment": doc[3],
             "Level": doc[4],
             "Rating": doc[5],
-            "RatingDesc": doc[6]
+            "RatingDesc": doc[6],
+            "FatigueLevel": doc[7]
         })
         used_exercises.add(i)
         muscle_groups_in_routine.add(muscle_group) 
