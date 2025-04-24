@@ -160,7 +160,7 @@ matplotlib-inline==0.1.6
 mccabe==0.7.0
 mdit-py-plugins==0.3.0
 mdurl==0.1.0
-menuinst==2.1.2
+menuinst==1.4.19 
 mistune==2.0.4
 more-itertools==10.3.0
 moviepy==2.1.2
