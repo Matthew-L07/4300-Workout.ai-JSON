@@ -542,7 +542,7 @@ body {
 
 .routine-heading {
     font-size: 1.5vw;
-    font-weight: 400;
+    /* font-weight: 400; */
     padding-left: 0.5rem;
     text-align: left;
     color: #cccccc;
