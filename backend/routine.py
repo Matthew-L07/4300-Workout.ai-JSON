@@ -1,89 +1,142 @@
+from collections import Counter
 import random
+import numpy as np
+from app import preprocess_text
 
 TARGET_MAPPINGS = {
-    "butt": ["Glutes"],
-    "glutes": ["Glutes"],
-    "legs": ["Quadriceps", "Hamstrings", "Calves", "Adductors", "Abductors"],
-    "thighs": ["Quadriceps", "Hamstrings"],
-    "calves": ["Calves"],
-    
-    "arms": ["Biceps", "Triceps", "Forearms"],
-    "biceps": ["Biceps"],
-    "triceps": ["Triceps"],
-    "shoulders": ["Shoulders"],
-    "chest": ["Chest"],
-    "back": ["Lats", "Traps", "Middle Back", "Lower Back"],
-    
-    "abs": ["Abdominals"],
-    "core": ["Abdominals", "Lower Back"],
-    
-    "crossfit": ["Quadriceps", "Chest", "Back", "Shoulders"],
-    "hiit": ["Quadriceps", "Chest", "Back", "Shoulders"],
-    "cardio": ["Quadriceps", "Chest", "Back", "Shoulders"],
-    "strength": ["Quadriceps", "Chest", "Back", "Shoulders"],
-    "full body": ["Quadriceps", "Chest", "Back", "Shoulders"]
+    "vertical": ["Quadriceps", "Calves", "Glutes", "Hamstrings"], 
+    "jump": ["Quadriceps", "Glutes", "Hamstrings", "Calves"],
+    "running": ["Hamstrings", "Calves", "Glutes", "Quadriceps"], 
+    "sprint": ["Hamstrings", "Calves", "Glutes", "Abdominals"],
+    "speed": ["Hamstrings", "Calves", "Glutes", "Quadriceps"],
+    "agility": ["Calves", "Quadriceps", "Adductors", "Abductors"],
+
+    "beach body": ["Abdominals", "Chest", "Shoulders", "Quadriceps"],
+    "lean": ["Abdominals", "Calves", "Shoulders", "Quadriceps"],
+    "cut": ["Abdominals", "Abdominals", "Shoulders", "Calves"],
+    "aesthetic": ["Chest", "Shoulders", "Abdominals", "Biceps"],
+
+    "bulk": ["Chest", "Back", "Quadriceps", "Shoulders"],
+    "mass": ["Chest", "Back", "Hamstrings", "Glutes"],
+    "gain": ["Quadriceps", "Chest", "Back", "Shoulders"],
+
+    "fat loss": ["Abdominals", "Quadriceps", "Shoulders", "Calves"],
+    "hiit": ["Quadriceps", "Chest", "Back", "Abdominals", "Calves", "Shoulders"],
+    "conditioning": ["Abdominals", "Calves", "Hamstrings", "Shoulders"],
+    "cardio": ["Quadriceps", "Calves", "Hamstrings", "Shoulders", "Abdominals"],
+
+    "push day": ["Chest", "Triceps", "Shoulders", "Chest"],
+    "pull day": ["Lats", "Biceps", "Middle Back", "Lower Back"],
+    "full body": ["Quadriceps", "Hamstrings", "Chest", "Lats", "Shoulders", "Glutes", "Abdominals", "Calves"],
+    "strength": ["Quadriceps", "Hamstrings", "Lats", "Chest", "Shoulders", "Glutes"],
+    "crossfit": ["Quadriceps", "Hamstrings", "Chest", "Lats", "Shoulders", "Abdominals", "Glutes", "Calves"],
+
+    "arms": ["Biceps", "Triceps", "Forearms", "Biceps"],
+    "biceps": ["Biceps", "Forearms", "Shoulders", "Lats"],
+    "triceps": ["Triceps", "Chest", "Shoulders", "Forearms"],
+    "shoulders": ["Shoulders", "Traps", "Chest", "Triceps"],
+    "chest": ["Chest", "Shoulders", "Triceps", "Biceps"],
+    "back": ["Lats", "Traps", "Middle Back", "Lower Back", "Biceps"],
+    "abs": ["Abdominals", "Abdominals", "Lower Back"],
+    "core": ["Abdominals", "Lower Back", "Abdominals", "Glutes"],
+    "legs": ["Quadriceps", "Hamstrings", "Calves", "Glutes", "Adductors", "Abductors"],
+    "glutes": ["Glutes", "Hamstrings", "Quadriceps", "Calves"],
+    "thighs": ["Quadriceps", "Hamstrings", "Adductors", "Glutes"],
+    "calves": ["Calves", "Hamstrings", "Glutes", "Quadriceps"],
+    "butt": ["Glutes", "Hamstrings", "Quadriceps", "Abductors"]
 }
 
-def get_targets(query, explicit_bodypart=None):
-    """Map user query and bodypart tag to target muscle groups using exact labels from data"""
+
+def get_targets(query, bert_model=None, explicit_bodypart=None):
     query = str(query).lower()
-    result = set()
+    result = []
 
     for keyword, targets in TARGET_MAPPINGS.items():
         if keyword in query:
-            result.update(targets)
+            result = targets
+            break
 
-    if explicit_bodypart:
-        result.add(explicit_bodypart)
+    if not result and bert_model:
+        query_clean = preprocess_text(query)
+        query_embed = bert_model.encode([query_clean], normalize_embeddings=True)[0]
+
+        keywords = list(TARGET_MAPPINGS.keys())
+        keyword_embeds = bert_model.encode(keywords, normalize_embeddings=True)
+        sims = keyword_embeds @ query_embed
+        best_idx = int(np.argmax(sims))
+        best_score = sims[best_idx]
+
+        if best_score >= 0.4:
+            result = TARGET_MAPPINGS[keywords[best_idx]]
 
     if not result:
         if "upper" in query:
-            result.update(["Biceps", "Triceps", "Shoulders", "Chest"])
+            result = ["Biceps", "Triceps", "Shoulders", "Chest"]
         elif "lower" in query:
-            result.update(["Quadriceps", "Hamstrings", "Glutes", "Calves"])
+            result = ["Quadriceps", "Hamstrings", "Glutes", "Calves"]
         else:
-            result.update(["Quadriceps", "Chest", "Back", "Shoulders"])
+            result = ["Quadriceps", "Chest", "Back", "Shoulders"]
 
-    return list(result)
+    if explicit_bodypart:
+        result = result[:3] + [explicit_bodypart]
 
-def generate_workout_routine(query, selected_equipment=None, documents=None, bodypart_filter=None, used_exercises=set()):
-    targets = set(get_targets(query, explicit_bodypart=bodypart_filter))
+    if len(result) > 4:
+        result = random.sample(result, 4)
+    elif len(result) < 4:
+        while len(result) < 4:
+            result.append(random.choice(result))
+
+    return result
+
+def generate_workout_routine(query, selected_equipment=None, documents=None,
+                              bodypart_filter=None, used_exercises=set(),
+                              bert_model=None, bert_embeddings=None):
+    targets = get_targets(query, bert_model=bert_model, explicit_bodypart=bodypart_filter)
     used_set = set(used_exercises)
+    target_counts = Counter(targets)
 
-    if not documents:
+    if not documents or bert_model is None or bert_embeddings is None:
         return []
 
-    filtered = [
-        doc for doc in documents
+    query_embed = bert_model.encode([preprocess_text(query)], normalize_embeddings=True)[0]
+
+    candidates = [
+        (idx, doc) for idx, doc in enumerate(documents)
         if doc[0] not in used_set and
            (not selected_equipment or doc[3] == selected_equipment) and
-           doc[2] in targets
+           doc[2] in target_counts
     ]
 
-    if len(filtered) < 5:
-        filtered = [
-            doc for doc in documents
+    if len(candidates) < 5:
+        candidates = [
+            (idx, doc) for idx, doc in enumerate(documents)
             if doc[0] not in used_set and
                (not selected_equipment or doc[3] == selected_equipment)
         ]
 
-    if not filtered:
+    if not candidates:
         return []
 
-    filtered_sorted = sorted(filtered, key=lambda doc: (doc[5], doc[7]), reverse=True)
+    sims = []
+    for idx, doc in candidates:
+        sim = np.dot(query_embed, bert_embeddings[idx])
+        sims.append((sim, doc))
 
+    sims_sorted = sorted(sims, key=lambda x: (x[0], x[1][5]), reverse=True)
+
+    used_per_bodypart = Counter()
     routine = []
-    seen_muscles = set()
 
-    for doc in filtered_sorted:
-        if doc[2] not in seen_muscles:
+    for _, doc in sims_sorted:
+        part = doc[2]
+        if used_per_bodypart[part] < target_counts[part]:
             routine.append(doc)
-            seen_muscles.add(doc[2])
+            used_per_bodypart[part] += 1
         if len(routine) == 5:
             break
 
     if len(routine) < 5:
-        for doc in filtered_sorted:
+        for _, doc in sims_sorted:
             if doc not in routine:
                 routine.append(doc)
             if len(routine) == 5:

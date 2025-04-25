@@ -56,7 +56,6 @@ vocab = set(word for desc in descs for word in desc.split())
 
 query_embed = create_query_embedder(vocab, bert_model, synonym_dict)
 
-
 @app.route("/")
 def home():
     return render_template("base.html", title="Fitness Search",
@@ -82,7 +81,6 @@ def exercise_page(title):
             })
     return "Exercise not found", 404
 
-
 @app.route("/video/<title>")
 def fetch_video(title):
     try:
@@ -104,11 +102,13 @@ def workout_routine():
         return jsonify({"main": [], "related": []})
 
     raw_main = generate_workout_routine(
-        target_muscles_str,
+        query, 
         selected_equipment,
         documents,
         bodypart_filter=selected_bodypart,
-        used_exercises=set()
+        used_exercises=set(),
+        bert_model=bert_model,
+        bert_embeddings=bert_embeddings_np
     )
 
     main_titles_set = set()
@@ -152,7 +152,6 @@ def workout_routine():
         "main": main_wrapped,
         "related": related_wrapped
     })
-
 
 if __name__ == "__main__" and 'DB_NAME' not in os.environ:
     app.run(debug=True, host="0.0.0.0", port=5000)
