@@ -4,8 +4,8 @@ import pandas as pd
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from utils import create_query_embedder, find_youtube_tutorial, preprocess_text, correct_equipment, get_target_muscle_groups, synonym_dict
-from exercise import get_related_exercises
-from routine import generate_workout_routine
+from exercise import get_best_matching_word, get_related_exercises
+from routine import generate_workout_routine, get_best_mapping_keyword
 from sentence_transformers import SentenceTransformer
 import numpy as np
 
@@ -123,11 +123,13 @@ def workout_routine():
     related_raw = get_related_exercises(
         documents,
         bert_embeddings_np,
-        main_exercises,
+        query=query,
         count=10,
         bodypart_filter=selected_bodypart,
-        used_titles=main_titles_set
+        used_titles=main_titles_set,
+        bert_model=bert_model
     )
+
 
     related_titles_set = set()
     related_exercises = []
@@ -138,15 +140,23 @@ def workout_routine():
         if len(related_exercises) == 3:
             break
 
-    main_wrapped = [
-        (ex, f"Reddit Review: {ex['RatingDesc']}", f"This is a good {ex['BodyPart'].lower()} exercise.")
-        for ex in main_exercises
-    ]
+    best_keyword = get_best_mapping_keyword(query, bert_model)
 
-    related_wrapped = [
-        (ex, f"Reddit Review: {ex['RatingDesc']}", f"This is a related {ex['BodyPart'].lower()} exercise.")
-        for ex in related_exercises
-    ]
+    all_exercise_titles = [ex["Title"] for ex in main_exercises + related_exercises]
+    all_exercise_embeds = bert_model.encode(all_exercise_titles, normalize_embeddings=True)
+
+    main_wrapped = []
+    for i, ex in enumerate(main_exercises):
+        word = get_best_matching_word(query, all_exercise_embeds[i], bert_model)
+        explanation = f"This is a good {best_keyword} workout."
+        main_wrapped.append((ex, f"Reddit Review: {ex['RatingDesc']}", explanation))
+
+
+    related_wrapped = []
+    for i, ex in enumerate(related_exercises):
+        word = get_best_matching_word(query, all_exercise_embeds[i + len(main_exercises)], bert_model)
+        related_wrapped.append((ex, f"Reddit Review: {ex['RatingDesc']}", f"This exercise matches with your word: '{word}'"))
+
 
     return jsonify({
         "main": main_wrapped,

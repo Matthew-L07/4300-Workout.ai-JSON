@@ -1,40 +1,51 @@
-from rapidfuzz.distance import Levenshtein
+from utils import preprocess_text
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+import nltk
+from nltk.corpus import stopwords
+nltk.download("stopwords")
+stop_words = set(stopwords.words("english"))
 
-def get_related_exercises(documents, bert_embeddings_np, main_exercises, count=3, bodypart_filter=None, used_titles=None):
-    if not main_exercises:
-        return []
+generic_words = stop_words | {
+    "body", "physique", "exercise", "routine", "program", "workout",
+    "want", "need", "feel", "goal", "make", "get", "do", "done"
+}
 
-    main_titles = {ex["Title"].upper() for ex in main_exercises}
-    main_bodyparts = {ex["BodyPart"] for ex in main_exercises}
-    title_lower = {title.lower() for title in main_titles}
+def get_best_matching_word(query, exercise_embed, bert_model):
+    query_words = preprocess_text(query).split()
+    filtered_words = [w for w in query_words if w not in generic_words]
+    
+    if not filtered_words:
+        filtered_words = query_words
+
+    word_embeds = bert_model.encode(filtered_words, normalize_embeddings=True)
+    sims = word_embeds @ exercise_embed
+    best_idx = int(np.argmax(sims))
+    return filtered_words[best_idx]
+
+
+def get_related_exercises(documents, bert_embeddings_np, query, count=3, bodypart_filter=None, used_titles=None, bert_model=None):
     used_titles = set(title.upper() for title in used_titles or [])
 
     filtered_indices = [
         idx for idx, doc in enumerate(documents)
         if doc[0].upper() not in used_titles
         and (not bodypart_filter or doc[2].lower() == bodypart_filter.lower())
-        and doc[2] in main_bodyparts
     ]
 
     if not filtered_indices:
         return []
 
-    main_indices = [i for i, doc in enumerate(documents)
-                    if doc[0].upper() in main_titles]
-    if not main_indices:
-        return []
+    query_words = [w for w in preprocess_text(query).split() if w not in generic_words]
+    if not query_words:
+        query_words = preprocess_text(query).split()
 
-    mean_embed = np.mean(
-        bert_embeddings_np[main_indices], axis=0, keepdims=True)
+    query_embed = bert_model.encode([" ".join(query_words)], normalize_embeddings=True)[0]
+
     candidate_embeds = bert_embeddings_np[filtered_indices]
-    if candidate_embeds.shape[0] == 0:
-        return []
+    sims = cosine_similarity([query_embed], candidate_embeds).flatten()
 
-    sims = cosine_similarity(mean_embed, candidate_embeds).flatten()
     actual_count = min(count, len(sims))
-
     if actual_count == 0:
         return []
 
@@ -62,3 +73,4 @@ def get_related_exercises(documents, bert_embeddings_np, main_exercises, count=3
             break
 
     return results
+

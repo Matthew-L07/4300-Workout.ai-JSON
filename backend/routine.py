@@ -46,6 +46,15 @@ TARGET_MAPPINGS = {
     "butt": ["Glutes", "Hamstrings", "Quadriceps", "Abductors"]
 }
 
+def get_best_mapping_keyword(query, bert_model):
+    query_clean = preprocess_text(query)
+    query_embed = bert_model.encode([query_clean], normalize_embeddings=True)[0]
+
+    keywords = list(TARGET_MAPPINGS.keys())
+    keyword_embeds = bert_model.encode(keywords, normalize_embeddings=True)
+    sims = keyword_embeds @ query_embed
+    best_idx = int(np.argmax(sims))
+    return keywords[best_idx]
 
 
 def get_targets(query, bert_model=None, explicit_bodypart=None):
