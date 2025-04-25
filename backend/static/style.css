@@ -269,10 +269,6 @@ body {
     transform: scale(1);
 }
 
-.exercise-card:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-}
-
 .card-front {
     background-color: #2c2c2e;
     padding: 1.5rem;
@@ -545,12 +541,11 @@ body {
 }
 
 .routine-heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #aaa;
+    font-size: 1.5vw;
+    font-weight: 400;
+    padding-left: 0.5rem;
     text-align: left;
-    margin-bottom: 1.5rem;
-    margin-left: 0.5rem;
+    color: #cccccc;
 }
 
 .routine-wrapper {
@@ -558,4 +553,101 @@ body {
     padding: 0;
     background: none;
     border: none;
+}
+
+.search-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.advanced-search-toggle {
+    text-align: center;
+    padding-left: 1rem;
+}
+
+#toggle-advanced {
+    background: none;
+    border: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+#toggle-advanced:hover {
+    text-decoration: underline;
+}
+
+.search-wrapper {
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.search-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.advanced-search-toggle button {
+    background: none;
+    border: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 999px;
+    transition: background-color 0.2s ease;
+}
+
+.advanced-search-toggle button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.results-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 4vh;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.routine-left {
+    flex: 2;
+}
+
+.diagram-right {
+    flex: 1;
+    max-width: 300px;
+}
+
+#muscle-diagram-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+#muscle-diagram-box {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#muscle-diagram-box.visible {
+    opacity: 1;
 }

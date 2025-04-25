@@ -15,16 +15,18 @@
             <h2 class="sub-title">Get the right workout for your gear and goals.</h2>
 
             <!-- Search box -->
-            <div class="input-box">
-                <input placeholder="What exercise are you looking for?" id="filter-text-val">
-                <button class="generate-btn" id="routine-button" onclick="generateRoutine()">Generate
-                    Routine</button>
+            <div class="search-wrapper">
+                <div class="input-box">
+                    <input placeholder="What exercise are you looking for?" id="filter-text-val">
+                    <button class="generate-btn" id="routine-button" onclick="generateRoutine()">Generate
+                        Routine</button>
+                </div>
+                <div class="advanced-search-toggle">
+                    <button id="toggle-advanced" onclick="toggleAdvancedSearch()">Advanced Search ▼</button>
+                </div>
             </div>
 
-
-
-
-            <div class="filter-row-container">
+            <div class="filter-row-container" id="advanced-filters" style="display: none;">
                 <!-- Equipment Filters -->
                 <div class="filter-box">
                     <p class="filter-label">Equipment</p>
@@ -172,8 +174,23 @@
                 `;
             }
 
+            function toggleAdvancedSearch() {
+                const filterSection = document.getElementById("advanced-filters");
+                const toggleButton = document.getElementById("toggle-advanced");
+
+                if (filterSection.style.display === "none") {
+                    filterSection.style.display = "flex";
+                    toggleButton.textContent = "Advanced Search ▲";
+                } else {
+                    filterSection.style.display = "none";
+                    toggleButton.textContent = "Advanced Search ▼";
+                }
+            }
+
             function generateRoutine() {
                 const query = document.getElementById("filter-text-val").value;
+                if (!query) return;
+
                 const params = { title: query };
                 if (selectedEquipment) params.equipment = selectedEquipment;
                 if (selectedBodypart) params.bodypart = selectedBodypart;
@@ -231,6 +248,7 @@
                             relatedWrapper.className = "routine-wrapper related";
 
                             const heading = document.createElement("h3");
+                            heading.className = "routine-heading";
                             heading.textContent = "Additional Exercises";
                             relatedWrapper.appendChild(heading);
 
