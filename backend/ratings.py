@@ -18,25 +18,31 @@ WEIGHT_CAP = 60
 negation_window = 3
 window_size = 3
 
-positive_pivots = {"fun", "effective", "enjoy", "great", "strong", "amazing", "love", "rewarding", "motivating", "progress", "beneficial", "results"}
-negative_pivots = {"pain", "injury", "hurt", "boring", "waste", "dangerous", "annoying", "hard", "difficult", "confusing", "fatigue", "bad", "inefficient"}
-fatigue_pivots = {"exhausted", "drained", "tiring", "fatiguing", "killer", "brutal", "intense", "sweating", "hard", "challenging", "wiped", "taxing"}
-negation_words = {"not", "no", "never", "none", "isnt", "wasnt", "arent", "dont", "didnt", "cant"}
-excluded_words = {"pm", "etc", "id", "someone", "anyone", "add", "new", "see", "thanks", "foods", "recipes", "include", "offer", "managed", "rid", "search", "met", "app", "deadlifts", "elliptical"}
-included_pivots = {"efficient", "rewarding", "motivating", "effective", "challenging", "results", "fun"}
+positive_pivots = {"fun", "effective", "enjoy", "great", "strong", "amazing",
+                   "love", "rewarding", "motivating", "progress", "beneficial", "results"}
+negative_pivots = {"pain", "injury", "hurt", "boring", "waste", "dangerous",
+                   "annoying", "hard", "difficult", "confusing", "fatigue", "bad", "inefficient"}
+fatigue_pivots = {"exhausted", "drained", "tiring", "fatiguing", "killer",
+                  "brutal", "intense", "sweating", "hard", "challenging", "wiped", "taxing"}
+negation_words = {"not", "no", "never", "none",
+                  "isnt", "wasnt", "arent", "dont", "didnt", "cant"}
+excluded_words = {"pm", "etc", "id", "someone", "anyone", "add", "new", "see", "thanks", "foods",
+                  "recipes", "include", "offer", "managed", "rid", "search", "met", "app", "deadlifts", "elliptical"}
+included_pivots = {"efficient", "rewarding", "motivating",
+                   "effective", "challenging", "results", "fun"}
 
 subreddit = "Fitness"
 corpus = Corpus(filename=download(f"subreddit-{subreddit}"))
 sbert = SentenceTransformer("all-MiniLM-L6-v2")
 
-ex_names = [preprocess_text(t).replace("_", " ").lower() for t in exercises_df["Title"]]
+ex_names = [preprocess_text(t).replace("_", " ").lower()
+            for t in exercises_df["Title"]]
 ex_embeddings = sbert.encode(ex_names, convert_to_tensor=True, batch_size=64)
-ex_row_lookup = {preprocess_text(row["Title"]).replace("_", " ").lower(): row for _, row in exercises_df.iterrows()}
+ex_row_lookup = {preprocess_text(row["Title"]).replace(
+    "_", " ").lower(): row for _, row in exercises_df.iterrows()}
 
 comment_texts, reddit_comments = [], []
 for i, utt in enumerate(corpus.iter_utterances()):
-    if i >= MAX_UTTERANCES:
-        break
     if i >= MAX_UTTERANCES:
         break
     text = utt.text
@@ -44,7 +50,8 @@ for i, utt in enumerate(corpus.iter_utterances()):
         reddit_comments.append(text)
         comment_texts.append(preprocess_text(text))
 
-comment_embeddings = sbert.encode(comment_texts, convert_to_tensor=True, batch_size=64)
+comment_embeddings = sbert.encode(
+    comment_texts, convert_to_tensor=True, batch_size=64)
 cos_sim = util.cos_sim(comment_embeddings, ex_embeddings)
 
 matched_comments = defaultdict(list)
@@ -61,13 +68,16 @@ for text in reddit_comments:
     for idx, word in enumerate(words):
         if word in stop_words or not word.isalpha():
             continue
-        context = words[max(0, idx - window_size): idx] + words[idx + 1: idx + 1 + window_size]
-        if set(context) & positive_pivots:
+        context = words[max(0, idx - window_size): idx] + \
+            words[idx + 1: idx + 1 + window_size]
+        context_set = set(context)
+        if context_set & positive_pivots:
             co_occurrence[word]["pos"] += 1
-        if set(context) & negative_pivots:
+        if context_set & negative_pivots:
             co_occurrence[word]["neg"] += 1
 
-word_scores = {w: c["pos"] / (c["pos"] + c["neg"]) for w, c in co_occurrence.items() if (c["pos"] + c["neg"]) > 1}
+word_scores = {w: c["pos"] / (c["pos"] + c["neg"])
+               for w, c in co_occurrence.items() if (c["pos"] + c["neg"]) > 1}
 
 word_counts, raw_scores, raw_fatigue_scores = {}, {}, {}
 for ex, comments in matched_comments.items():
@@ -79,7 +89,8 @@ for ex, comments in matched_comments.items():
                 fatigue_score += 1
             if word in stop_words or not word.isalpha():
                 continue
-            is_negated = any(w in negation_words for w in words[max(0, i - negation_window):i])
+            is_negated = any(
+                w in negation_words for w in words[max(0, i - negation_window):i])
             polarity = -1 if is_negated else 1
             if word in positive_pivots:
                 score += 2.0 * polarity
@@ -98,10 +109,12 @@ scores = list(raw_scores.values())
 mean = sum(scores) / len(scores) if scores else 0
 std = (sum((x - mean) ** 2 for x in scores) / len(scores)) ** 0.5 or 1e-10
 
+
 def scaled_rating(score):
     z = (score - mean) / std
     sigmoid = 1 / (1 + math.exp(-2.5 * (z + 1.1)))
     return round(1.0 + sigmoid * 4.0, 2)
+
 
 BODY_PART_FATIGUE = {
     "biceps": 1.0, "triceps": 1.0, "forearms": 1.0, "calves": 1.0,
@@ -112,15 +125,13 @@ BODY_PART_FATIGUE = {
 
 
 fatigue_values = list(raw_fatigue_scores.values())
-percentiles = np.percentile(fatigue_values, np.linspace(0, 100, 6)) if fatigue_values else [0, 1, 2, 3, 4, 5]
+percentiles = np.percentile(
+    fatigue_values, [20, 40, 60, 80]) if fatigue_values else [0, 1, 2, 3]
 
-fatigue_values = list(raw_fatigue_scores.values())
-if fatigue_values:
-    percentiles = np.percentile(fatigue_values, [20, 40, 60, 80])
-else:
-    percentiles = [0, 1, 2, 3]
 
 def scaled_fatigue_from_text(score):
+    if not percentiles:
+        return 3.0
     if score <= percentiles[0]:
         return 1.0
     elif score <= percentiles[1]:
@@ -129,8 +140,7 @@ def scaled_fatigue_from_text(score):
         return 3.0
     elif score <= percentiles[3]:
         return 4.0
-    else:
-        return 5.0
+    return 5.0
 
 
 def fatigue_from_bodypart(row, text_score=None):
@@ -150,10 +160,11 @@ word_freq = Counter()
 for word_list in word_counts.values():
     word_freq.update(word_list)
 
+
 def get_top_words(word_list, rating, count=5):
     local_freq = Counter(word_list)
-
     scored_pos, scored_neg = {}, {}
+
     for w, tf in local_freq.items():
         w = w.lower()
         if w in stop_words or w in excluded_words or not w.isalpha() or len(w) < 3:
@@ -168,13 +179,14 @@ def get_top_words(word_list, rating, count=5):
 
     top_pos = [w for w, _ in sorted(scored_pos.items(), key=lambda x: -x[1])]
     top_neg = [w for w, _ in sorted(scored_neg.items(), key=lambda x: -x[1])]
+
     if rating < 3.0:
         return top_neg[:count]
     elif rating < 3.75:
         half = count // 2
         return (top_pos[:count - half] + top_neg[:half])[:count]
-    else:
-        return top_pos[:count]
+    return top_pos[:count]
+
 
 def basic_desc(rating):
     if rating >= 4.75:
@@ -199,12 +211,14 @@ for _, row in exercises_df.iterrows():
     else:
         score = raw_scores[matched_ex]
         raw_rating = scaled_rating(score)
-        popularity_score = min(len(matched_comments[matched_ex]), WEIGHT_CAP) / WEIGHT_CAP
+        popularity_score = min(
+            len(matched_comments[matched_ex]), WEIGHT_CAP) / WEIGHT_CAP
         popularity_rating = 1.0 + 4.0 * popularity_score
         rating = round(0.75 * popularity_rating + 0.25 * raw_rating, 2)
 
         fatigue_raw = raw_fatigue_scores.get(matched_ex, 0)
-        fatigue_level = fatigue_from_bodypart(ex_row_lookup[matched_ex], fatigue_raw)
+        fatigue_level = fatigue_from_bodypart(
+            ex_row_lookup[matched_ex], fatigue_raw)
 
         lead = basic_desc(rating)
         top_words = get_top_words(word_counts[matched_ex], rating)

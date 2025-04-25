@@ -11,66 +11,58 @@ generic_words = stop_words | {
     "want", "need", "feel", "goal", "make", "get", "do", "done"
 }
 
+
 def get_best_matching_word(query, exercise_embed, bert_model):
     query_words = preprocess_text(query).split()
-    filtered_words = [w for w in query_words if w not in generic_words]
-    
-    if not filtered_words:
-        filtered_words = query_words
+    filtered_words = [
+        w for w in query_words if w not in generic_words] or query_words
 
     word_embeds = bert_model.encode(filtered_words, normalize_embeddings=True)
     sims = word_embeds @ exercise_embed
-    best_idx = int(np.argmax(sims))
-    return filtered_words[best_idx]
+    return filtered_words[int(np.argmax(sims))]
 
 
 def get_related_exercises(documents, bert_embeddings_np, query, count=3, bodypart_filter=None, used_titles=None, bert_model=None):
-    used_titles = set(title.upper() for title in used_titles or [])
+    used_titles = {title.upper() for title in (used_titles or [])}
 
-    filtered_indices = [
-        idx for idx, doc in enumerate(documents)
-        if doc[0].upper() not in used_titles
-        and (not bodypart_filter or doc[2].lower() == bodypart_filter.lower())
-    ]
+    # Pre-filter documents based on used titles and bodypart
+    filtered_docs = []
+    filtered_embeds = []
+    for idx, doc in enumerate(documents):
+        if doc[0].upper() in used_titles:
+            continue
+        if bodypart_filter and doc[2].lower() != bodypart_filter.lower():
+            continue
+        filtered_docs.append(doc)
+        filtered_embeds.append(bert_embeddings_np[idx])
 
-    if not filtered_indices:
+    if not filtered_docs:
         return []
 
-    query_words = [w for w in preprocess_text(query).split() if w not in generic_words]
-    if not query_words:
-        query_words = preprocess_text(query).split()
+    # Process query once
+    query_words = [w for w in preprocess_text(query).split(
+    ) if w not in generic_words] or preprocess_text(query).split()
+    query_embed = bert_model.encode(
+        [" ".join(query_words)], normalize_embeddings=True)[0]
 
-    query_embed = bert_model.encode([" ".join(query_words)], normalize_embeddings=True)[0]
+    # Calculate similarities in one operation
+    sims = cosine_similarity([query_embed], filtered_embeds).flatten()
 
-    candidate_embeds = bert_embeddings_np[filtered_indices]
-    sims = cosine_similarity([query_embed], candidate_embeds).flatten()
-
+    # Get top results efficiently
     actual_count = min(count, len(sims))
     if actual_count == 0:
         return []
 
     top_indices = np.argsort(-sims)[:actual_count]
 
-    seen_titles = set(used_titles)
-    results = []
-    for i in top_indices:
-        doc = documents[filtered_indices[i]]
-        title_upper = doc[0].upper()
-        if title_upper in seen_titles:
-            continue
-        seen_titles.add(title_upper)
-        results.append({
-            'Title': doc[0],
-            'Desc': doc[1],
-            'BodyPart': doc[2],
-            'Equipment': doc[3],
-            'Level': doc[4],
-            'Rating': doc[5],
-            'RatingDesc': doc[6],
-            'FatigueLevel': doc[7]
-        })
-        if len(results) == count:
-            break
-
-    return results
-
+    # Build results without duplicate checks (already filtered)
+    return [{
+        'Title': filtered_docs[i][0],
+        'Desc': filtered_docs[i][1],
+        'BodyPart': filtered_docs[i][2],
+        'Equipment': filtered_docs[i][3],
+        'Level': filtered_docs[i][4],
+        'Rating': filtered_docs[i][5],
+        'RatingDesc': filtered_docs[i][6],
+        'FatigueLevel': filtered_docs[i][7]
+    } for i in top_indices]
