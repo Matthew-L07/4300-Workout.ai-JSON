@@ -91,31 +91,61 @@ def fetch_video(title):
     except Exception as e:
         return jsonify({"Video": None, "Error": str(e)})
 
-
 @app.route("/routine")
 def workout_routine():
     query = request.args.get("title", "")
     selected_equipment = request.args.get("equipment", "")
+    selected_bodypart = request.args.get("bodypart", "")
 
     target_muscles_list = get_target_muscle_groups(query)
-    target_muscles_str = " ".join(
-        target_muscles_list) if target_muscles_list else query
+    target_muscles_str = " ".join(target_muscles_list) if target_muscles_list else query
 
     if not target_muscles_str:
         return jsonify({"main": [], "related": []})
 
-    main_exercises = generate_workout_routine(target_muscles_str, selected_equipment, documents)
-    related = get_related_exercises(documents, bert_embeddings_np, main_exercises, count=8)
+    raw_main = generate_workout_routine(
+        target_muscles_str,
+        selected_equipment,
+        documents,
+        bodypart_filter=selected_bodypart,
+        used_exercises=set()
+    )
+
+    main_titles_set = set()
+    main_exercises = []
+    for ex in raw_main:
+        if ex["Title"] not in main_titles_set:
+            main_exercises.append(ex)
+            main_titles_set.add(ex["Title"])
+        if len(main_exercises) == 4:
+            break
+
+    related_raw = get_related_exercises(
+        documents,
+        bert_embeddings_np,
+        main_exercises,
+        count=10,
+        bodypart_filter=selected_bodypart,
+        used_titles=main_titles_set
+    )
+
+    related_titles_set = set()
+    related_exercises = []
+    for ex in related_raw:
+        if ex["Title"] not in main_titles_set and ex["Title"] not in related_titles_set:
+            related_exercises.append(ex)
+            related_titles_set.add(ex["Title"])
+        if len(related_exercises) == 3:
+            break
 
     main_wrapped = [
-        (ex, "Reddit Review: " +
-         ex["RatingDesc"], f"This is a good {ex['BodyPart'].lower()} exercise.")
+        (ex, f"Reddit Review: {ex['RatingDesc']}", f"This is a good {ex['BodyPart'].lower()} exercise.")
         for ex in main_exercises
     ]
+
     related_wrapped = [
-        (ex, "Reddit Review: " +
-         ex["RatingDesc"], f"This is a related {ex['BodyPart'].lower()} exercise.")
-        for ex in related
+        (ex, f"Reddit Review: {ex['RatingDesc']}", f"This is a related {ex['BodyPart'].lower()} exercise.")
+        for ex in related_exercises
     ]
 
     return jsonify({

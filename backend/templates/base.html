@@ -184,9 +184,11 @@
                     .then(res => res.json())
                     .then(data => {
                         const answerBox = document.getElementById("answer-box");
+                        answerBox.innerHTML = "";
 
                         let mainWrapper = answerBox.querySelector(".routine-wrapper");
                         if (!mainWrapper) {
+                            if (mainWrapper) mainWrapper.remove();
                             mainWrapper = document.createElement("div");
                             mainWrapper.className = "routine-wrapper";
                             answerBox.appendChild(mainWrapper);
@@ -201,7 +203,7 @@
                         }
 
                         const existingCards = mainWrapper.querySelectorAll(".exercise-card");
-                        const allMain = [...data.main, ...(data.related || [])];
+                        const allMain = data.main;
 
                         allMain.forEach((ex, i) => {
                             let card;
