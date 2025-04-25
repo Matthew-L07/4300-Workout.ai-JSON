@@ -47,6 +47,7 @@ TARGET_MAPPINGS = {
 }
 
 
+
 def get_targets(query, bert_model=None, explicit_bodypart=None):
     query = str(query).lower()
     result = []
@@ -78,15 +79,17 @@ def get_targets(query, bert_model=None, explicit_bodypart=None):
             result = ["Quadriceps", "Chest", "Back", "Shoulders"]
 
     if explicit_bodypart:
-        result = result[:3] + [explicit_bodypart]
+        result = [explicit_bodypart] + [r for r in result if r != explicit_bodypart]
 
+    result = list(dict.fromkeys(result))  
+
+    while len(result) < 4:
+        result.append(random.choice(result))
     if len(result) > 4:
-        result = random.sample(result, 4)
-    elif len(result) < 4:
-        while len(result) < 4:
-            result.append(random.choice(result))
+        result = result[:4]
 
     return result
+
 
 def generate_workout_routine(query, selected_equipment=None, documents=None,
                               bodypart_filter=None, used_exercises=set(),
